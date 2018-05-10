@@ -1,0 +1,2 @@
+class SakeTag < ApplicationRecord
+end

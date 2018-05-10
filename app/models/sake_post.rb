@@ -1,0 +1,2 @@
+class SakePost < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Retire < ApplicationRecord
+end
