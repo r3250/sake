@@ -1,0 +1,2 @@
+class SakeCommentsController < ApplicationController
+end
