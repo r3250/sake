@@ -1,4 +1,4 @@
-class SakesController < ApplicationController
+class SakePostsController < ApplicationController
   def index
   end
 
