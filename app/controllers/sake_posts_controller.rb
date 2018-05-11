@@ -7,6 +7,7 @@ class SakePostsController < ApplicationController
   end
 
   def show
+  	@sake_post = SakePost.find(params[:id])
   end
 
   def edit

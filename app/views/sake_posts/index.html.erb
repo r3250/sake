@@ -5,24 +5,27 @@
     </div>
     <div class="col-lg-10">
 	   <% @sake_posts.each do |sake_post| %>
-			<table class="sake_post_table">
-				<tbody>
-					<tr>
-					  <td rowspan="3"><%= attachment_image_tag sake_post, :image, :fill, 200, 300, format: 'jpg' %></td>
-					  <td class="sake_post_td"><%= "ユーザー名" %> ：</td>
-					</tr>
-					<tr>
-					  <td class="sake_post_td"><%= "sake名" %> ：<span class="sake_post_sake"><%= sake_post.sake_name %></span></td>
-				    </tr>
-					<tr>
-					  <td class="sake_post_td"><%= "店名" %> ：<span class="sake_post_shop"><%= sake_post.shop_name %></span></td>
-					</tr>
-				</tbody>
-			</table>
+	   			<div class="row">
+    			  <div class="col-lg-2">
+    				 <div class="sake_post_image">
+					  <%= attachment_image_tag sake_post, :image, :fill, 200, 300, format: 'jpg' %>
+					</div>
+				  </div>
+				  <div class="col-lg-2">
+				  </div>
+					<div class="col-lg-8">
+						<br>
+						<br>
+						<br>
+					  <p><%= "ユーザー名" %> ：</p>
+					  <p><%= "sake名" %> ：<span class="sake_post_sake"><%= sake_post.sake_name %></span></p>
+					  <p><%= "店名" %> ：<span class="sake_post_shop"><%= sake_post.shop_name %></span></p>
+					</div>
+	   			</div>
 		<% end %>
     </div>
     <div class="paginate">
-   <%= paginate @sake_posts %>
+      <%= paginate @sake_posts %>
     </div>
   </div>
  </div>
