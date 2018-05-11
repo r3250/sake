@@ -1,3 +1,25 @@
 // Place all the styles related to the sake_posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.sake_post_box {
+	background-color: black;
+}
+.sake_post_box td,
+.sake_post_box span {
+	color: white;
+}
+.sake_post_table {
+	margin-bottom: 30px;
+}
+.sake_post_td {
+	padding-left: 100px;
+}
+.sake_post_sake {
+	margin-left: 90px;
+}
+.sake_post_shop {
+	margin-left: 108px;
+}
+.paginate {
+	text-align: center;
+}
