@@ -1,10 +1,10 @@
 // Place all the styles related to the sake_posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.sake_post_box {
-	background-color: black;
-}
+
+
 .sake_post_box p,
+.sake_post_box a,
 .sake_post_box span {
 	color: white;
 }
@@ -12,12 +12,61 @@
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+.sake_post_favorite {
+	width: 170px;
+	text-align: right;
+}
+.sake_post_text {
+	margin-top: 40px;
+}
+.sake_post_text p:nth-child(2) {
+	margin: 20px 0;
+}
+.sake_post_nickname {
+	margin-left: 63px;
+}
 .sake_post_sake {
 	margin-left: 90px;
 }
 .sake_post_shop {
 	margin-left: 108px;
 }
+.sake_post_address {
+	margin-left: 106px;
+}
+.sake_post_caption {
+	margin-left: 72px;
+}
+.sake_post_back {
+	text-align: right;
+	padding-right: 20px;
+}
 .paginate {
 	text-align: center;
 }
+.image_filed {
+	color: white;
+}
+.tag_field {
+	margin: 30px 0;
+}
+.address_field {
+	margin: 30px 0;
+}
+.sake_post_btn {
+	text-align: center;
+	margin-top: 30px;
+}
+.sake_post_btn .btn {
+	color: black;
+	background-color: white;
+}
+.sake_post_mybtn {
+	margin-top: 50px;
+	margin-right: 30px;
+	text-align: right;
+}
+.sake_post_mybtn a:nth-child(3) {
+	margin-left: 30px;
+}
+

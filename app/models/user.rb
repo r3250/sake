@@ -16,5 +16,5 @@ class User < ApplicationRecord
 
   has_many :sake_posts
   has_many :sake_comments
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
 end
