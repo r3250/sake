@@ -1,2 +1,35 @@
-<h1>SakePosts#new</h1>
-<p>Find me in app/views/sake_posts/new.html.erb</p>
+<div class="container">
+  <div class="sake_post_box">
+   <div class="row">
+   	 <div class="col-lg-3">
+   	 </div>
+   	   <div class="col-lg-6">
+			<%= form_for(@sake_post) do |f| %>
+              <div class="row">
+              	 <div class="col-lg-3 image_filed">
+					 <%= f.attachment_field :image %>
+				</div>
+				<div class="col-lg-4">
+				</div>
+				<div class="col-lg-5">
+					<%= f.text_field :sake_name, :size => "30", :placeholder => "sake名" %><br>
+				 <div class="tag_field">
+					<%= f.text_field :shop_name, :size => "30",  :placeholder => "タグ" %><br>
+				</div>
+					<%= f.text_field :shop_name, :size => "30",  :placeholder => "店名" %><br>
+				<div class="address_field">
+					<%= f.text_field :address, :size => "30",  :placeholder => "住所" %><br>
+				</div>
+					<%= f.text_area :caption, :size => "30",  :placeholder => "sake紹介" %><br>
+				  <div class="sake_post_btn">
+					<%= f.submit "登録", class: "btn" %>
+			      </div>
+				</div>
+		      </div>
+			<% end %>
+       </div>
+      <div class="col-lg-3">
+      </div>
+  </div>
+ </div>
+</div>

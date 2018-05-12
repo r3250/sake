@@ -1,2 +1,34 @@
-<h1>SakePosts#show</h1>
-<p>Find me in app/views/sake_posts/show.html.erb</p>
+<div class="container">
+ <div class="sake_post_box">
+  <div class="row">
+ 	<div class="col-lg-3">
+    </div>
+    <div class="col-lg-9">
+			<div class="row">
+    			  <div class="col-lg-2">
+    				 <div class="sake_post_myimage">
+					  <%= attachment_image_tag @sake_post, :image, :fill, 200, 300, format: 'jpg' %>
+					</div>
+				  </div>
+				  <div class="col-lg-2">
+				  </div>
+					<div class="col-lg-8">
+					  <p><%= "ユーザー名" %> ：<span class="sake_post_nickname"><%= @sake_post.user.nickname %></span></p>
+					  <p><%= "sake名" %> ：<span class="sake_post_sake"><%= @sake_post.sake_name %></span></p>
+					  <p><%= "タグ" %> ：
+					  <p><%= "店名" %> ：<span class="sake_post_shop"><%= @sake_post.shop_name %></span></p>
+					  <p><%= "場所" %> ：<span class="sake_post_address"><%= @sake_post.address %></span></p>
+					  <p><%= "SAKE紹介" %> ：<span class="sake_post_caption"><%= @sake_post.caption %></span></p><br>
+					 <div class="sake_post_mybtn">
+					  <% if @sake_post.user_id == current_user.id %>
+					  <%= link_to "編集", edit_sake_post_path(@sake_post) %>
+					  <%= link_to "削除", sake_post_path(@sake_post), method: :delete, "data-confirm" => "削除しますか" %>
+					  <% end %>
+					  <%= link_to "戻る", sake_posts_path %>
+                    </div>
+				  </div>
+	   		</div>
+    </div>
+  </div>
+ </div>
+</div>
