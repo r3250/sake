@@ -1,7 +1,7 @@
 class SakePostsController < ApplicationController
 	before_action :authenticate_user!, expect: [:index, :show]
   def index
-  	@sake_posts = SakePost.all
+  	@sake_posts = SakePost.all.order(created_at: :desc)
   end
 
   def new

@@ -1,2 +1,32 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+ <div class="user_box">
+  <div class="row">
+ 	<div class="col-lg-3">
+    </div>
+    <div class="col-lg-9">
+			<div class="row">
+    			  <div class="col-lg-2">
+    				 <div class="user_image">
+					  <%#= attachment_image_tag @user, :image, :fill, 200, 300, format: 'jpg' %>
+					</div>
+				  </div>
+				  <div class="col-lg-2">
+				  </div>
+					<div class="col-lg-8">
+					  <p><%= "ユーザー名" %> ：<span class="user_nickname"><%= @user.nickname %></span></p>
+					  <p><%= "好きな酒" %> ：<span class="user_sake"><%= @user.favorite_sake %></span></p>
+					  <p><%= "好きなお店" %> ：<span class="user_shop"><%= @user.favorite_drink %></span></p>
+					  <p><%= "場所" %> ：<span class="user_address"><%= @user.favorite_shop %></span></p>
+					  <p><%= "SAKE紹介" %> ：<span class="user_introduction"><%= @user.introduction %></span></p><br>
+					 <div class="user_mybtn">
+					  <% if @user.id == current_user.id %>
+					  <%= link_to "編集", edit_user_path(current_user) %>
+					  <% end %>
+					  <%= link_to "戻る", sake_posts_path %>
+                    </div>
+				  </div>
+	   		</div>
+    </div>
+  </div>
+ </div>
+</div>

@@ -1,2 +1,49 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="container">
+  <div class="sake_post_box">
+   <div class="row">
+   	 <div class="col-lg-3">
+   	 </div>
+   	   <div class="col-lg-6">
+			<%= form_for(@user) do |f| %>
+              <div class="row">
+              	 <div class="col-lg-3 image_filed">
+              	 	
+				</div>
+				<div class="col-lg-4">
+				</div>
+				<div class="col-lg-5">
+					<%= f.text_field :last_name, :size => "30", :placeholder => "姓" %><br>
+				 <div class="field_form">
+					<%= f.text_field :first_name, :size => "30",  :placeholder => "名" %><br>
+				 </div>
+					<%= f.text_field :last_kana, :size => "30",  :placeholder => "カナ" %><br>
+				 <div class="field_form">
+					<%= f.text_field :first_kana, :size => "30",  :placeholder => "メイ" %><br>
+				 </div>
+				 <div class="field_form">
+					<%= f.email_field :email, :size => "30",  :placeholder => "email" %><br>
+				</div>
+			    <div class="tag_field">
+					<%= f.text_field :favorite_sake, :size => "30",  :placeholder => "好きな酒" %><br>
+				</div>
+			    <div class="field_form">
+					<%= f.text_field :favorite_shop, :size => "30",  :placeholder => "お気に入りお店" %><br>
+			    </div>
+			    <div class="tag_field">
+					<%= f.text_field :favorite_drink, :size => "30",  :placeholder => "好きな飲み方" %><br>
+			    </div>
+			    <div class="field_form">
+					<%= f.text_area :introduction, :size => "30",  :placeholder => "自己紹介" %><br>
+				</div>
+				  <div class="user_editbtn">
+					<%= f.submit "登録", class: "btn" %>
+			      </div>
+				</div>
+		      </div>
+			<% end %>
+       </div>
+      <div class="col-lg-3">
+      </div>
+  </div>
+ </div>
+</div>
