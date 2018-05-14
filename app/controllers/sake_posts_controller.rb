@@ -18,6 +18,7 @@ class SakePostsController < ApplicationController
   def show
   	@sake_post = SakePost.find(params[:id])
     @sake_comment = SakeComment.new
+    @sake_comments = @sake_post.sake_comments
   end
 
   def edit
@@ -40,6 +41,4 @@ class SakePostsController < ApplicationController
    def sake_post_params
    	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id)
    end
-
-
 end
