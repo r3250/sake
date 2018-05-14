@@ -8,14 +8,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  	<header>
+  <body class="<%= "#{controller.controller_name}" %>">
+  	<header class="header_<%= "#{controller.controller_name}" %>">
   	  <div class="container">
   		<nav>
   			<ul class="nav_list">
          <div class="row">
           <% if user_signed_in? %>
-              <li class="nav_list_item"><%= link_to "Sign out",destroy_user_session_path, method: :delete %></li>
+              <li class="nav_list_item"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
               <li class="nav_list_item"><%= link_to "menu", "" %></li>
               <% else %>
       				<li class="nav_list_item"><%= link_to "新規登録",new_user_registration_path %></li>
@@ -27,10 +27,14 @@
   	   </div>
      </div>
   	</header>
+    <div class="header_border top_border_<%= "#{controller.controller_name}" %>">
+    </div>
 
     <%= yield %>
 
-    <footer>
+  <div class="footer_border under_border_<%= "#{controller.controller_name}" %>">
+  </div>
+    <footer class="footer_<%="#{controller.controller_name}" %>">
     	Copyright © 2018 SAKE. All Rights Reserved.
     </footer>
   </body>

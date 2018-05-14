@@ -1,7 +1,7 @@
 class SakePostsController < ApplicationController
-	before_action :authenticate_user!, expect: [:index, :show]
+	before_action :authenticate_user!, except: [:index, :show]
   def index
-  	@sake_posts = SakePost.all
+  	@sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
   end
 
   def new
@@ -17,6 +17,7 @@ class SakePostsController < ApplicationController
 
   def show
   	@sake_post = SakePost.find(params[:id])
+    @sake_comment = SakeComment.new
   end
 
   def edit

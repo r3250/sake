@@ -1,3 +1,33 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top_image_text {
+	position: relative;
+  margin-bottom: 30px;
+}
+
+.top_image_text p  {
+	position: absolute;
+  top: 50%;
+  left: 44%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  color: white;
+  font-size: 50px;
+}
+.top_image_text image {
+	width: 100%;
+}
+.top_image_text::before {
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
