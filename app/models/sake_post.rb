@@ -1,7 +1,7 @@
 class SakePost < ApplicationRecord
 	has_many :sake_tags
 	has_many :favorites, dependent: :destroy
-	has_many :sake_comments
+	has_many :sake_comments, dependent: :destroy
 	belongs_to :user
 	attachment :image
 

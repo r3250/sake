@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :authenticate_user!, except: [:index, :show]
   def index
   end
 
@@ -19,6 +20,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-  	params.require(:user).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :favorite_sake, :favorite_shop, :favorite_drink, :introduction)
+  	params.require(:user).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :favorite_sake, :favorite_shop, :favorite_drink, :introduction, :image)
   end
 end

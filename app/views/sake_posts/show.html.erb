@@ -1,34 +1,44 @@
-<div class="container">
- <div class="sake_post_box">
-  <div class="row">
- 	<div class="col-lg-3">
-    </div>
-    <div class="col-lg-9">
-			<div class="row">
-    			  <div class="col-lg-2">
-    				 <div class="sake_post_myimage">
-					  <%= attachment_image_tag @sake_post, :image, :fill, 200, 300, format: 'jpg' %>
+<div class="container bg-dark">
+	<div class="sake_post_box">
+		<div class="row">
+			<div class="col-lg-3">
+			</div>
+			<div class="col-lg-9">
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="sake_post_myimage">
+							  <%= attachment_image_tag @sake_post, :image, :fill, 200, 300, format: 'jpg' %>
+							  <p><%= @sake_post.sake_comments.count %> 件すべて表示</p>
+							   <% @sake_post.sake.comments.each do |sake_comment| %>
+							     <%= sake_comment.comment %>
+							     <% end %>
+							<div class="sake_post_favorite">
+							  <%= @sake_post.favorites.count %> いいね
+						    </div>
+						</div>
 					</div>
-				  </div>
-				  <div class="col-lg-2">
-				  </div>
-					<div class="col-lg-8">
-					  <p><%= "ユーザー名" %> ：<span class="sake_post_nickname"><%= @sake_post.user.nickname %></span></p>
-					  <p><%= "sake名" %> ：<span class="sake_post_sake"><%= @sake_post.sake_name %></span></p>
-					  <p><%= "タグ" %> ：
-					  <p><%= "店名" %> ：<span class="sake_post_shop"><%= @sake_post.shop_name %></span></p>
-					  <p><%= "場所" %> ：<span class="sake_post_address"><%= @sake_post.address %></span></p>
-					  <p><%= "SAKE紹介" %> ：<span class="sake_post_caption"><%= @sake_post.caption %></span></p><br>
-					 <div class="sake_post_mybtn">
-					  <% if @sake_post.user_id == current_user.id %>
-					  <%= link_to "編集", edit_sake_post_path(@sake_post) %>
-					  <%= link_to "削除", sake_post_path(@sake_post), method: :delete, "data-confirm" => "削除しますか" %>
-					  <% end %>
-					  <%= link_to "戻る", sake_posts_path %>
-                    </div>
-				  </div>
-	   		</div>
-    </div>
-  </div>
- </div>
-</div>
+					<div class="col-lg-2">
+					</div>
+					<div class="col-lg-8 sake_post_show_text">
+						<%= link_to user_path(@sake_post.user) do %>
+						<p><%= "ユーザー名" %><span class="sake_post_nickname">: <%= @sake_post.user.nickname %></span></p>
+						<% end %>
+						<p><%= "sake名" %><span class="sake_post_sake">: <%= @sake_post.sake_name %></span></p>
+						<p><%= "タグ" %>
+							<p><%= "店名" %><span class="sake_post_shop">: <%= @sake_post.shop_name %></span></p>
+							<p><%= "場所" %><span class="sake_post_address">: <%= @sake_post.address %></span></p>
+							<p><%= "SAKE紹介" %><span class="sake_post_caption">: <%= @sake_post.caption %></span></p><br>
+							<div class="sake_post_mybtn">
+								<% if @sake_post.user_id == current_user.id %>
+								<%= link_to "編集", edit_sake_post_path(@sake_post) %>
+								<%= link_to "削除", sake_post_path(@sake_post), method: :delete, "data-confirm" => "削除しますか" %>
+								<% end %>
+								<%= link_to "戻る", sake_posts_path %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
