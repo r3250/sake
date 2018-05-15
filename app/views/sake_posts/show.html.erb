@@ -9,15 +9,12 @@
 						<div class="sake_post_myimage">
 							  <%= attachment_image_tag @sake_post, :image, :fill, 200, 300, format: 'jpg' %>
 							<div class="sake_post_favorite">
-							  <%= @sake_post.sake_comments.count%> 件すべて表示
-							  <%= @sake_post.favorites.count %> いいね
+							  <span class="sake_post_favorite_text"> コメント<%= @sake_post.sake_comments.count%> 件 表示</span>
+							    <i class="glyphicon glyphicon-glass" aria-hidden="true"><span class="sake_post_favorite_text"><%= @sake_post.favorites.count %></span></i>
 							</div>
 							 <div id="comments_area">
 							 	<%= render partial: 'sake_comments/index', locals: { sake_comments: @sake_comments } %>
 							 </div>
-							 <% if user_signed_in? %>
-							 	<%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: @sake_post } %>
-							 <% end %>
 						</div>
 					</div>
 					<div class="col-lg-2">
@@ -32,10 +29,13 @@
 							<p><%= "場所" %><span class="sake_post_address">: <%= @sake_post.address %></span></p>
 							<p><%= "SAKE紹介" %><span class="sake_post_caption">: <%= @sake_post.caption %></span></p><br>
 							<div class="sake_post_mybtn">
+							<% if user_signed_in? %>
 								<% if @sake_post.user_id == current_user.id %>
 								<%= link_to "編集", edit_sake_post_path(@sake_post) %>
 								<%= link_to "削除", sake_post_path(@sake_post), method: :delete, "data-confirm" => "削除しますか" %>
+								<% else %>
 								<% end %>
+							<% end %>
 								<%= link_to "戻る", sake_posts_path %>
 							</div>
 						</div>
