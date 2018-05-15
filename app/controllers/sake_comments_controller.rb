@@ -19,6 +19,6 @@ class SakeCommentsController < ApplicationController
 	private
 
 	def sake_comment_params
-		params.require(:sake_comment).permit(:comment, :user_id, :sake_post)
+		params.require(:sake_comment).permit(:comment, :user_id, :sake_post_id)
 	end
 end
