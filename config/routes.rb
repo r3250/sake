@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-  resources :users, only:[:show, :edit, :update]
+  resources :users, only:[:index, :show, :edit, :update]
   resources :retires, only:[:new, :create]
   resources :sake_posts, only:[:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :sake_comments, only:[:create, :destroy]
