@@ -8,13 +8,16 @@
 					<div class="col-lg-2">
 						<div class="sake_post_myimage">
 							  <%= attachment_image_tag @sake_post, :image, :fill, 200, 300, format: 'jpg' %>
-							  <p><%= @sake_post.sake_comments.count %> 件すべて表示</p>
-							   <% @sake_post.sake.comments.each do |sake_comment| %>
-							     <%= sake_comment.comment %>
-							     <% end %>
 							<div class="sake_post_favorite">
+							  <%= @sake_post.sake_comments.count%> 件すべて表示
 							  <%= @sake_post.favorites.count %> いいね
-						    </div>
+							</div>
+							 <div id="comments_area">
+							 	<%= render partial: 'sake_comments/index', locals: { sake_comments: @sake_comments } %>
+							 </div>
+							 <% if user_signed_in? %>
+							 	<%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: @sake_post } %>
+							 <% end %>
 						</div>
 					</div>
 					<div class="col-lg-2">
