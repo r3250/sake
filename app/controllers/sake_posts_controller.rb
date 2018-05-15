@@ -1,7 +1,10 @@
 class SakePostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_sake_post, only:[:edit, :update]
+
   def index
   	@sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
+    @sake_comment = SakeComment.new
   end
 
   def new
@@ -41,4 +44,13 @@ class SakePostsController < ApplicationController
    def sake_post_params
    	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id)
    end
+
+   def correct_sake_post
+    user = User.find(params[:id])
+    if current_user != user
+       redirect_to root_path
+    end
+   end
+
 end
+

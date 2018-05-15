@@ -2,12 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.sake_posts {
+  background: image-url('1289519907-simply-wood-dark-iphone-wallpaper.png');
+  background-position: center center;
+  /* タイル状には並べないように指定 */
+  background-repeat: no-repeat;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するディスプレイの大きさに基づいて、背景画像を縦横比を固定しながら調整 */
+  background-size: cover;
+  /* 画像が読み込まれる前の背景色の指定 */
+  background-color: #464646;
+}
+textarea {
+	width: 300px;
+	height: 40px;
+}
+div#comments_area {
+	width: 500px;
+}
 
 .sake_post_box p,
 .sake_post_box a,
 .sake_post_box span {
 	color: white;
+}
+.sake_post_box_favorite {
+	width: 200px;
+	text-align: right;
+	margin-top: 10px;
+	padding-right: 10px;
 }
 .post_form {
 	margin-top: 40px;
@@ -18,12 +42,24 @@
 	margin-bottom: 20px;
 }
 .sake_post_favorite {
-	width: 170px;
-	text-align: right;
+	width: 300px;
 	color: white;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.sake_post_favorite_text:nth-child(1) {
+	margin-right: 50px;
 }
 .sake_post_text {
 	margin-top: 40px;
+}
+.sake_post_text form {
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.sake_post_text_comment {
+	text-align: right;
+	padding-right: 50px;
 }
 .sake_post_text p:nth-child(2) {
 	margin: 20px 0;
@@ -87,6 +123,17 @@
 	text-align: right;
 	margin-bottom: 30px;
 	margin-right: 50px;
+}
+.form_btn {
+	width: 300px;
+	text-align: right;
+	padding-top: 10px;
+	height: 60px;
+}
+.form_btn .btn {
+	width:100px;
+	color: black;
+	background-color: white;
 }
 .paginate {
 	text-align: center;

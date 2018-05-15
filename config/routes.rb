@@ -13,10 +13,9 @@ Rails.application.routes.draw do
   resources :retires, only:[:new, :create]
   resources :sake_posts, only:[:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :sake_comments, only:[:create, :destroy]
-    resources :favorites, only:[:create, :destroy]
+    resource :favorites, only:[:create, :destroy]
     resource :tags, only:[:create, :destroy]
   end
-
 
   namespace :admins do
     resources :users, only:[:index, :edit, :update]
