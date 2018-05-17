@@ -46,10 +46,12 @@
 						 	　　　<%= link_to "コメント表示", sake_post_path(sake_post) %>
 						     </div>
 					     <% end %>
+					     <div class="tag_box">
 					        <p>Tags</p>
 							<% sake_post.tag_list.each do |tag| %>
 							<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
 							<% end %>
+						</div>
 					</div>
 	   			</div>
 		<% end %>
