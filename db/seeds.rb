@@ -20,3 +20,4 @@ SakeComment.create(:user_id =>1, :sake_post_id =>3, :comment => "うまくない
 SakeComment.create(:user_id =>1, :sake_post_id =>2, :comment => "うまくないお酒")
 SakeComment.create(:user_id =>8, :sake_post_id =>2, :comment => "うまくないお酒")
 SakeComment.create(:user_id =>8, :sake_post_id =>3, :comment => "美味しいお酒")
+

@@ -4,7 +4,7 @@
  	<div class="col-lg-2">
     </div>
     <div class="col-lg-10">
-	   <% @sake_posts.each do |sake_post| %>
+	   <% @search_sake_posts.each do |sake_post| %>
 	   			<div class="row">
 	   			 <div class="col-lg-1">
 	   			 </div>
@@ -26,7 +26,7 @@
 						 <% end %>
 						<% else %>
 						 <%= link_to new_user_registration_path do %>
-						   <%= sake_post.favorites.count %> いいね
+						   <i class="glyphicon glyphicon-glass" aria-hidden="true"><%= sake_post.favorites.count %></i>
 						 <% end %>
 					   <% end %>
 					</div>
@@ -46,12 +46,23 @@
 					 	　　　<%= link_to "コメント表示", sake_post_path(sake_post) %>
 					     </div>
 					         <% end %>
+					         <div class='field'>
+								<%= form_for(sake_post) do |f| %>
+								    <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
+								    <%= f.text_field :tag_list %>
+								    <%= f.submit "登録" %>
+								<% end %>
+							 </div>
+
+							<span class="label label-danger"><% sake_post.tag_list.split(",").to_a.each do |tag| %></span>
+							<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
+							<% end %>
 					</div>
 	   			</div>
 		<% end %>
     </div>
     <div class="paginate">
-    <%= paginate @sake_posts %>
+    <%= paginate @search_sake_posts %>
     </div>
   </div>
  </div>

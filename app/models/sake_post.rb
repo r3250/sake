@@ -1,5 +1,5 @@
 class SakePost < ApplicationRecord
-	has_many :sake_tags
+	acts_as_taggable_on :tag_lists
 	has_many :favorites, dependent: :destroy
 	has_many :sake_comments, dependent: :destroy
 	belongs_to :user

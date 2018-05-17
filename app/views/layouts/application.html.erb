@@ -12,15 +12,27 @@
   	<header class="header_<%= "#{controller.controller_name}" %>">
   	  <div class="container">
   		<nav>
-  			<ul class="nav_list">
          <div class="row">
-          <% if user_signed_in? %>
-              <li class="nav_list_item"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
-              <li class="nav_list_item"><%= link_to "menu", "" %></li>
+    			<ul class="ddmenu">
+           <% if user_signed_in? %>
+              <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+              <li class="ddmenu_text"><%= link_to "menu" %>
+                <ul>
+                   <li><%= link_to "Top", top_path %></li>
+                   <li><%= link_to "sake一覧", sake_posts_path %></li>
+                   <li><%= link_to "My Page", user_path(current_user) %></li>
+                   <li><%= link_to "退会", "" %></li>
+                </ul>
+              </li>
               <% else %>
-      				<li class="nav_list_item"><%= link_to "新規登録",new_user_registration_path %></li>
-      				<li class="nav_list_item"><%= link_to "ログイン",new_user_session_path %></li>
-      				<li class="nav_list_item"><%= link_to "menu", "" %></li>
+      				<li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
+      				<li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
+      				<li class="ddmenu_text"><%= link_to "menu" %>
+               <ul>
+                   <li><%= link_to "Top", top_path %></li>
+                   <li><%= link_to "sake一覧", sake_posts_path %></li>
+                </ul>
+              </li>
           <% end %>
   			</ul>
   		</nav>

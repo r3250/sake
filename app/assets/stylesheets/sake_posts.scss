@@ -23,7 +23,6 @@ div#comments_area {
 }
 
 .sake_post_box p,
-.sake_post_box a,
 .sake_post_box span {
 	color: white;
 }
@@ -135,6 +134,7 @@ div#comments_area {
 	color: black;
 	background-color: white;
 }
-.paginate {
+.paginate nav {
 	text-align: center;
+	margin-top: 30px;
 }

@@ -15,6 +15,7 @@
  */
  @import"bootstrap-sprockets";
  @import"bootstrap";
+
  *{
 	margin:  0;
 	padding: 0;
@@ -23,6 +24,19 @@
 body {
 	background-color: black;
 }
+a {
+	color: white;
+}
+a:hover {
+	color: #dd0000;
+	text-decoration: none;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .sessions {
 	background-color: white;
 }
@@ -49,14 +63,6 @@ body {
 	      color:black;
 	    }
 }
-.clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-a:hover {
-	color: white;
-}
 header {
 	width: 100%;
 	height: 80px;
@@ -82,6 +88,65 @@ header {
 nav {
 	width: 1120px;
 	height: 80px;
+	text-align: right;
+}
+.ddmenu_text {
+	height: 80px;
+	padding-top: 40px;
+}
+.ddmenu_text:nth-child(2) {
+	padding-right: 60px;
+}
+ul.ddmenu {
+   margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+   padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
+}
+ul.ddmenu li {
+   width: 125px;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
+}
+ul.ddmenu a {
+   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
+   color: white;              /* メニュー項目の文字色(白色) */
+   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   font-weight: normal;         /* 太字にする */
+   display: block;            /* ★項目内全域をリンク可能にする */
+}
+ul.ddmenu a:hover {
+   /*background-color: #ffdddd;*/ /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+   color: #dd0000;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+}
+ul.ddmenu ul {
+   margin: 0px;        /* ★サブメニュー外側の余白(ゼロ) */
+   padding: 0px;       /* ★サブメニュー内側の余白(ゼロ) */
+   display: none;      /* ★標準では非表示にする */
+   position: absolute; /* ★絶対配置にする */
+}
+.header_registrations ul.ddmenu ul li {
+   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+   border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+.header_sessions ul.ddmenu ul li {
+   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+   border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li {
+   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+   border-bottom: 1px solid white; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li a {
+   line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+   text-align: left;    /* 文字列の配置(左寄せ) */
+   padding-left: 5px;   /* 文字列前方の余白(5px) */
+   font-weight: normal; /* 太字にはしない */
+}
+ul.ddmenu ul li a:hover {
+   /*background-color: black;*/ /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+   color: #dd0000;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
 }
 footer {
 	height: 50px;
@@ -92,7 +157,7 @@ footer {
     background-color: white;
 	height: 1.2px;
 	width: 90%;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 .under_border_sessions {
 	display: none;
@@ -105,19 +170,6 @@ footer {
 }
 .footer_registrations {
 	color: black;
-}
-.nav_list {
-	height: 70px;
-	float: right;
-}
-.nav_list_item {
-	display: inline-block;
-	height: 80px;
-	line-height: 115px;
-	padding: 0 10px;
-}
-.nav_list_item:nth-child(5) {
-	margin-left: 80px;
 }
 .signup_box {
 	width: 90%;

@@ -3,8 +3,13 @@ class SakePostsController < ApplicationController
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
-  	@sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
-    @sake_comment = SakeComment.new
+    if params[:tag].present?
+    @search_sake_posts = SakePost.tagged_with(params[:tag])
+    else
+     @search_sake_posts = SakePost.all
+   end
+     @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
+     @sake_comment = SakeComment.new
   end
 
   def new
@@ -19,6 +24,11 @@ class SakePostsController < ApplicationController
   end
 
   def show
+    if params[:tag]
+    @sake_posts = SakePost.tagged_with(params[:tag])
+    else
+     @sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
+   end
   	@sake_post = SakePost.find(params[:id])
     @sake_comment = SakeComment.new
     @sake_comments = @sake_post.sake_comments
@@ -42,13 +52,16 @@ class SakePostsController < ApplicationController
    private
 
    def sake_post_params
-   	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id)
+   	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id, :name, :tag_list)
    end
 
    def correct_sake_post
-    user = User.find(params[:id])
-    if current_user != user
+    sake_post = SakePost.find(params[:id])
+    if current_user.id != sake_post.user_id
        redirect_to root_path
+     else
+      @sake_post = sake_post
+      render :edit
     end
    end
 
