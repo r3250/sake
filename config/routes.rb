@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: 'tops#top', as: "top"
-
+  get "/users/:id/user_posts" => "users#user_post", as:"user_post"
   resources :users, only:[:index, :show, :edit, :update]
   resources :retires, only:[:new, :create]
   resources :sake_posts, only:[:index, :new, :create, :show, :edit, :update, :destroy] do

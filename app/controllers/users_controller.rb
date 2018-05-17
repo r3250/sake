@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
     before_action :correct_user, only:[:edit, :update]
-  def index
-    @users = current_user.sake_posts
+  def user_post
+    @user = User.find(params[:id])
+    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(1)
   end
 
   def show

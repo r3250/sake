@@ -8,7 +8,7 @@ class SakePostsController < ApplicationController
     else
      @search_sake_posts = SakePost.all
    end
-     @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
+     @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc).per(10)
      @sake_comment = SakeComment.new
   end
 

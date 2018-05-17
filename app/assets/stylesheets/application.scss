@@ -125,6 +125,7 @@ ul.ddmenu ul {
    padding: 0px;       /* ★サブメニュー内側の余白(ゼロ) */
    display: none;      /* ★標準では非表示にする */
    position: absolute; /* ★絶対配置にする */
+   z-index: 1;
 }
 .header_registrations ul.ddmenu ul li {
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
