@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :sake_comments, only:[:create, :destroy]
     resource :favorites, only:[:create, :destroy]
   end
-  get 'tags/:tag', to: 'sake_posts#index', as: :tag
+  get 'tags/:tag_list', to: 'sake_posts#index', as: :tag
   root to: 'sake_posts#index'
   namespace :admins do
     resources :users, only:[:index, :edit, :update]

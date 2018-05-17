@@ -24,14 +24,8 @@
 						<p><%= "ユーザー名" %><span class="sake_post_nickname">: <%= @sake_post.user.nickname %></span></p>
 						<% end %>
 						<p><%= "sake名" %><span class="sake_post_sake">: <%= @sake_post.sake_name %></span></p>
-								<%= form_for(@sake_post) do |f| %>
-								    <p><%= f.label :tag_list, 'タグ' %></p>
-								    <%= f.text_field :tag_list %>
-								    <%= f.submit "登録" %>
-								<% end %>
-								<br>
-									<span class="label label-danger"><% @sake_post.tag_list.split(",").to_a.each do |tag| %></span>
-							<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
+						    <span class="label label-danger"><% @sake_post.tag_list.each do |tag| %></span>
+							       <span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
 							<% end %>
 							    <br>
 							<p><%= "店名" %><span class="sake_post_shop">: <%= @sake_post.shop_name %></span></p>

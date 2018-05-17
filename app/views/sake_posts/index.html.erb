@@ -41,20 +41,13 @@
 						     <p><%= "sake名" %><span class="sake_post_sake"> ：<%= sake_post.sake_name %></span></p>
 						     <p><%= "店名" %><span class="sake_post_shop"> ：<%= sake_post.shop_name %></span></p>
 							 <% if user_signed_in? %>
-						 	  <%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: sake_post } %>
-					     <div class="sake_post_text_comment">
-					 	　　　<%= link_to "コメント表示", sake_post_path(sake_post) %>
-					     </div>
-					         <% end %>
-					         <div class='field'>
-								<%= form_for(sake_post) do |f| %>
-								    <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
-								    <%= f.text_field :tag_list %>
-								    <%= f.submit "登録" %>
-								<% end %>
-							 </div>
-
-							<span class="label label-danger"><% sake_post.tag_list.split(",").to_a.each do |tag| %></span>
+						 <%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: sake_post } %>
+						     <div class="sake_post_text_comment">
+						 	　　　<%= link_to "コメント表示", sake_post_path(sake_post) %>
+						     </div>
+					     <% end %>
+					        <p>Tags</p>
+							<% sake_post.tag_list.each do |tag| %>
 							<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
 							<% end %>
 					</div>

@@ -3,13 +3,12 @@ class SakePostsController < ApplicationController
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
-    if params[:tag].present?
-    @search_sake_posts = SakePost.tagged_with(params[:tag])
+    if params[:tag_list].present?
+      @search_sake_posts = SakePost.tagged_with(params[:tag_list]).page(params[:page]).order(created_at: :desc).per(5)
     else
-     @search_sake_posts = SakePost.all
+      @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc).per(5)
    end
-     @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc).per(10)
-     @sake_comment = SakeComment.new
+      @sake_comment = SakeComment.new
   end
 
   def new
@@ -19,26 +18,29 @@ class SakePostsController < ApplicationController
   def create
     sake_post = SakePost.new(sake_post_params)
     sake_post.user_id = current_user.id
+    sake_post.tag_list.clear # 送られてきたTagを消してきれいにする
+    ary = params[:sake_post][:tag_list].split(",").to_a # 送信されたパラメータを分解して配列にする
+    sake_post.tag_list.add(ary) # 配列にしたものをtagに追加する
   	sake_post.save
   	redirect_to sake_posts_path
   end
 
   def show
-    if params[:tag]
-    @sake_posts = SakePost.tagged_with(params[:tag])
-    else
-     @sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
-   end
   	@sake_post = SakePost.find(params[:id])
     @sake_comment = SakeComment.new
     @sake_comments = @sake_post.sake_comments
   end
 
   def edit
-  	@sake_post = SakePost.find(params[:id])
+      @sake_post = SakePost.find(params[:id])
+      @tag_list = @sake_post.tag_list.to_s
   end
+
   def update
   	sake_post = SakePost.find(params[:id])
+    sake_post.tag_list.clear
+    ary = params[:sake_post][:tag_list].split(",").to_a
+    sake_post.tag_list.add(ary)
   	sake_post.update(sake_post_params)
   	redirect_to sake_post_path(sake_post)
   end
@@ -59,9 +61,6 @@ class SakePostsController < ApplicationController
     sake_post = SakePost.find(params[:id])
     if current_user.id != sake_post.user_id
        redirect_to root_path
-     else
-      @sake_post = sake_post
-      render :edit
     end
    end
 

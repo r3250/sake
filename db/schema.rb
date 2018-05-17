@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516071126) do
+ActiveRecord::Schema.define(version: 20180515165464) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 20180516071126) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "tag_list"
     t.index ["user_id"], name: "index_sake_posts_on_user_id"
   end
 
