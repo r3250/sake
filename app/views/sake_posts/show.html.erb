@@ -24,7 +24,10 @@
 						<p><%= "ユーザー名" %><span class="sake_post_nickname">: <%= @sake_post.user.nickname %></span></p>
 						<% end %>
 						<p><%= "sake名" %><span class="sake_post_sake">: <%= @sake_post.sake_name %></span></p>
-						<p><%= "タグ" %>
+						    <span class="label label-danger"><% @sake_post.tag_list.each do |tag| %></span>
+							       <span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
+							<% end %>
+							    <br>
 							<p><%= "店名" %><span class="sake_post_shop">: <%= @sake_post.shop_name %></span></p>
 							<p><%= "場所" %><span class="sake_post_address">: <%= @sake_post.address %></span></p>
 							<p><%= "SAKE紹介" %><span class="sake_post_caption">: <%= @sake_post.caption %></span></p><br>

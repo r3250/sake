@@ -5,6 +5,7 @@ SakePost.seed do |s|
   s.caption = 'いいちこはどこでも買えます'
   s.address = '東京都渋谷区松濤1-1-1'
   s.image = Rails.root.join("db/fixtures/images/karira.jpg").open
+  s.tag_list = "いいい,ううう,おおお"
   s.user_id = 1
 end
 
@@ -15,6 +16,7 @@ SakePost.seed do |s|
   s.caption = 'いいちこはどこでも買えます'
   s.address = '東京都渋谷区松濤1-1-1'
   s.image = Rails.root.join("db/fixtures/images/karira.jpg").open
+  s.tag_list = "いいい,ううう,おおお"
   s.user_id = 2
 end
 
@@ -25,6 +27,7 @@ SakePost.seed do |s|
   s.caption = 'いいちこはどこでも買えます'
   s.address = '東京都渋谷区松濤1-1-1'
   s.image = Rails.root.join("db/fixtures/images/karira.jpg").open
+  s.tag_list = "いいい,ううう,おおお"
   s.user_id = 3
 end
 
@@ -35,6 +38,7 @@ SakePost.seed do |s|
   s.caption = 'いいちこはどこでも買えます'
   s.address = '東京都渋谷区松濤1-1-1'
   s.image = Rails.root.join("db/fixtures/images/karira.jpg").open
+  s.tag_list = "いいい,ううう,おおお"
   s.user_id = 4
 end
 
@@ -45,6 +49,7 @@ SakePost.seed do |s|
   s.caption = 'いいちこはどこでも買えます'
   s.address = '東京都渋谷区松濤1-1-1'
   s.image = Rails.root.join("db/fixtures/images/karira.jpg").open
+  s.tag_list = "いいい,ううう,おおお"
   s.user_id = 5
 end
 
@@ -55,5 +60,6 @@ SakePost.seed do |s|
   s.caption = 'いいちこはどこでも買えます'
   s.address = '東京都渋谷区松濤1-1-1'
   s.image = Rails.root.join("db/fixtures/images/karira.jpg").open
+  s.tag_list = "いいい,ううう,おおお"
   s.user_id = 6
 end

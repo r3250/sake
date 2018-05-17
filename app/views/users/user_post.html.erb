@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-2">
+  	</div>
+  	<div class="col-lg-10">
+  	<% @user_posts.each do |user_post| %>
+  	 <%= link_to sake_post_path(user_post) do %>
+  	  <%= attachment_image_tag user_post, :image, :fill, 200, 300, format: 'jpg' %>
+  	  <% end %>
+  	<% end %>
+  	</div>
+  </div>
+    <div class="user_post_btn">
+        <%= link_to "戻る", user_path(@user.id) %>
+    </div>
+    <div class="paginate">
+    <%= paginate @user_posts %>
+    </div>
+</div>

@@ -3,8 +3,12 @@ class SakePostsController < ApplicationController
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
-  	@sake_posts = SakePost.page(params[:page]).order(created_at: :desc)
-    @sake_comment = SakeComment.new
+    if params[:tag_list].present?
+      @search_sake_posts = SakePost.tagged_with(params[:tag_list]).page(params[:page]).order(created_at: :desc).per(5)
+    else
+      @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc).per(5)
+   end
+      @sake_comment = SakeComment.new
   end
 
   def new
@@ -14,6 +18,9 @@ class SakePostsController < ApplicationController
   def create
     sake_post = SakePost.new(sake_post_params)
     sake_post.user_id = current_user.id
+    sake_post.tag_list.clear # 送られてきたTagを消してきれいにする
+    ary = params[:sake_post][:tag_list].split(",").to_a # 送信されたパラメータを分解して配列にする
+    sake_post.tag_list.add(ary) # 配列にしたものをtagに追加する
   	sake_post.save
   	redirect_to sake_posts_path
   end
@@ -25,10 +32,15 @@ class SakePostsController < ApplicationController
   end
 
   def edit
-  	@sake_post = SakePost.find(params[:id])
+      @sake_post = SakePost.find(params[:id])
+      @tag_list = @sake_post.tag_list.to_s
   end
+
   def update
   	sake_post = SakePost.find(params[:id])
+    sake_post.tag_list.clear
+    ary = params[:sake_post][:tag_list].split(",").to_a
+    sake_post.tag_list.add(ary)
   	sake_post.update(sake_post_params)
   	redirect_to sake_post_path(sake_post)
   end
@@ -42,12 +54,12 @@ class SakePostsController < ApplicationController
    private
 
    def sake_post_params
-   	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id)
+   	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id, :name, :tag_list)
    end
 
    def correct_sake_post
-    user = User.find(params[:id])
-    if current_user != user
+    sake_post = SakePost.find(params[:id])
+    if current_user.id != sake_post.user_id
        redirect_to root_path
     end
    end

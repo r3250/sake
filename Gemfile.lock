@@ -7,6 +7,14 @@ GIT
       rest-client (~> 2)
       sinatra (~> 2.0.0.beta2)
 
+GIT
+  remote: https://github.com/mbleigh/acts-as-taggable-on.git
+  revision: 38fefffc8f104455f87fdccd77841a2f550b16c6
+  branch: master
+  specs:
+    acts-as-taggable-on (5.0.0)
+      activerecord (>= 4.2.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -264,6 +272,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on!
   bootstrap-sass
   byebug
   capybara (~> 2.13)
