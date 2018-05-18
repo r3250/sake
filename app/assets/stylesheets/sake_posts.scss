@@ -21,7 +21,9 @@ textarea {
 div#comments_area {
 	width: 500px;
 }
-
+.color {
+	color: red;
+}
 .sake_post_box p,
 .sake_post_box span {
 	color: white;
@@ -85,7 +87,7 @@ div#comments_area {
 	margin-left: 108px;
 }
 .sake_post_caption {
-	margin-left: 72px;
+	margin-top: 10px;
 }
 .sake_post_back {
 	text-align: right;

@@ -1,19 +1,50 @@
 <div class="container">
-  <div class="row">
-  	<div class="col-lg-2">
-  	</div>
-  	<div class="col-lg-10">
-  	<% @user_posts.each do |user_post| %>
-  	 <%= link_to sake_post_path(user_post) do %>
-  	  <%= attachment_image_tag user_post, :image, :fill, 200, 300, format: 'jpg' %>
-  	  <% end %>
-  	<% end %>
-  	</div>
+  <div class ="user_box">
+    <div class="user_post_box">
+            <div class="row">
+              <div class="col-lg-1">
+              </div>
+                <div class="col-lg-11">
+                    <div class="row">
+                        <div class="col-lg-3">
+                           <%= attachment_image_tag @user, :image, :fill, 150, 200, format: 'jpg' %>
+                       </div>
+                       <div class="col-lg-4">
+                            <p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
+                            <p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
+                            <p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
+                            <p><%= "お気に入り場所" %> <span class="user_favolite_address">: <%= @user.favorite_shop %></span></p>
+                            <p><%= "自己紹介" %></p>
+                            <p><span class="user_introduction"><%= @user.introduction %></span></p>
+                       </div>
+                       <div class="col-lg-5">
+                       </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+            <div class="row">
+                	<div class="col-lg-2">
+                	</div>
+                	<div class="col-lg-10">
+                    	<% @user_posts.each do |user_post| %>
+                    	 <%= link_to sake_post_path(user_post) do %>
+                    	  <%= attachment_image_tag user_post, :image, :fill, 200, 300, format: 'jpg' %>
+                    	  <% end %>
+                    	<% end %>
+                	</div>
+           </div>
+           <% if current_user.id != @user.id %>
+                <div class="user_post_btn">
+                  <%= link_to "戻る", sake_posts_path %>
+                </div>
+           <% else %>
+                <div class="user_post_btn">
+                  <%= link_to "戻る", user_path(current_user.id) %>
+                </div>
+           <% end %>
+            <div class="paginate">
+            <%= paginate @user_posts %>
+            </div>
   </div>
-    <div class="user_post_btn">
-        <%= link_to "戻る", user_path(@user.id) %>
-    </div>
-    <div class="paginate">
-    <%= paginate @user_posts %>
-    </div>
 </div>

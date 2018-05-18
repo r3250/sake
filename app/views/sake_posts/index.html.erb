@@ -21,13 +21,19 @@
 				  <div class="col-lg-1">
 				  </div>
 					<div class="col-lg-7 sake_post_text">
-	    				 	<%= link_to user_path(sake_post.user_id) do %>
-						     <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
+						 <% if current_user.id != sake_post.user_id %>
+	    				 	<%= link_to user_post_path(sake_post.user_id) do %>
+						      <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
+	    				 	<% end %>
+	    				 <% else %>
+	    				 	<%= link_to user_path(current_user.id) do %>
+						      <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
 						    <% end %>
+	    				 <% end %>
 						     <p><%= "sake名" %><span class="sake_post_sake"> ：<%= sake_post.sake_name %></span></p>
 						     <p><%= "店名" %><span class="sake_post_shop"> ：<%= sake_post.shop_name %></span></p>
 							 <% if user_signed_in? %>
-						 <%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: sake_post } %>
+						      <%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: sake_post } %>
 						     <div class="sake_post_text_comment">
 						 	　　　<%= link_to "コメント表示", sake_post_path(sake_post) %>
 						     </div>

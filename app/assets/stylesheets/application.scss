@@ -16,6 +16,8 @@
  @import"bootstrap-sprockets";
  @import"bootstrap";
 
+
+
  *{
 	margin:  0;
 	padding: 0;
@@ -36,7 +38,9 @@ a:hover {
 	display: block;
 	clear: both;
 }
-
+.iine {
+ color: #ff0000;
+ }
 .sessions {
 	background-color: white;
 }
