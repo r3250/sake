@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!, except: [:user_post, :show]
-    before_action :correct_user, only:[:edit, :update]
+    before_action :correct_user, only:[:show, :edit, :update]
   def user_post
     @user = User.find(params[:id])
     @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(5)

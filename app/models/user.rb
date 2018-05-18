@@ -18,4 +18,5 @@ class User < ApplicationRecord
   has_many :sake_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
   attachment :image
+  acts_as_paranoid
 end

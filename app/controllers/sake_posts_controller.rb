@@ -3,12 +3,25 @@ class SakePostsController < ApplicationController
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
+       search_sake_posts = []
+       SakePost.all.order(created_at: :desc).each do |sake|
+        if sake.user.deleted_at.blank?
+          search_sake_posts << sake
+        end
+      end
     if params[:tag_list].present?
       @search_sake_posts = SakePost.tagged_with(params[:tag_list]).page(params[:page]).order(created_at: :desc).per(5)
     else
-      @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc).per(5)
-   end
+      @search_sake_posts = []
+
+      SakePost.all.order(created_at: :desc).each do |sake|
+        if sake.user.deleted_at.blank?
+          @search_sake_posts << sake
+        end
+      end
+      @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
       @sake_comment = SakeComment.new
+   end
   end
 
   def new

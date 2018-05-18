@@ -3,8 +3,9 @@ class SakePost < ApplicationRecord
 	acts_as_taggable
 	has_many :favorites, dependent: :destroy
 	has_many :sake_comments, dependent: :destroy
-	belongs_to :user
+	belongs_to :user, -> { with_deleted }
 	attachment :image
+	
 
    validates :tag_list, presence: true
 
