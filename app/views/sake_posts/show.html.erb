@@ -10,11 +10,7 @@
 							  <%= attachment_image_tag @sake_post, :image, :fill, 200, 300, format: 'jpg' %>
 						   <div id="favorite-botton-<%= @sake_post.id %>">
 							      <%= render partial: "favorites/favorite", locals: { sake_post: @sake_post } %>
-							  <span class="sake_post_favorite_text"> コメント<%= @sake_post.sake_comments.count%> 件 表示</span>
-							 <div id="comments_area">
-							 	<%= render partial: 'sake_comments/index', locals: { sake_comments: @sake_comments } %>
-							 </div>
-						  </div>
+                           </div>
 					    </div>
 					</div>
 					<div class="col-lg-1">
@@ -47,6 +43,13 @@
 							  </div>
 						</div>
 				</div>
+							 <% if user_signed_in? %>
+				               <%= render partial: 'sake_comments/form', locals: { sake_comment: @sake_comment, sake_post: @sake_post } %>
+				             <% end %>
+
+							 <div id="comments_area">
+					 	       <%= render partial: 'sake_comments/index', locals: { sake_comments: @sake_comments } %>
+					         </div>
 			</div>
 		</div>
 	</div>

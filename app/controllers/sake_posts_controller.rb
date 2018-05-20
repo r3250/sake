@@ -3,25 +3,19 @@ class SakePostsController < ApplicationController
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
-       search_sake_posts = []
-       SakePost.all.order(created_at: :desc).each do |sake|
-        if sake.user.deleted_at.blank?
-          search_sake_posts << sake
-        end
+    search_sake_posts = [] # 分岐文sakeを代入
+    SakePost.all.order(created_at: :desc).each do |sake|
+      if sake.user.deleted_at.blank? # created_atが空の場合
+        search_sake_posts << sake 
       end
+    end
     if params[:tag_list].present?
-      @search_sake_posts = SakePost.tagged_with(params[:tag_list]).page(params[:page]).order(created_at: :desc).per(5)
+          @search_sake_posts = SakePost.tagged_with(params[:tag_list]).order(created_at: :desc).sake # sake_post.rbにてsakeを定義
+          @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
     else
-      @search_sake_posts = []
-
-      SakePost.all.order(created_at: :desc).each do |sake|
-        if sake.user.deleted_at.blank?
-          @search_sake_posts << sake
-        end
-      end
+      @search_sake_posts = search_sake_posts
       @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
-      @sake_comment = SakeComment.new
-   end
+    end
   end
 
   def new

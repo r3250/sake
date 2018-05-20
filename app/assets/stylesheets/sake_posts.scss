@@ -24,6 +24,10 @@ div#comments_area {
 .color {
 	color: red;
 }
+.sake_post_box {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
 .sake_post_box p,
 .sake_post_box span {
 	color: white;
@@ -59,10 +63,6 @@ div#comments_area {
 }
 .sake_post_text form {
 	margin-top: 40px;
-}
-.sake_post_text_comment {
-	text-align: right;
-	padding-right: 150px;
 }
 .sake_post_text p:nth-child(2) {
 	margin: 20px 0;
@@ -143,7 +143,7 @@ div#comments_area {
 	margin-top: 30px;
 }
 .tag_box {
-	line-height: 10px;
+	margin-top: 45px;
 	 a:hover {
 	 	color: white;
 	 }
@@ -154,4 +154,11 @@ div#comments_area {
 	 a:hover {
 	 	color: white;
 	 }
+}
+.comment_area {
+	width: 700px;
+}
+.comment_area a,
+.comment_area p {
+	color: black;
 }

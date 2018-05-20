@@ -22,6 +22,6 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :users, only:[:index, :edit, :update]
   end
-  get '/admins_top' => 'admins#index', as:'admins'
+  get '/admins/top' => 'admins#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
