@@ -1,15 +1,33 @@
 // Place all the styles related to the admins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.admins {
+.admin_background {
 	background-color: white;
 }
-.header_admins .ddmenu_text {
-	a:hover {
-		color: red;
-	}
+.header_admins {
+	  a,a:visited{
+        color:black;
+	  }
+	    a:hover{
+	      color:black;
+	    }
+}
+.header_admins ul.ddmenu ul li {
+   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+   border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
 }
 .admin_hedding {
 	padding-left: 120px;
+	margin-top: 10px;
 	margin-bottom: 30px;
+}
+.admin_link_btn {
+	text-align: center;
+	margin-top: 100px;
+}
+.admin_link_btn a {
+	width: 500px;
+}
+.footer_admins {
+	color: black;
 }

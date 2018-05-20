@@ -7,8 +7,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<% if request.path.include?('admin') %>
+  <body class="admin_background">
+    <% else %>
   <body class="<%= "#{controller.controller_name}" %> ">
+<% end %>
   	<header class="header_<%= "#{controller.controller_name}" %>">
   	  <div class="container">
   		<nav>

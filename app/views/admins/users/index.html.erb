@@ -1,28 +1,43 @@
 <div class="container">
+	<div class="row">
+		<div class="col-lg-5">
+		</div>
+	  <div class="col-lg-5 search_box">
+  		<p>ユーザー検索</p>
+  		  <%= search_form_for(@q, url:admins_users_path) do |f| %>
+          <%= f.search_field :nickname_cont, :placeholder => "ユーザーネーム" %>
+          <%= f.submit "検索", class: "black-btn btn-xs" %>
+        <% end %>
+      </div>
+    </div>
   <div class="row">
   	<div class="col-lg-2">
   	</div>
-  	 <div class="col-lg-10">
-		  <% @users.each do |user| %>
-		  	  <div class="row">
-		  	  	  <div class="col-lg-1">
-		  	  	  </div>
-		  	  	     <div class="col-lg-3">
-						       <%= attachment_image_tag user, :image, :fill, 200, 300, format: 'jpg' %>
-				     </div>
-				     <div class="col-lg-1">
-				     </div>
-				        <div class="col-lg-8">
-						      <p><%= "ユーザー名" %> : <%= user.nickname %></p>
-							  <p><%= "好きな酒" %>: <%= user.favorite_sake %></p>
-							  <p><%= "好きな飲み方" %> : <%= user.favorite_drink %></p>
-							  <p><%= "お気に入り場所" %> : <%= user.favorite_shop %></p>
-							  <p><%= "自己紹介" %></p>
-							  <p><%= user.introduction %></p>
-							  <%=link_to "編集", edit_admins_user_path(user.id), class: "btn" %>
-					   </div>
-			 </div>
-		  <% end %>
-    </div>
+	  	 <div class="col-lg-10">
+			  <% @users.each do |user| %>
+			  	  <div class="row admin_users">
+			  	  	  <div class="col-lg-1">
+			  	  	  </div>
+			  	  	     <div class="col-lg-3">
+							       <%= attachment_image_tag user, :image, :fill, 200, 300, format: 'jpg' %>
+					     </div>
+					     <div class="col-lg-1">
+					     </div>
+					        <div class="col-lg-8">
+							      <p><%= "ユーザー名" %> : <%= user.nickname %></p>
+								  <p><%= "好きな酒" %>: <%= user.favorite_sake %></p>
+								  <p><%= "好きな飲み方" %> : <%= user.favorite_drink %></p>
+								  <p><%= "お気に入り場所" %> : <%= user.favorite_shop %></p>
+								  <p><%= "自己紹介" %></p>
+								  <p><%= user.introduction %></p>
+								  <%=link_to "詳細", admins_user_path(user.id), class: "black-btn btn-sm" %>
+								  <%=link_to "編集", edit_admins_user_path(user.id), class: "black-btn btn-sm" %>
+						   </div>
+				 </div>
+			  <% end %>
+	    </div>
   </div>
+        <div class="paginate">
+	      <%= paginate @users %>
+	    </div>
 </div>

@@ -1,18 +1,22 @@
 class Admins::UsersController < ApplicationController
-  before_action :authenticate_admin!
   def index
-  	@users = User.all
+  @q = User.ransack(params[:q])
+  @users = @q.result.order(created_at: :desc).page(params[:page]).per(5)
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @user_posts = @user.sake_posts
   end
 
   def edit
   	@user = User.find(params[:id])
-  	@users = @user.sake_posts
   end
 
   def update
   	user = User.find(params[:id])
   	user.update(user_params)
-  	redirect_to admins_user_path(user.id)
+  	redirect_to admins_users_path
   end
 
   private

@@ -23,20 +23,16 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body {
-	background-color: black;
-}
-a {
-	color: white;
-}
-a:hover {
-	color: #dd0000;
-	text-decoration: none;
-}
 .clearfix::after {
 	content: "";
 	display: block;
 	clear: both;
+}
+a {
+	color: white;
+}
+a,a:hover,a:visited{
+  text-decoration: none;
 }
 .iine {
  color: #ff0000;
@@ -47,12 +43,6 @@ a:hover {
 .header_sessions {
 	width: 100%;
 	height: 80px;
-	  a,a:visited{
-        color:black;
-	  }
-	    a:hover{
-	      color:black;
-	    }
 }
 .registrations {
 	background-color: white;
@@ -60,22 +50,19 @@ a:hover {
 .header_registrations {
 	width: 100%;
 	height: 80px;
-	  a,a:visited{
-        color:black;
-	  }
-	    a:hover{
-	      color:black;
-	    }
 }
 header {
 	width: 100%;
 	height: 80px;
-	  a,a:visited{
-        color:white;
-	  }
-	    a:hover{
-	      color:white;
-	    }
+}
+.header_users ul.ddmenu a {
+   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
+   color: white;              /* メニュー項目の文字色(白色) */
+   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   font-weight: normal;         /* 太字にする */
+   display: block;            /* ★項目内全域をリンク可能にする */
 }
 .header_border {
     background-color: white;
@@ -113,7 +100,7 @@ ul.ddmenu li {
 }
 ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
-   color: white;              /* メニュー項目の文字色(白色) */
+   color: black;              /* メニュー項目の文字色(白色) */
    line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
    text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
    text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
@@ -212,12 +199,6 @@ footer {
 .header_text_box {
 	text-align: center;
 	margin-top: 20px;
-}
-.btn {
-	background-color: black;
-	color: white;
-	width: 150px;
-	margin-bottom: 50px;
 }
 .button {
   display: inline-block;

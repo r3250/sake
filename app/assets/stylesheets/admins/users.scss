@@ -1,3 +1,25 @@
 // Place all the styles related to the admins/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search_box {
+	margin-bottom: 50px;
+}
+.search_box p {
+	padding-left: 50px;
+
+}
+.search_box .black-btn {
+  background-color: black;
+  color:#fff;
+  width: 50px;
+}
+.admin_users {
+	margin-bottom: 50px;
+}
+.admin_users .black-btn {
+  background-color: black;
+  color:#fff;
+  width: 100px;
+
+}
