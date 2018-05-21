@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.tag_btn .btn{
-	width: 100px;
+.admin_sake_post_box {
+	margin-top: 30px;
+	margin-bottom: 50px;
 }
-.tag_tr th:nth-child(1) {
-
+.admin_post_form p {
+	color: black;
+}
+.admin_btn_back {
+	text-align: right;
+	margin-bottom: 30px;
+	margin-right: 50px;
 }

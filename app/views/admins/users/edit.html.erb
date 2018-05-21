@@ -13,30 +13,30 @@
 					</div>
 				  <div class="col-lg-5">
 						<%= f.text_field :last_name, :size => "30", :placeholder => "姓" %><br>
-					 <div class="field_form">
+					 <div class="admin_field_form">
 						<%= f.text_field :first_name, :size => "30",  :placeholder => "名" %><br>
 					 </div>
 						<%= f.text_field :last_kana, :size => "30",  :placeholder => "カナ" %><br>
-					 <div class="field_form">
+					 <div class="admin_field_form">
 						<%= f.text_field :first_kana, :size => "30",  :placeholder => "メイ" %><br>
 					 </div>
-					 <div class="field_form">
+					 <div class="admin_field_form">
 						<%= f.email_field :email, :size => "30",  :placeholder => "email" %><br>
 					</div>
-				    <div class="tag_field">
+				    <div class="admin_field_form">
 						<%= f.text_field :favorite_sake, :size => "30",  :placeholder => "好きな酒" %><br>
 					</div>
-				    <div class="field_form">
+				    <div class="admin_field_form">
 						<%= f.text_field :favorite_shop, :size => "30",  :placeholder => "お気に入りお店" %><br>
 				    </div>
-				    <div class="tag_field">
+				    <div class="admin_field_form">
 						<%= f.text_field :favorite_drink, :size => "30",  :placeholder => "好きな飲み方" %><br>
 				    </div>
-				    <div class="field_form">
+				    <div class="admin_field_form">
 						<%= f.text_area :introduction, :size => "30",  :placeholder => "自己紹介" %><br>
 					</div>
 					  <div class="user_editbtn">
-						<%= f.submit "登録", class: "btn" %>
+						<%= f.submit "登録", class: "btn btn-default btn-xs" %>
 				      </div>
 				  </div>
 		    </div>
@@ -45,8 +45,8 @@
       <div class="col-lg-3">
       </div>
   </div>
-		  <div class="btn_back">
-			<%#= link_to "戻る", user_path(current_admin.id) %>
+		  <div class="admin_btn_back">
+			<%= link_to "戻る", admins_users_path %>
 		  </div>
  </div>
 </div>

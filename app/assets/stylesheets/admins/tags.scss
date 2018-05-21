@@ -1,3 +1,20 @@
 // Place all the styles related to the admins/tags controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tag_btn .btn{
+	width: 100px;
+}
+.th_tag {
+	width: 230px;
+	padding-left: 30px;
+}
+.tag_edit_form {
+	margin-top: 40px;
+}
+.tag_edit_form .btn {
+	width: 100px;
+}
+.tag_edit_btn {
+	width: 90%;
+	text-align: right;
+}
