@@ -14,6 +14,15 @@
   /* 画像が読み込まれる前の背景色の指定 */
   background-color: #464646;
 }
+.header_tops ul.ddmenu a {
+   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
+   color: white;              /* メニュー項目の文字色(白色) */
+   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   font-weight: normal;         /* 太字にする */
+   display: block;            /* ★項目内全域をリンク可能にする */
+}
 
 .top_image_text {
 	position: relative;

@@ -4,8 +4,8 @@
     </div>
     <div class="col-lg-10">
 	   <% @search_sake_posts.each do |sake_post| %>
- <div class="sake_post_box">
-	   			<div class="row">
+        <div class="sake_post_box">
+	   			<div class="row text_color">
 		   			 <div class="col-lg-1">
 		   			 </div>
 	    			  <div class="col-lg-3">
@@ -16,38 +16,37 @@
 							 <div id="favorite-botton-<%= sake_post.id %>">
 							    <%= render partial: "favorites/favorite", locals: { sake_post: sake_post } %>
 							 </div>
-						        <%= link_to "コメントをする", sake_post_path(sake_post) %>
+						        <span class="text_color_comment"><%= link_to "コメントをする", sake_post_path(sake_post) %></span>
 						  </div>
 						     <div class="sake_post_image_comment">
 						     </div>
 					  </div>
-				  <div class="col-lg-1">
-				  </div>
-					<div class="col-lg-7 sake_post_text">
-
-					 <% if user_signed_in? %>
-						 <% if current_user.id != sake_post.user_id || current_user.id == sake_post.user_id %>
-	    				 	<%= link_to user_post_path(sake_post.user_id) do %>
-						      <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
-	    				 	<% end %>
-	    				 <% end %>
-	    			 <% else %>
-			    			 <%= link_to user_post_path(sake_post.user_id) do %>
-			    			 <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
-			    			 <% end %>
-	    			 <% end %>
-						     <p><%= "sake名" %><span class="sake_post_sake"> ：<%= sake_post.sake_name %></span></p>
-						     <p><%= "店名" %><span class="sake_post_shop"> ：<%= sake_post.shop_name %></span></p>
-					     <div class="tag_box">
-					        <p>Tags</p>
-							<% sake_post.tag_list.each do |tag| %>
-							<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
-							<% end %>
-						</div>
-					</div>
-	   			</div>
+					  <div class="col-lg-1">
+					  </div>
+					  <div class="col-lg-7 sake_post_text">
+						 <% if user_signed_in? %>
+							 <% if current_user.id != sake_post.user_id || current_user.id == sake_post.user_id %>
+		    				 	<%= link_to user_post_path(sake_post.user_id) do %>
+							      <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
+		    				 	<% end %>
+		    				 <% end %>
+		    			 <% else %>
+				    			 <%= link_to user_post_path(sake_post.user_id) do %>
+				    			 <p><%= "ユーザー名" %><span class="sake_post_nickname"> ：<%= sake_post.user.nickname %></span></p>
+				    			 <% end %>
+		    			 <% end %>
+							     <p><%= "sake名" %><span class="sake_post_sake"> ：<%= sake_post.sake_name %></span></p>
+							     <p><%= "店名" %><span class="sake_post_shop"> ：<%= sake_post.shop_name %></span></p>
+						     <div class="tag_box">
+						        <p>Tags</p>
+								<% sake_post.tag_list.each do |tag| %>
+								<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
+								<% end %>
+						    </div>
+					  </div>
+	   			 </div>
 	   		</div>
-		<% end %>
+		 <% end %>
     </div>
 	    <div class="paginate">
 	      <%= paginate @search_sake_posts %>

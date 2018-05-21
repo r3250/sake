@@ -1,0 +1,19 @@
+<div class="container">
+  <nav>
+   <div class="row">
+      	<ul class="ddmenu">
+         <% if admin_signed_in? %>
+            <li class="ddmenu_text"><%= link_to "ログアウト",destroy_admin_session_path, method: :delete %></li>
+            <li class="ddmenu_text"><%= link_to "menu" %>
+              <ul>
+                 <li><%= link_to "Top", top_path %></li>
+                 <li><%= link_to "sake一覧", sake_posts_path %></li>
+                 <li><%= link_to "ユーザー一覧", user_path(current_admin) %></li>
+                 <li><%= link_to "Tag一覧", new_retire_path %></li>
+              </ul>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>

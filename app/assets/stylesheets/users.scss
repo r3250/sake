@@ -10,10 +10,14 @@
 .users {
 	background-color: black;
 }
-.user_box p,
-.user_box a,
-.user_box span {
-	color: white;
+.header_users ul.ddmenu a {
+   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
+   color: white;              /* メニュー項目の文字色(白色) */
+   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   font-weight: normal;         /* 太字にする */
+   display: block;            /* ★項目内全域をリンク可能にする */
 }
 .user_image {
 	margin-top: 50px;
@@ -66,8 +70,29 @@
 }
 .user_post_btn {
 	text-align: right;
+	padding-right: 30px;
+}
+.user_post_btn a {
+	color: white;
+}
+.user_post_btn a:hover {
+	 	color: red;
 }
 .user_post_box {
 	margin-top: 50px;
 	margin-bottom: 60px
+}
+.user_post_box p {
+	color: white;
+
+}
+.user_post_text {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.user_post_mybtn {
+	text-align: right;
+}
+.footer_users {
+	color: white;
 }

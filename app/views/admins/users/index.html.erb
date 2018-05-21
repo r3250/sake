@@ -29,15 +29,15 @@
 								  <p><%= "好きな飲み方" %> : <%= user.favorite_drink %></p>
 								  <p><%= "お気に入り場所" %> : <%= user.favorite_shop %></p>
 								  <p><%= "自己紹介" %></p>
-								  <p><%= user.introduction %></p>
-								  <%=link_to "詳細", admins_user_path(user.id), class: "black-btn btn-sm" %>
-								  <%=link_to "編集", edit_admins_user_path(user.id), class: "black-btn btn-sm" %>
+								  <p><%= simple_format(user.introduction) %></p>
+								  <%=link_to "", admins_user_path(user.id), class: "glyphicon glyphicon-user btn btn-default btn-xs" %>
+								  <%=link_to "", edit_admins_user_path(user.id), class: "glyphicon glyphicon-wrench btn btn-default btn-xs" %>
 						   </div>
 				 </div>
 			  <% end %>
 	    </div>
   </div>
-        <div class="paginate">
+        <div class="admin_paginate">
 	      <%= paginate @users %>
 	    </div>
 </div>

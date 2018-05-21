@@ -3,51 +3,51 @@
   <div class="row">
      <div class="col-lg-2">
      </div>
-       <div class="col-lg-6">
-        <%= devise_error_messages! %>
-          <p>新規アカウント登録</p>
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-              <div class="field">
-                <%= f.label :姓 %><br />
-                <%= f.text_field :last_name, :size => "70", autofocus: true, autocomplete: "last_name", :placeholder => "姓" %>
-              </div>
-              <div class="field">
-                <%= f.label :名 %><br />
-                <%= f.text_field :first_name, :size => "70", autofocus: true, autocomplete: "first_name", :placeholder => "名" %>
-              </div>
-              <div class="field">
-                <%= f.label :セイ %><br />
-                <%= f.text_field :last_kana, :size => "70", autofocus: true, autocomplete: "last_kana", :placeholder => "セイ" %>
-              </div>
-              <div class="field">
-                <%= f.label :メイ %><br />
-                <%= f.text_field :first_kana, :size => "70", autofocus: true, autocomplete: "first_kana", :placeholder => "メイ" %>
-              </div>
-              <div class="field">
-                <%= f.label :ユーザーネーム %><br />
-                <%= f.text_field :nickname, :size => "70", autofocus: true, autocomplete: "nickname", :placeholder => "ユーザーネーム" %>
-              </div>
-                <div class="field">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, :size => "70", autofocus: true, autocomplete: "email", :placeholder => "email" %>
-              </div>
-              <div class="field">
-                <%= f.label :password %><br />
-                <%= f.password_field :password, :size => "70", autocomplete: "off", :placeholder => "パスワード" %>
-              </div>
-              <div class="field">
-                <%= f.label :password_confirmation %><br />
-                <%= f.password_field :password_confirmation, :size => "70", autocomplete: "off", :placeholder => "パスワード確認" %>
-              </div>
-            <div class="signup_actions">
-              <div class="actions">
-                <%= f.submit "Sign up", class: "button" %>
-              </div>
-            </div>
-            <% end %>
-      </div>
-      <div class="col-lg-4">
-      </div>
+           <div class="col-lg-6">
+              <%= devise_error_messages! %>
+                <p>新規アカウント登録</p>
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <div class="field">
+                      <%= f.label :姓 %><br />
+                      <%= f.text_field :last_name, :size => "70", autofocus: true, autocomplete: "last_name", :placeholder => "姓" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :名 %><br />
+                      <%= f.text_field :first_name, :size => "70", autofocus: true, autocomplete: "first_name", :placeholder => "名" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :セイ %><br />
+                      <%= f.text_field :last_kana, :size => "70", autofocus: true, autocomplete: "last_kana", :placeholder => "セイ" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :メイ %><br />
+                      <%= f.text_field :first_kana, :size => "70", autofocus: true, autocomplete: "first_kana", :placeholder => "メイ" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :ユーザーネーム %><br />
+                      <%= f.text_field :nickname, :size => "70", autofocus: true, autocomplete: "nickname", :placeholder => "ユーザーネーム" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :email %><br />
+                      <%= f.email_field :email, :size => "70", autofocus: true, autocomplete: "email", :placeholder => "email" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :password %><br />
+                      <%= f.password_field :password, :size => "70", autocomplete: "off", :placeholder => "パスワード" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :password_confirmation %><br />
+                      <%= f.password_field :password_confirmation, :size => "70", autocomplete: "off", :placeholder => "パスワード確認" %>
+                    </div>
+                  <div class="signup_actions">
+                    <div class="actions">
+                      <%= f.submit "Sign up", class: "button" %>
+                    </div>
+                  </div>
+                  <% end %>
+          </div>
+          <div class="col-lg-4">
+          </div>
     </div>
   </div>
 </div>

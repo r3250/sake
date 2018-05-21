@@ -12,44 +12,36 @@
     <% else %>
   <body class="<%= "#{controller.controller_name}" %> ">
 <% end %>
+  <% if request.path.include?('admin') %>
+    <header class="admin_header">
+  <% else %>
   	<header class="header_<%= "#{controller.controller_name}" %>">
-  	  <div class="container">
-  		<nav>
-         <div class="row">
-    			<ul class="ddmenu">
-           <% if user_signed_in? %>
-              <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
-              <li class="ddmenu_text"><%= link_to "menu" %>
-                <ul>
-                   <li><%= link_to "Top", top_path %></li>
-                   <li><%= link_to "sake一覧", sake_posts_path %></li>
-                   <li><%= link_to "My Page", user_path(current_user) %></li>
-                   <li><%= link_to "退会", new_retire_path %></li>
-                </ul>
-              </li>
-              <% else %>
-      				<li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
-      				<li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
-      				<li class="ddmenu_text"><%= link_to "menu" %>
-               <ul>
-                   <li><%= link_to "Top", top_path %></li>
-                   <li><%= link_to "sake一覧", sake_posts_path %></li>
-                </ul>
-              </li>
-          <% end %>
-  			</ul>
-  		</nav>
-  	   </div>
-     </div>
+  <% end %>
+       <% if request.path.include?('admin') %>
+         <%= render 'layouts/adminHeader' %>
+       <% else %>
+         <%= render 'layouts/userHeader' %>
+       <% end %>
   	</header>
+  <% if request.path.include?('admin') %>
+    <div class="top_border_<%= "#{controller.controller_name}" %>">
+  <% else %>
     <div class="header_border top_border_<%= "#{controller.controller_name}" %>">
+  <% end %>
     </div>
 
     <%= yield %>
-
-  <div class="footer_border under_border_<%= "#{controller.controller_name}" %>">
+  <% if request.path.include?('admin') %>
+    <div class="under_border_<%= "#{controller.controller_name}" %>">
+  <% else %>
+    <div class="footer_border under_border_<%= "#{controller.controller_name}" %>">
+  <% end %>
   </div>
+  <% if request.path.include?('admin') %>
+    <footer class="admin_<%="#{controller.controller_name}" %>">
+  <% else %>
     <footer class="footer_<%="#{controller.controller_name}" %>">
+  <% end %>
     	Copyright © 2018 SAKE. All Rights Reserved.
     </footer>
   </body>

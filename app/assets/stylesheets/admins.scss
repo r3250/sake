@@ -4,30 +4,57 @@
 .admin_background {
 	background-color: white;
 }
-.header_admins {
-	  a,a:visited{
-        color:black;
-	  }
-	    a:hover{
-	      color:black;
-	    }
+.admin_background ul.ddmenu a {
+   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
+   color: black;              /* メニュー項目の文字色(白色) */
+   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   font-weight: normal;         /* 太字にする */
+   display: block;            /* ★項目内全域をリンク可能にする */
 }
-.header_admins ul.ddmenu ul li {
+.admin_background ul.ddmenu ul li {
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+.admin_background a,
+.admin_background p,
+.admin_background span {
+	color: black;
+	  a:hover {
+	  	color: red;
+	  }
+}
+
+.top_border_admins {
+	display: none;
 }
 .admin_hedding {
 	padding-left: 120px;
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
+.admin_actions .btn_black a:hover {
+	color: white;
+}
 .admin_link_btn {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 80px;
 }
-.admin_link_btn a {
-	width: 500px;
+.admin_link_btn .black-btn {
+  color:#fff;
+  width: 500px;
+    a:hover {
+    	color: white;
+    }
+}
+.admin_link_btn .black-btn:nth-child(1) {
+	margin-bottom: 20px;
 }
 .footer_admins {
 	color: black;
+	margin-top: 50px;
+}
+.under_border_admins {
+	display: none;
 }

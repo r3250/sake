@@ -1,16 +1,15 @@
 <div class="container">
- <div class="row">
- 	<div class="col-lg-4">
- 	</div>
- 	   <div class="col-lg-4">
-	 	<p>本当に退会いたしますか？</p>
-	 	<%= form_for(@retire) do |f| %>
-	 	  <%= f.text_area :retire_reason, :size => "100", :placeholder => "退会理由" %>
-	 	  <br>
-	 	  <%= f.submit "退会" %>
-	 	  <% end %>
-	    </div>
-	<div class="col-lg-4">
-    </div>
- </div>
+  <div class="retire_box">
+     <div class="retire_text">
+	   <div class="row">
+		 	<p>本当に退会いたしますか？</p>
+		   <%= form_for(@retire) do |f| %>
+		 	<%= f.text_area :retire_reason, :size => "100", :placeholder => "退会理由" %>
+ 	   </div>
+ 	 </div><br>
+ 	      <div class="retire_btn">
+	 	    <%= f.submit "退会", class: "black-btn" %>
+	 	  </div>
+	 	   <% end %>
+  </div>
 </div>

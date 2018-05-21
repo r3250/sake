@@ -6,7 +6,7 @@ class SakePostsController < ApplicationController
     search_sake_posts = [] # 分岐文sakeを代入
     SakePost.all.order(created_at: :desc).each do |sake|
       if sake.user.deleted_at.blank? # created_atが空の場合
-        search_sake_posts << sake 
+        search_sake_posts << sake
       end
     end
     if params[:tag_list].present?

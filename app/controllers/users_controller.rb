@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     before_action :correct_user, only:[:show, :edit, :update]
   def user_post
     @user = User.find(params[:id])
-    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(5)
+    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(1)
   end
 
   def show

@@ -21,4 +21,5 @@ SakeComment.create(:user_id =>1, :sake_post_id =>2, :comment => "うまくない
 SakeComment.create(:user_id =>8, :sake_post_id =>2, :comment => "うまくないお酒")
 SakeComment.create(:user_id =>8, :sake_post_id =>3, :comment => "美味しいお酒")
 
-Admin.create(:email => 'test@test', :password => 'password')
+admin = Admin.new(:email => 'test1@test1', :password => 'password')
+admin.save!
