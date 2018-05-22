@@ -40,7 +40,7 @@
 						     <div class="tag_box">
 						        <p>Tags</p>
 								<% sake_post.tag_list.each do |tag| %>
-								<span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
+								<%=link_to tag, sake_posts_path(tag_list: tag), class: "badge badge-danger" %>
 								<% end %>
 						    </div>
 					  </div>

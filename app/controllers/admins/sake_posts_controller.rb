@@ -1,6 +1,19 @@
 class Admins::SakePostsController < ApplicationController
+	  before_action :authenticate_admin!
+	def edit
+		@sake_post = SakePost.find(params[:id])
+	end
+
+	def update
+		sake_post = SakePost.find(params[:id])
+		sake_post.update(sake_post_params)
+		redirect_to admins_sake_post_path(sake_post.id)
+	end
+
 	def destroy
-		
+		sake_post = SakePost.find(params[:id])
+		sake_post.destroy
+		redirect_to admins_sake_post_path(sake_post.id)
 	end
 
 	private

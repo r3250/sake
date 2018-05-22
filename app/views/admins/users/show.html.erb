@@ -45,6 +45,7 @@
 								    <p class="card-text"><%= user_post.shop_name %></p>
 								    <p class="card-text"><%= user_post.address %></p>
 								    <p class="card-text card_caption"><%= user_post.caption %></p>
+								    <%= link_to "編集",edit_admins_sake_post_path(user_post.id) %>
 								    <%= link_to "削除",admins_sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか" %>
 								  </div>
 								</div>
