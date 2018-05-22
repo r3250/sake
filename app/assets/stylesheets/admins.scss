@@ -28,26 +28,28 @@
 .top_border_admins {
 	display: none;
 }
+.admin_top {
+	margin-top: 80px;
+}
 .admin_hedding {
 	padding-left: 120px;
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
-.admin_actions .btn_black a:hover {
-	color: white;
+.admin_actions {
+	padding-left: 14px;
+}
+.admin_actions .btn {
+	width: 140px;
 }
 .admin_link_btn {
-	text-align: center;
-	margin-top: 80px;
+	width: 44%;
+	margin: 0 auto;
 }
-.admin_link_btn .black-btn {
-  color:#fff;
+.admin_link_btn .btn {
   width: 500px;
-    a:hover {
-    	color: white;
-    }
 }
-.admin_link_btn .black-btn:nth-child(1) {
+.admin_link_btn .btn:nth-child(1) {
 	margin-bottom: 20px;
 }
 .footer_admins {
@@ -59,4 +61,20 @@
 }
 .admin_field_form {
   margin: 30px 0;
+}
+.admin_paginate {
+  width: 100%;
+}
+.admin_paginate nav {
+  width: 100px;
+  margin: 0 auto;
+}
+.admin_paginate a {
+  color: black;
+}
+.admin_paginate a:hover {
+  color: red;
+}
+.admin_paginate span {
+  color: black;
 }

@@ -1,4 +1,4 @@
-/*
+ /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -13,9 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import"bootstrap-sprockets";
- @import"bootstrap";
-
+ @import "bootstrap" ;
 
 
  *{
@@ -138,6 +136,9 @@ footer {
 .under_border_registrations {
 	display: none;
 }
+.registration_hedding {
+  width: 571px;
+}
 .signup_box {
 	width: 90%;
 	margin: 0 auto;
@@ -152,6 +153,7 @@ footer {
 .signup_actions {
 	text-align: center;
 	margin-top: 10px;
+  width: 571px;
 }
 .header_text {
 	text-align: center;
@@ -209,35 +211,28 @@ footer {
   background-color: #f5f5f5;
   color: #333;
 }
-.paginate nav {
-  text-align: center;
-  margin-top: 30px;
+.paginate {
+  width: 100%;
 }
-.paginate a,
+.paginate nav {
+  width: 100px;
+  margin: 0 auto;
+}
+.paginate a {
+  color: white;
+}
+.paginate a:hover {
+  color: red;
+}
 .paginate span {
   color: white;
-   a:hover {
-    color: red;
-   }
-
-}
-.admin_paginate nav {
-  text-align: center;
-  margin-top: 30px;
-}
-.admin_paginate a,
-.admin_paginate span {
-  color: black;
-   a:hover {
-    color: red;
-   }
-
 }
 .image_filed {
   color: white;
 }
 .field_form {
   margin: 30px 0;
+  width: 225px;
 }
 .btn-default {
   width: 150px;

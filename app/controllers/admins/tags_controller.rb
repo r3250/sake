@@ -1,7 +1,6 @@
 class Admins::TagsController < ApplicationController
 	def index
-  	@q = SakePost.all_tags.ransack(params[:q])
-    @sake_posts_tags = @q.result.order(created_at: :desc).page(params[:page]).per(5)
+  	@sake_posts_tags = SakePost.all_tags.page(params[:page]).per(10)
 	end
 
   def edit
@@ -14,11 +13,15 @@ class Admins::TagsController < ApplicationController
   	redirect_to admins_tags_path
   end
 
+  def destroy
+    sake_posts_tag = Tag.find(params[:id])
+    sake_posts_tag.destroy
+    redirect_to admins_tags_path
+  end
 
-
-      private
+    private
 
     def tag_params
-   	  params.require(:sake_post).permit(:tag_list)
+   	  params.require(:tag).permit(:name)
     end
 end

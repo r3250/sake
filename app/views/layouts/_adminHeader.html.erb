@@ -1,6 +1,9 @@
 <div class="container">
   <nav>
    <div class="row">
+          <div class="col col-lg-7">
+          </div>
+        <div class="col col-lg-5">
       	<ul class="ddmenu">
          <% if admin_signed_in? %>
             <li class="ddmenu_text"><%= link_to "ログアウト",destroy_admin_session_path, method: :delete %></li>
@@ -14,6 +17,7 @@
             </li>
         <% end %>
       </ul>
+    </div>
     </div>
   </nav>
 </div>

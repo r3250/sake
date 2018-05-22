@@ -56,7 +56,7 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'kaminari'
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'paranoia'
 gem 'ransack'

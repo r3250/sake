@@ -19,6 +19,14 @@
    font-weight: normal;         /* 太字にする */
    display: block;            /* ★項目内全域をリンク可能にする */
 }
+.user_box span,
+.user_box p,
+.user_box a {
+	color: white;
+}
+.user_box a:hover {
+	color: red;
+}
 .user_image {
 	margin-top: 50px;
 	margin-bottom: 100px;
@@ -32,16 +40,16 @@
 	margin-top: 70px;
 }
 .user_nickname {
-	margin-left: 66px;
+	margin-left: 65px;
 }
 .user_favolite_sake {
-	margin-left: 80px;
+	margin-left: 81px;
 }
 .user_favolite_shop {
-	margin-left: 52px;
+	margin-left: 49px;
 }
 .user_favolite_address {
-	margin-left: 38px;
+	margin-left: 33px;
 }
 .user_introduction {
 }
@@ -49,12 +57,12 @@
 	margin-left: 30px;
 }
 .user_editbtn {
-	text-align: center;
+	width: 270px;
 	margin-top: 30px;
+	text-align: center;
 }
 .user_editbtn .btn {
-	color: black;
-	background-color: white;
+	width: 140px;
 }
 .user_mybtn {
 	text-align: right;
@@ -91,7 +99,6 @@
 	margin-bottom: 40px;
 }
 .user_post_mybtn {
-	text-align: right;
 }
 .footer_users {
 	color: white;

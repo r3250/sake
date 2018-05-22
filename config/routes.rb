@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   root to: 'sake_posts#index'
   namespace :admins do
     resources :users, only:[:index, :show, :edit, :update, :destroy]
-    resources :sake_posts, only:[:new, :create, :destroy]
-    resources :tags, only:[:index, :edit, :update, :destroy]
+    resources :sake_posts, only:[:destroy]
+    resources :tags, only:[:index, :edit, :update]
   end
   get '/admins/top' => 'admins#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

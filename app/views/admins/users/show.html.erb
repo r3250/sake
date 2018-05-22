@@ -1,23 +1,25 @@
 <div class="container">
-  <div class="row">
 		<!-- タブ・メニュー -->
 		<ul class="nav nav-tabs">
-			<li><a href="#user_page" data-toggle="tab">ユーザー</a></li>
-			<li aclass="active"><a href="#user_posts" data-toggle="tab">投稿一覧</a></li>
+		  <li class="nav-item">
+			<li><a href="#user_page" class="nav-link" data-toggle="tab">ユーザー</a></li>
+		  </li>
+		  <li class="nav-item">
+			<li class="active"><a href="#user_posts" class="nav-link" data-toggle="tab">投稿一覧</a></li>
+		 </li>
 		</ul>
-
          <!-- タブ内容 -->
 		      <div class="tab-content">
 					<div class="tab-pane" id="user_page">
 						   <div class="row">
-				    			  <div class="col-lg-3">
+				    			  <div class="col col-lg-2">
 				    				 <div class="user_image">
 									  <%= attachment_image_tag @user, :image, :fill, 200, 300, format: 'jpg' %>
 									</div>
 								  </div>
-								  <div class="col-lg-1">
+								  <div class="col col-lg-3">
 								  </div>
-									<div class="col-lg-8 user_text">
+									<div class="col col-lg-7 user_text">
 									  <p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
 									  <p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
 									  <p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
@@ -26,38 +28,32 @@
 									  	<p><span class="user_introduction"><%= simple_format(@user.introduction) %></span></p>
 									 <div class="admin_user_mybtn">
 									  <% if admin_signed_in? %>
-									   <%= link_to "編集", edit_user_path(@user.id) %>
 									   <%= link_to "戻る", admins_users_path %>
 				                      <% end %>
-				                    </div>
+				                      </div>
 								  </div>
 					   		</div>
 					</div>
 					<div class="tab-pane active" id="user_posts">
 						<div class="row">
-		                	<div class="col-lg-2">
-		                	</div>
-		                	<div class="col-lg-10">
-		                		<% @user_posts.each do |user_post| %>
-		                		 <% 5.times do %>
-		                    	<div class="card" style="width: 18rem;">
-								     <%= attachment_image_tag user_post, :image, :fill, 150, 150, format: 'jpg' %>
+		                	<% @user_posts.each do |user_post| %>
+		                	  <% 6.times do %>
+		                    	<div class="card" style="width: 15em;">
+								     <%= attachment_image_tag user_post, :image, :fill, 150, 150, format: 'jpg', class: "card-img-top" %>
 								  <div class="card-body">
 								    <h5 class="card-title"><%= user_post.sake_name %></h5>
 								    <p class="card-text"><%= user_post.shop_name %></p>
 								    <p class="card-text"><%= user_post.address %></p>
-								    <p class="card-text"><%= user_post.caption %></p>
-								    <%= link_to "削除", :controller => "admins/users", :action => "destroy", method: :delete, "data-confirm" => "削除しますか" %>
+								    <p class="card-text card_caption"><%= user_post.caption %></p>
+								    <%= link_to "削除",admins_sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか" %>
 								  </div>
 								</div>
-								  <% end %>
-		                        <% end %>
-		                	</div>
-				        </div>
+							<% end %>
+							 <% end %>
+		                </div>
+				     </div>
 						    <div class="admin_paginate">
 						    <%= paginate @user_posts %>
 						    </div>
-				    </div>
 			   </div>
-  </div>
 </div>

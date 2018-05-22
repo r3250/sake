@@ -23,7 +23,7 @@
 						<p>Tags</p>
 					    <div class="tag_text">
 					       <% @sake_post.tag_list.each do |tag| %>
-						       <span class="label label-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
+						       <span class="badge badge-danger"><%=link_to tag, sake_posts_path(tag_list: tag) %></span>
 						   <% end %>
 					    </div>
 						<br>

@@ -82,13 +82,13 @@ textarea {
 	margin-left: 65px;
 }
 .sake_post_sake {
-	margin-left: 92px;
+	margin-left: 96px;
 }
 .sake_post_shop {
-	margin-left: 108px;
+	margin-left: 112px;
 }
 .sake_post_address {
-	margin-left: 108px;
+	margin-left: 112px;
 }
 .sake_post_caption {
 	margin-top: 10px;
@@ -101,8 +101,12 @@ textarea {
 	  }
 }
 .sake_post_btn {
-	text-align: center;
+	width: 270px;
 	margin-top: 30px;
+	text-align: center;
+}
+.sake_post_btn .btn {
+	width: 140px;
 }
 .sake_post_mybtn {
 	text-align: right;
@@ -126,9 +130,9 @@ textarea {
 }
 .btn_back a {
 	color: white;
-	  a:hover {
-	  	color: red;
-	  }
+}
+.btn_back a:hover {
+	color: red;
 }
 .form_btn {
 	width: 300px;
@@ -159,11 +163,21 @@ textarea {
 	 	color: red;
 	 }
 }
-.comment_border {
-	border-bottom: 1px dashed black;
-	margin-bottom: 20px;
-	padding-bottom: 5px;
+.coment_content {
+	margin-bottom: 2px;
+}
+.comment_btn {
+	width: 850px;
 	text-align: right;
+	position: relative;
+}
+.comment_btn:after {
+position: absolute;
+content: " ";
+display: block;
+border-bottom: 1px dashed black;
+bottom: -3px;
+width: 100%;
 }
 .black-btn{
   background-color: black;
@@ -172,6 +186,10 @@ textarea {
 }
 .black-btn span {
 	color: white;
+}
+.comment_text {
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .footer_sake_posts {
 	color: white;

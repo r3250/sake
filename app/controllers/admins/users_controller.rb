@@ -20,13 +20,6 @@ class Admins::UsersController < ApplicationController
   	redirect_to admins_users_path
   end
 
-  def destroy
-    user = User.find(params[:id])
-    user_posts = user.sake_posts
-    user_posts.destroy
-    redirect_to admins_user_path(current_admin.id)
-  end
-
   private
 
   def user_params
