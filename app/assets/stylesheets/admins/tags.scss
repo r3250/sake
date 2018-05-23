@@ -1,6 +1,14 @@
 // Place all the styles related to the admins/tags controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tag_search_box {
+	width: 20%;
+	margin: 0 auto;
+}
+.tag_search_box p {
+	padding-left: 60px;
+}
 .table_tag {
 	margin-top: 40px;
 	margin-bottom: 15px;

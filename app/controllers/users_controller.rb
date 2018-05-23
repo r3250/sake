@@ -4,8 +4,8 @@ class UsersController < ApplicationController
 
   def user_post
     @user = User.find(params[:id])
-    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(5)
-    @user_favorites = @user.favorites.page(params[:page]).order(created_at: :desc).per(5)
+    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(4)
+    @user_favorites = @user.favorites.page(params[:page]).order(created_at: :desc).per(4)
   end
 
   def show

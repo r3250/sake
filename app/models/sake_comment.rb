@@ -3,6 +3,6 @@ class SakeComment < ApplicationRecord
 	belongs_to :sake_post
 
     validates :comment, presence: true
-    validates :comment, length: { in: 1..200 }
+    validates :comment, length: { in: 1..50 }
 
 end

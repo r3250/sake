@@ -36,19 +36,22 @@
 					</div>
 					<div class="tab-pane active" id="user_posts">
 						<div class="row">
-		                	<% @user_posts.each do |user_post| %>
-		                    	<div class="card" style="width: 15em;">
-								     <%= attachment_image_tag user_post, :image, :fill, 150, 150, format: 'jpg', class: "card-img-top" %>
-								  <div class="card-body">
-								    <h5 class="card-title"><%= user_post.sake_name %></h5>
-								    <p class="card-text"><%= user_post.shop_name %></p>
-								    <p class="card-text"><%= user_post.address %></p>
-								    <p class="card-text card_caption"><%= user_post.caption %></p>
-								    <%= link_to "編集",edit_admins_sake_post_path(user_post.id) %>
-								    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか" %>
-								  </div>
-								</div>
-							 <% end %>
+			                 <% @user_posts.each do |user_post| %>
+			                     <div class="card" style="width: 16em;">
+									     <%= attachment_image_tag user_post, :image, :fill, 150, 150, format: 'jpg', class: "card-img-top" %>
+								    <div class="card-body">
+									    <h5 class="card-title"><%= user_post.sake_name %></h5>
+									<ul class="list-group list-group-flush">
+									    <p class="list-group-item card_shop"><%= user_post.shop_name %></p>
+									    <p class="list-group-item card_address"><%= user_post.address %></p>
+									    <p class="list-group-item card_caption"><%= user_post.caption %></p>
+									    <div class="card-body">
+										    <%= link_to "編集",edit_admins_sake_post_path(user_post.id), class: "btn btn-secondary btn-sm" %>
+										    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "</削除しますか", class: "btn btn-danger btn-sm" %>
+										</div>
+									</div>
+								 </div>
+							  <% end %>
 		                </div>
 				     </div>
 						    <div class="admin_paginate">

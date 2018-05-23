@@ -1,5 +1,6 @@
 class SakePostsController < ApplicationController
-  before_action :correct_sake_post, only:[:edit, :update]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_sake_post, only:[:edit, :update, :destroy]
 
   def index
     search_sake_posts = [] # 分岐文sakeを代入
@@ -51,14 +52,25 @@ class SakePostsController < ApplicationController
     sake_post.tag_list.clear
     ary = params[:sake_post][:tag_list].split(",").to_a
     sake_post.tag_list.add(ary)
-  	sake_post.update(sake_post_params)
+  	if sake_post.update(sake_post_params)
   	redirect_to sake_post_path(sake_post)
+    else
+      @sake_post = sake_post
+      render :edit
+    end
+
   end
 
   def destroy
   	sake_post = SakePost.find(params[:id])
-  	sake_post.destroy
-  	redirect_to sake_posts_path
+  	if admin_signed_in?
+       sake_post.destroy
+  	   redirect_to admins_user_path(sake_post.id)
+    else
+       sake_post.destroy
+       redirect_to sake_posts_path
+    end
+
   end
 
    private

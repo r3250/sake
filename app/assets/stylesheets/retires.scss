@@ -2,22 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.retire_box {
-	margin-top: 60px;
-	margin-bottom: 40px;
-}
-.retire_text {
-	text-align: center;
-}
-.retire_btn {
-	width: 27%;
-	margin: 0 auto;
-	text-align: right;
-}
-.retire_btn .black-btn {
-	width: 100px;
-}
 .header_retires ul.ddmenu ul li {
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+.retire_box {
+	width: 100%;
+	margin-top: 100px;
+}
+.retire_content {
+	width: 28%;
+	margin: 0 auto;
+}
+.retire_text {
+	padding-left: 67px;
+}
+.retire_btn {
+	text-align: right;
+}
+.retire_btn .btn {
+	width: 80px;
 }

@@ -113,3 +113,20 @@
 .footer_users {
 	color: white;
 }
+.user_post_paginate {
+  width: 100%;
+  line-height: 90px;
+}
+.user_post_paginate nav {
+  width: 100px;
+  margin: 0 auto;
+}
+.user_post_paginate a {
+  color: white;
+}
+.user_post_paginate a:hover {
+  color: red;
+}
+.user_post_paginate span {
+  color: white;
+}

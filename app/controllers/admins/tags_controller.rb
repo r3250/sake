@@ -1,7 +1,8 @@
 class Admins::TagsController < ApplicationController
     before_action :authenticate_admin!
 	def index
-  	@sake_posts_tags = SakePost.all_tags.page(params[:page]).per(10)
+    @q = SakePost.all_tags.ransack(params[:q])
+  	@sake_posts_tags = @q.result.page(params[:page]).per(10)
 	end
 
   def edit

@@ -39,14 +39,14 @@
       </div>
           <ul class="nav nav-tabs">
             <li class="nav-item">
-             <li><a href="#user_post" class="nav-link" data-toggle="tab">投稿一覧</a></li>
+             <li class="active"><a href="#user_post" class="nav-link" data-toggle="tab">投稿一覧</a></li>
             </li>
             <li class="nav-item">
-             <li class=""><a href="#user_post2" class="nav-link" data-toggle="tab">イイね画像</a></li>
+             <li><a href="#user_post2" class="nav-link" data-toggle="tab">イイね画像</a></li>
             </li>
           </ul>
               <div class="tab-content">
-                 <div class="tab-pane" id="user_post">
+                 <div class="tab-pane active" id="user_post">
                     <div class="row">
                         	<div class="col-lg-2">
                         	</div>
@@ -58,7 +58,7 @@
                             	<% end %>
                         	</div>
                     </div>
-                        <div class="paginate">
+                        <div class="user_post_paginate">
                           <%= paginate @user_posts %>
                         </div>
                  </div>
@@ -74,7 +74,7 @@
                               <% end %>
                           </div>
                     </div>
-                      <div class="paginate">
+                      <div class="user_post_paginate">
                         <%= paginate @user_favorites %>
                       </div>
                 </div>

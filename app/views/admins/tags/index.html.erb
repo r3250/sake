@@ -1,33 +1,43 @@
 <div class="container">
- <div class="row">
- 	<div class="col-lg-3">
-    </div>
-    <div class="col-lg-6 table_tag">
-	  <div class="table-responsive">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th scope="col" class="th_tag">Tags</th>
-					<th scope="col"></th>
-					<th scope="col"></th>
-					<th scope="col"></th>
-				</tr>
-			</thead>
-			<tbody>
-		  	  <% @sake_posts_tags.each do |tag| %>
-				<tr>
-					<td colspan="2"><span class="badge badge-danger"><%= tag %></span></td>
-					<td class="tag_btn"><%= link_to "編集", edit_admins_tag_path(tag.id) %></td>
-					<td class="tag_btn"><%= link_to "削除", admins_tag_path(tag.id), method: :delete, "data-confirm" => "削除しますか" %></td>
-				</tr>
-		  	  <% end %>
-			</tbody>
-		</table>
-	   </div>
-	</div>
-	<div class="col-lg-3">
-	</div>
-  </div>
-    <div class="admin_paginate">
-    	<%= paginate @sake_posts_tags %>
+		  <div class="row">
+			  <div class="tag_search_box">
+		  		<p>タグ検索</p>
+		  		  <%= search_form_for(@q, url:admins_tags_path) do |f| %>
+		          <%= f.search_field :name_cont, :placeholder => "タグ" %>
+		          <%= f.submit "検索", class: "btn btn-dark btn-sm" %>
+		        <% end %>
+		      </div>
+		  </div>
+		　<div class="row">
+			 	<div class="col-lg-3">
+			    </div>
+			      <div class="col-lg-6 table_tag">
+					  <div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col" class="th_tag">Tags</th>
+									<th scope="col"></th>
+									<th scope="col"></th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+						  	  <% @sake_posts_tags.each do |tag| %>
+								<tr>
+									<td colspan="2"><span class="badge badge-danger"><%= tag %></span></td>
+									<td class="tag_btn"><%= link_to "編集", edit_admins_tag_path(tag.id) %></td>
+									<td class="tag_btn"><%= link_to "削除", admins_tag_path(tag.id), method: :delete, "data-confirm" => "削除しますか" %></td>
+								</tr>
+						  	  <% end %>
+							</tbody>
+						</table>
+					   </div>
+				　　</div>
+				<div class="col-lg-3">
+				</div>
+		　　</div>
+		    <div class="admin_paginate">
+		    	<%= paginate @sake_posts_tags %>
+		    </div>
 </div>

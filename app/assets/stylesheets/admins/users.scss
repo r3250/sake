@@ -21,7 +21,6 @@
 }
 .search_box p {
 	padding-left: 50px;
-
 }
 .admin_users {
 	margin-bottom: 50px;
@@ -51,5 +50,14 @@
   color: white;
 }
 .card_caption {
+  overflow-x: scroll;
+  width: 209px;
+  height: 100px;
+}
+.card_shop,
+.card_address {
   overflow: scroll;
+  white-space:nowrap;
+  width: 209px;
+  height: 50px;
 }

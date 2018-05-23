@@ -6,11 +6,15 @@ class RetiresController < ApplicationController
   def create
   	retire = Retire.new(retire_params)
   	retire.user_id = current_user.id
-  	retire.save
+  if retire.save
   	retire = User.find(current_user.id)
   	retire.destroy
   	retire.update(email: retire.deleted_at.to_i.to_s + '_' + retire.email.to_s)
   	redirect_to root_path
+  else
+       @retire = retire
+       render :new
+  end
   end
 
   private

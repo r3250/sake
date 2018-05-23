@@ -9,6 +9,7 @@ class SakePost < ApplicationRecord
    	validates :sake_name, presence: true
    	validates :shop_name, presence: true
    	validates :caption, presence: true
+   	validates :caption, length: { in: 1..200 }
    	validates :image, presence: true
 
 	def favorited_by?(user)

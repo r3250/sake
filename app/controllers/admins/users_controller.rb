@@ -2,12 +2,12 @@ class Admins::UsersController < ApplicationController
   before_action :authenticate_admin!
   def index
   @q = User.ransack(params[:q])
-  @users = @q.result.order(created_at: :desc).page(params[:page]).per(5)
+  @users = @q.result.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def show
     @user = User.find(params[:id])
-    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(5)
+    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(8)
   end
 
   def edit

@@ -3,6 +3,15 @@
 		   	 <div class="col-lg-3">
 		   	 </div>
 		   	   <div class="col-lg-6">
+		   	 <% if @sake_post.errors.any? %>
+			    <div id="error_explanation">
+			      <ul>
+				      <% @sake_post.errors.full_messages.each do |message| %>
+				        <li><%= message %></li>
+			          <% end %>
+		          </ul>
+		        </div>
+	          <% end %>
 				 <%= form_for(@sake_post) do |f| %>
 		            <div class="row">
 		              	 <div class="col-lg-3 image_filed">
