@@ -21,6 +21,9 @@
 						<%= f.text_field :first_kana, :size => "30",  :placeholder => "メイ" %><br>
 					 </div>
 					 <div class="admin_field_form">
+                      <%= f.text_field :nickname, :size => "30", autofocus: true, autocomplete: "nickname", :placeholder => "ユーザーネーム" %>
+                    </div>
+					 <div class="admin_field_form">
 						<%= f.email_field :email, :size => "30",  :placeholder => "email" %><br>
 					</div>
 				    <div class="admin_field_form">

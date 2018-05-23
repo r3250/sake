@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-  root to: 'tops#top', as: "top"
   get "/users/:id/user_posts" => "users#user_post", as:"user_post"
   resources :users, only:[:index, :show, :edit, :update]
   resources :retires, only:[:new, :create]
@@ -22,7 +21,7 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :users, only:[:index, :show, :edit, :update]
     resources :sake_posts, only:[:edit, :update, :destroy]
-    resources :tags, only:[:index, :edit, :update, :destory]
+    resources :tags, only:[:index, :edit, :update, :destroy]
   end
   get '/admins/top' => 'admins#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

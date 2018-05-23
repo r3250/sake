@@ -7,7 +7,7 @@ class Admins::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(1)
+    @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(5)
   end
 
   def edit
@@ -23,6 +23,6 @@ class Admins::UsersController < ApplicationController
   private
 
   def user_params
-  	params.require(:user).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :favorite_sake, :favorite_shop, :favorite_drink, :introduction, :image)
+  	params.require(:user).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :favorite_sake, :favorite_shop, :favorite_drink, :introduction, :image, :nickname)
   end
 end

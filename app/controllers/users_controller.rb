@@ -18,14 +18,18 @@ class UsersController < ApplicationController
 
   def update
   	user = User.find(params[:id])
-  	user.update(user_params)
-  	redirect_to user_path(user.id)
+  	if user.update(user_params)
+  	   redirect_to user_path(user.id)
+    else
+       @user = user
+       render :edit
+    end
   end
 
   private
 
   def user_params
-  	params.require(:user).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :favorite_sake, :favorite_shop, :favorite_drink, :introduction, :image)
+  	params.require(:user).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :favorite_sake, :favorite_shop, :favorite_drink, :introduction, :image, :nickname)
   end
   def correct_user
     user = User.find(params[:id])

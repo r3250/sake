@@ -37,7 +37,6 @@
 					<div class="tab-pane active" id="user_posts">
 						<div class="row">
 		                	<% @user_posts.each do |user_post| %>
-		                	  <% 6.times do %>
 		                    	<div class="card" style="width: 15em;">
 								     <%= attachment_image_tag user_post, :image, :fill, 150, 150, format: 'jpg', class: "card-img-top" %>
 								  <div class="card-body">
@@ -46,10 +45,9 @@
 								    <p class="card-text"><%= user_post.address %></p>
 								    <p class="card-text card_caption"><%= user_post.caption %></p>
 								    <%= link_to "編集",edit_admins_sake_post_path(user_post.id) %>
-								    <%= link_to "削除",admins_sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか" %>
+								    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか" %>
 								  </div>
 								</div>
-							<% end %>
 							 <% end %>
 		                </div>
 				     </div>

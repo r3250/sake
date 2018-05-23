@@ -4,13 +4,20 @@
         <div class="col-lg-2">
         </div>
         <div class="col-lg-2">
-              <p class="header_text"><strong>ようこそ ○○へ</strong></p>
-              <p class="header_text"><strong>○○をお楽しみください</strong></p>
+                <% if !alert.nil? %>
+      <div id="error_explanation">
+        <ul>
+          <li><%= alert %></li>
+        </ul>
+      </div>
+      <% end %>
+
+              <p class="header_text"><strong>アカウントお持ちの方</strong></p><br>
 
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                     <div class="field">
-                      <%= f.label :email %><br />
-                      <%= f.email_field :email, :size => "35", autofocus: true, autocomplete: "email", :placeholder => "email or ユーザーネーム" %>
+                      <%= f.label :ログイン %><br />
+                      <%= f.text_field :login, :size => "35", autofocus: true, autocomplete: "email", :placeholder => "email or ユーザーネーム" %>
                     </div>
                     <div class="field">
                       <%= f.label :password %><br />

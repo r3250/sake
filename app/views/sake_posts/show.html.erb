@@ -30,7 +30,7 @@
 						<p><%= "店名" %><span class="sake_post_shop">: <%= @sake_post.shop_name %></span></p>
 						<p><%= "場所" %><span class="sake_post_address">: <%= @sake_post.address %></span></p>
 						<p><%= "SAKE紹介" %></p>
-					    <p><span class="sake_post_caption"><%= @sake_post.caption %></span></p>
+					    <p><span class="sake_post_caption"><%= simple_format(@sake_post.caption) %></span></p>
 						  <div class="sake_post_mybtn">
 								<% if user_signed_in? %>
 									<% if @sake_post.user_id == current_user.id %>

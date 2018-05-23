@@ -1,4 +1,5 @@
 class SakeCommentsController < ApplicationController
+	before_action :authenticate_user!
 	def create
 		@sake_post = SakePost.find(params[:sake_post_id])
 		@sake_comment = @sake_post.sake_comments.build(sake_comment_params)

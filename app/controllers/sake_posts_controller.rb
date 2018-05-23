@@ -1,5 +1,4 @@
 class SakePostsController < ApplicationController
-	before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
@@ -28,8 +27,12 @@ class SakePostsController < ApplicationController
     sake_post.tag_list.clear # 送られてきたTagを消してきれいにする
     ary = params[:sake_post][:tag_list].split(",").to_a # 送信されたパラメータを分解して配列にする
     sake_post.tag_list.add(ary) # 配列にしたものをtagに追加する
-  	sake_post.save
-  	redirect_to sake_posts_path
+  	if sake_post.save
+  	   redirect_to sake_posts_path
+    else
+       @sake_post = sake_post
+       render :new
+    end
   end
 
   def show

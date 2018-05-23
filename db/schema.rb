@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20180515165464) do
     t.string "first_name", default: "太郎", null: false
     t.string "last_kana", default: "タナカ", null: false
     t.string "first_kana", default: "タロウ", null: false
-    t.string "nickname", default: "サンプル", null: false
+    t.string "nickname", null: false
     t.string "favorite_sake"
     t.string "favorite_drink"
     t.string "favorite_shop"
