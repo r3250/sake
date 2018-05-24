@@ -7,14 +7,10 @@ class Admins::SakePostsController < ApplicationController
 	def update
 		sake_post = SakePost.find(params[:id])
 		sake_post.update(sake_post_params)
-		redirect_to admins_sake_post_path(sake_post.id)
+		redirect_to admins_user_path(sake_post.user_id)
 	end
 
-	def destroy
-		sake_post = SakePost.find(params[:id])
-		sake_post.destroy
-		redirect_to admins_sake_post_path(sake_post.id)
-	end
+
 
 	private
 
@@ -22,5 +18,3 @@ class Admins::SakePostsController < ApplicationController
    	  params.require(:sake_post).permit(:sake_name, :shop_name, :caption, :address, :image, :user_id, :name, :tag_list)
 	end
 end
-
-

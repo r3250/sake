@@ -12,14 +12,14 @@
 		      <div class="tab-content">
 					<div class="tab-pane" id="user_page">
 						   <div class="row">
-				    			  <div class="col col-lg-2">
+				    			  <div class="col col-lg-3">
 				    				 <div class="user_image">
 									  <%= attachment_image_tag @user, :image, :fill, 200, 300, format: 'jpg' %>
 									</div>
 								  </div>
-								  <div class="col col-lg-3">
+								  <div class="col col-lg-1">
 								  </div>
-									<div class="col col-lg-7 user_text">
+									<div class="col col-lg-8 user_text">
 									  <p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
 									  <p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
 									  <p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
@@ -47,7 +47,7 @@
 									    <p class="list-group-item card_caption"><%= user_post.caption %></p>
 									    <div class="card-body">
 										    <%= link_to "編集",edit_admins_sake_post_path(user_post.id), class: "btn btn-secondary btn-sm" %>
-										    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "</削除しますか", class: "btn btn-danger btn-sm" %>
+										    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか", class: "btn btn-danger btn-sm" %>
 										</div>
 									</div>
 								 </div>

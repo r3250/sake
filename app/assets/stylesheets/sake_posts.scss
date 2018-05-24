@@ -14,6 +14,9 @@
   /* 画像が読み込まれる前の背景色の指定 */
   background-color: #464646;
 }
+.sake_posts #error_explanation {
+	color: red;
+}
 .header_sake_posts ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
    color: white;              /* メニュー項目の文字色(白色) */
@@ -172,6 +175,19 @@ textarea {
 	position: relative;
 }
 .comment_btn:after {
+position: absolute;
+content: " ";
+display: block;
+border-bottom: 1px dashed black;
+bottom: -3px;
+width: 100%;
+}
+.comment_border {
+	width: 850px;
+	text-align: right;
+	position: relative;
+}
+.comment_border:after {
 position: absolute;
 content: " ";
 display: block;

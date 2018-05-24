@@ -1,4 +1,4 @@
 class TopsController < ApplicationController
-  def top
+  def how_to_top
   end
 end

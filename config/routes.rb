@@ -24,5 +24,6 @@ Rails.application.routes.draw do
     resources :tags, only:[:index, :edit, :update, :destroy]
   end
   get '/admins/top' => 'admins#top'
+  get '/how_to' => 'tops#how_to_top', as:"top"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

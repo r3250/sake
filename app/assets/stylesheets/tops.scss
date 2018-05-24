@@ -1,6 +1,17 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.how_to_box {
+	margin-top: 50px;
+}
+.tops .ddmenu_text {
+      	color: black;
+ }
+.tops .ddmenu_text_nickname {
+  padding-top: 48px;
+  padding-left: 15px;
+  color: black;
+}
 
 
 .header_tops ul.ddmenu ul li {
@@ -9,4 +20,14 @@
 }
 .top_border_tops {
   display: none;
+}
+.modal_text {
+	text-align: center;
+}
+.modal_btn {
+	text-align: center;
+	padding-bottom: 10px;
+}
+.modal_btn .btn {
+	width: 100px;
 }

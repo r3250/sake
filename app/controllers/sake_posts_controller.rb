@@ -1,6 +1,6 @@
 class SakePostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_sake_post, only:[:edit, :update, :destroy]
+  before_action :correct_sake_post, only:[:edit, :update]
 
   def index
     search_sake_posts = [] # 分岐文sakeを代入
@@ -65,7 +65,7 @@ class SakePostsController < ApplicationController
   	sake_post = SakePost.find(params[:id])
   	if admin_signed_in?
        sake_post.destroy
-  	   redirect_to admins_user_path(sake_post.id)
+  	   redirect_to admins_user_path(sake_post.user_id)
     else
        sake_post.destroy
        redirect_to sake_posts_path

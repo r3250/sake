@@ -19,7 +19,9 @@
   /* 画像が読み込まれる前の背景色の指定 */
   background-color: #464646;
 }
-
+.users #error_explanation {
+	color: red;
+}
 .header_users ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
    color: white;              /* メニュー項目の文字色(白色) */
@@ -118,8 +120,9 @@
   line-height: 90px;
 }
 .user_post_paginate nav {
-  width: 100px;
+  width: 108px;
   margin: 0 auto;
+  display: block;
 }
 .user_post_paginate a {
   color: white;

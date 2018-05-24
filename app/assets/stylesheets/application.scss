@@ -54,14 +54,21 @@ header {
 .top_border_sessions {
 	display: none;
 }
-nav {
-	width: 1120px;
-	height: 80px;
-	text-align: right;
+.registrations .ddmenu_text {
+  color: black;
+ }
+ .sessions .ddmenu_text {
+  color: black;
+ }
+.ddmenu_text_nickname {
+  padding-top: 48px;
+  padding-left: 15px;
+  color: white;
 }
 .ddmenu_text {
 	height: 80px;
 	padding-top: 40px;
+  color: white;
 }
 .ddmenu_text:nth-child(2) {
 	padding-right: 60px;
@@ -148,12 +155,11 @@ footer {
   border-radius: 5px;
 */}
 .sessions #error_explanation{
-  width: 233%;
+  width: 150%;
   margin: 30px auto;
   padding-top:10px;
   padding-bottom:5px;
 }
-
 #error_explanation > h2{
   display: none;
 }
@@ -238,8 +244,9 @@ footer {
   width: 100%;
 }
 .paginate nav {
-  width: 100px;
+  width: 108px;
   margin: 0 auto;
+  display: block;
 }
 .paginate a {
   color: white;

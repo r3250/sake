@@ -3,6 +3,13 @@
         <div class="col-lg-4">
         </div>
             <div class="col-lg-4 ">
+                <% if !alert.nil? %>
+                  <div id="error_explanation">
+                    <ul>
+                      <li><%= alert %></li>
+                    </ul>
+                  </div>
+                <% end %>
                 <div class="admin_hedding">
                <p><strong>管理者 Log in</strong></p>
               </div>

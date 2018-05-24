@@ -4,7 +4,7 @@
   </button>
 </p>
 <div class="collapse" id="comment">
-  <div class="card card-body">
+  <div class="card card-body comment_scroll">
 	 <div class="row comment_area">
 	  <div class="well">
 			<% sake_comments.each do |sake_comment| %>
@@ -13,6 +13,9 @@
 			    <p class="coment_content">コメント：<%= simple_format(sake_comment.comment) %></p>
 			    <% if sake_comment.user == current_user %>
 			      <p class="comment_btn"><%= link_to '削除する', sake_post_sake_comment_path(sake_comment.sake_post_id, sake_comment.id), method: :delete, remote: true, class: "btn btn-danger active btn-sm" %></p>
+			      <% else %>
+			      <div class="comment_border">
+			      </div>
 			    <% end %>
 			  <% end %>
 			<% end %>

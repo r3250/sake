@@ -4,6 +4,12 @@
 .admin_background {
 	background-color: white;
 }
+.admin_background .ddmenu_text {
+	color: black;
+}
+.admin_background .ddmenu_text:nth-child(2) {
+	padding-left: 43px;
+}
 .admin_background ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
    color: black;              /* メニュー項目の文字色(白色) */

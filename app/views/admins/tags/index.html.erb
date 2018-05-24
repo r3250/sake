@@ -26,8 +26,8 @@
 						  	  <% @sake_posts_tags.each do |tag| %>
 								<tr>
 									<td colspan="2"><span class="badge badge-danger"><%= tag %></span></td>
-									<td class="tag_btn"><%= link_to "編集", edit_admins_tag_path(tag.id) %></td>
-									<td class="tag_btn"><%= link_to "削除", admins_tag_path(tag.id), method: :delete, "data-confirm" => "削除しますか" %></td>
+									<td class="tag_btn"><%= link_to "編集", edit_admins_tag_path(tag.id), class: "btn btn-secondary btn-sm" %></td>
+									<td class="tag_btn"><%= link_to "削除", admins_tag_path(tag.id), method: :delete, "data-confirm" => "削除しますか", class: "btn btn-danger btn-sm" %></td>
 								</tr>
 						  	  <% end %>
 							</tbody>

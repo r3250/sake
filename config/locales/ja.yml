@@ -5,10 +5,10 @@ ja:
       sake_post: 投稿
     attributes:
       user:
-        last_name: 姓
-        first_name: 名
-        last_kana: セイ
-        first_kana: メイ
+        last_name: 苗字
+        first_name: 名前
+        last_kana: フリガナ（セイ）
+        first_kana: フリガナ（メイ)
         nickname: ユーザーネーム
         email: メールアドレス
         password: パスワード
