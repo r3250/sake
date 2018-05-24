@@ -1,5 +1,4 @@
 class TopsController < ApplicationController
-	before_action :authenticate_user!, except: [:top]
-  def top
+  def how_to_top
   end
 end

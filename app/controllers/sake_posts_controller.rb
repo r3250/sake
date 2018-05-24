@@ -1,14 +1,21 @@
 class SakePostsController < ApplicationController
-	before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
+    search_sake_posts = [] # 分岐文sakeを代入
+    SakePost.all.order(created_at: :desc).each do |sake|
+      if sake.user.deleted_at.blank? # created_atが空の場合
+        search_sake_posts << sake
+      end
+    end
     if params[:tag_list].present?
-      @search_sake_posts = SakePost.tagged_with(params[:tag_list]).page(params[:page]).order(created_at: :desc).per(5)
+          @search_sake_posts = SakePost.tagged_with(params[:tag_list]).order(created_at: :desc).sake # sake_post.rbにてsakeを定義
+          @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
     else
-      @search_sake_posts = SakePost.page(params[:page]).order(created_at: :desc).per(5)
-   end
-      @sake_comment = SakeComment.new
+      @search_sake_posts = search_sake_posts
+      @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
+    end
   end
 
   def new
@@ -21,8 +28,12 @@ class SakePostsController < ApplicationController
     sake_post.tag_list.clear # 送られてきたTagを消してきれいにする
     ary = params[:sake_post][:tag_list].split(",").to_a # 送信されたパラメータを分解して配列にする
     sake_post.tag_list.add(ary) # 配列にしたものをtagに追加する
-  	sake_post.save
-  	redirect_to sake_posts_path
+  	if sake_post.save
+  	   redirect_to sake_posts_path
+    else
+       @sake_post = sake_post
+       render :new
+    end
   end
 
   def show
@@ -41,14 +52,25 @@ class SakePostsController < ApplicationController
     sake_post.tag_list.clear
     ary = params[:sake_post][:tag_list].split(",").to_a
     sake_post.tag_list.add(ary)
-  	sake_post.update(sake_post_params)
+  	if sake_post.update(sake_post_params)
   	redirect_to sake_post_path(sake_post)
+    else
+      @sake_post = sake_post
+      render :edit
+    end
+
   end
 
   def destroy
   	sake_post = SakePost.find(params[:id])
-  	sake_post.destroy
-  	redirect_to sake_posts_path
+  	if admin_signed_in?
+       sake_post.destroy
+  	   redirect_to admins_user_path(sake_post.user_id)
+    else
+       sake_post.destroy
+       redirect_to sake_posts_path
+    end
+
   end
 
    private

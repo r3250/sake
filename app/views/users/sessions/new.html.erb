@@ -1,40 +1,47 @@
 <div class="container">
  <div class="signin_box">
   <div class="row">
-    <div class="col-lg-2">
-    </div>
-    <div class="col-lg-2">
-      <p class="header_text">ようこそ ○○へ</p>
-        <p class="header_text">○○をお楽しみください</p>
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-2">
+                <% if !alert.nil? %>
+      <div id="error_explanation">
+        <ul>
+          <li><%= alert %></li>
+        </ul>
+      </div>
+      <% end %>
 
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, :size => "35", autofocus: true, autocomplete: "email", :placeholder => "email" %>
-            </div>
-            <div class="field">
-              <%= f.label :password %><br />
-              <%= f.password_field :password, :size => "35", autocomplete: "off", :placeholder => "パスワード" %>
-            </div>
-            <br>
-          <div class="signin_actions">
-            <div class="actions">
-              <%= f.submit "Log in", class: "button" %>
-            </div>
-          </div>
-          <% end %>
-    </div>
-          <div class="col-lg-3">
-          </div>
-           <div class="col-lg-3">
-              <p class="header_text">アカウントをお持ちでない方</p>
-              <p class="header_text">こちらで新規登録をお願い致します</p>
-            <div class="header_text_box">
-              <%= link_to "新規登録", new_user_registration_path, class: "button" %>
-            </div>
-           </div>
-           <div class="col-lg-2">
-           </div>
+              <p class="header_text"><strong>アカウントお持ちの方</strong></p><br>
+
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                    <div class="field">
+                      <%= f.label :ログイン %><br />
+                      <%= f.text_field :login, :size => "35", autofocus: true, autocomplete: "email", :placeholder => "email or ユーザーネーム" %>
+                    </div>
+                    <div class="field">
+                      <%= f.label :password %><br />
+                      <%= f.password_field :password, :size => "35", autocomplete: "off", :placeholder => "パスワード" %>
+                    </div>
+                    <br>
+                  <div class="signin_actions">
+                    <div class="actions">
+                      <%= f.submit "Log in", class: "button" %>
+                    </div>
+                  </div>
+              <% end %>
+         </div>
+               <div class="col-lg-3">
+               </div>
+               <div class="col-lg-3">
+                   <p class="header_text"><strong>アカウントをお持ちでない方</strong></p>
+                   <p class="header_text"><strong>こちらで新規登録をお願い致します</strong></p>
+                 <div class="header_text_btn">
+                   <%= link_to "新規登録", new_user_registration_path, class: "button" %>
+                 </div>
+               </div>
+       <div class="col-lg-2">
+       </div>
   </div>
  </div>
 </div>

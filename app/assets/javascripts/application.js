@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery
+//= require jquery3
+//= require popper
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -26,3 +27,4 @@ $(function(){
          $('ul.ddmenu ul').slideUp(150);
       });
    });
+

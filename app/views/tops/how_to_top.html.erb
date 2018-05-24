@@ -1,0 +1,73 @@
+<div class="container how_to_box">
+     <div class="row">
+          <p>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#how_to" aria-expanded="false" aria-controls="how_to">
+              酒について
+            </button>
+          </p>
+          <div class="collapse" id="how_to">
+            <div class="card card-body">
+              私が初めて作った酒投稿サイトです。初めて0から作成しました。少し前の私からするとまさか、このようなサイトを作るとはとても感慨深いです。まだまだ...なサイトですが、是非楽しんでください!!!
+            </div>
+          </div>
+      </div><br>
+      <div class="row">
+          <p>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#how_to_1" aria-expanded="false" aria-controls="how_to">
+              使用方法
+            </button>
+          </p>
+          <div class="collapse" id="how_to_1">
+            <div class="card card-body">
+              お酒に特化したSNSのようなサイトです。お酒やお酒に関わるものを投稿してください。好きなお酒、今日呑んだお酒や他の人にオススメしたいお酒etc...<br>
+              ぜひお楽しみください。ぜひ、マイページでご自身の情報のご登録をしてみてください!!
+            </div>
+          </div>
+     </div><br>
+     <div class="row">
+          <p>
+          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#how_to_2" aria-expanded="false" aria-controls="how_to">
+              画像について
+            </button>
+          </p>
+          <div class="collapse" id="how_to_2">
+            <div class="card card-body">
+              恐れ入りますが、画像の投稿は、お酒の画像又はそれに関する画像の投稿をしていただけますよう、よろしくお願い致します。適当ではない画像と判断させて頂いた場合は、こちらで削除する等の処理をさせていただく場合がございますのでご了承をよろしくお願い致します。
+            </div>
+          </div>
+      </div><br>
+       <div class="row">
+            <p>
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#how_to_3" aria-expanded="false" aria-controls="how_to">
+                最後に
+              </button>
+            </p>
+            <div class="collapse" id="how_to_3">
+              <div class="card card-body">
+                投稿やコメント等、こちらで適当ではないと判断させていただいた物に関しては、その投稿に関して削除等の適切な対応を取らせていただく場合がございます。この条件に同意の上、ご利用をよろしくお願い致します。
+              </div>
+            </div>
+        </div><br>
+
+       <div class="row">
+          <div class="col col-lg-10">
+          </div>
+              <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-sm">ここをクリック!!</button>
+          <div class="col-lg-2">
+          </div>
+      </div>
+          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <p class="modal_text">早速使ってみる</p>
+                  <div class="modal_btn">
+                      <%= link_to "新規登録", new_user_registration_path, class: "btn btn-dark btn-sm" %>
+                  </div>
+                <p class="modal_text">先ずはサイトを見る</p>
+                  <div class="modal_btn">
+                      <%= link_to "酒一覧", sake_posts_path, class: "btn btn-dark btn-sm" %>
+                 </div>
+              </div>
+            </div>
+        </div>
+</div>

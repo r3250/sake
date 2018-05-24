@@ -4,6 +4,15 @@
    	 <div class="col-lg-3">
    	 </div>
    	   <div class="col-lg-6">
+	   	    <% if @user.errors.any? %>
+			    <div id="error_explanation">
+			      <ul>
+				      <% @user.errors.full_messages.each do |message| %>
+				        <li><%= message %></li>
+			          <% end %>
+		          </ul>
+		        </div>
+	         <% end %>
 		 <%= form_for(@user) do |f| %>
               <div class="row">
 	              	<div class="col-lg-3 image_filed">
@@ -21,6 +30,9 @@
 						<%= f.text_field :first_kana, :size => "30",  :placeholder => "メイ" %><br>
 					 </div>
 					 <div class="field_form">
+					 	<%= f.text_field :nickname, :size => "30", :placeholder => "ユーザー名" %><br>
+					 </div>
+					 <div class="field_form">
 						<%= f.email_field :email, :size => "30",  :placeholder => "email" %><br>
 					</div>
 				    <div class="tag_field">
@@ -36,7 +48,7 @@
 						<%= f.text_area :introduction, :size => "30",  :placeholder => "自己紹介" %><br>
 					</div>
 					  <div class="user_editbtn">
-						<%= f.submit "登録", class: "btn" %>
+						<%= f.submit "登録", class: "btn btn-secondary btn-sm" %>
 				      </div>
 				  </div>
 		    </div>

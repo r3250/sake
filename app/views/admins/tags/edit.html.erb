@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-2">
+    </div>
+       <div class="col-lg-3">
+		  	<div class="tag_edit_form">
+			  <%= form_for(@sake_posts_tag, :url => { :contoroller => 'admins/tags', :action => 'update'}) do |f| %>
+			        <%= f.label :Tag名 %><br>
+				<div class="field_form">
+			        <%= f.text_field :name, :size => "30", :placeholder => "タグ名" %>
+			    </div>
+			    <div class="tag_edit_btn">
+			        <%= f.submit "更新", class: "btn btn-secondary btn-sm" %>
+			    </div>
+			  <% end %>
+		    </div>
+		</div>
+		  <div class="col-lg-7">
+		  </div>
+  </div>
+</div>

@@ -7,11 +7,37 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+.users {
+  background: image-url('1289519907-simply-wood-dark-iphone-wallpaper.png');
+  background-position: center center;
+  /* タイル状には並べないように指定 */
+  background-repeat: no-repeat;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するディスプレイの大きさに基づいて、背景画像を縦横比を固定しながら調整 */
+  background-size: cover;
+  /* 画像が読み込まれる前の背景色の指定 */
+  background-color: #464646;
+}
+.users #error_explanation {
+	color: red;
+}
+.header_users ul.ddmenu a {
+   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
+   color: white;              /* メニュー項目の文字色(白色) */
+   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   font-weight: normal;         /* 太字にする */
+   display: block;            /* ★項目内全域をリンク可能にする */
+}
+.user_box span,
 .user_box p,
-.user_box a,
-.user_box span {
+.user_box a {
 	color: white;
+}
+.user_box a:hover {
+	color: red;
 }
 .user_image {
 	margin-top: 50px;
@@ -26,30 +52,29 @@
 	margin-top: 70px;
 }
 .user_nickname {
-	margin-left: 66px;
+	margin-left: 65px;
 }
 .user_favolite_sake {
-	margin-left: 80px;
+	margin-left: 81px;
 }
 .user_favolite_shop {
-	margin-left: 52px;
+	margin-left: 49px;
 }
 .user_favolite_address {
-	margin-left: 38px;
+	margin-left: 33px;
 }
 .user_introduction {
-	margin-left: 81px;
 }
 .sake_post_mybtn a:nth-child(3) {
 	margin-left: 30px;
 }
 .user_editbtn {
-	text-align: center;
+	width: 270px;
 	margin-top: 30px;
+	text-align: center;
 }
 .user_editbtn .btn {
-	color: black;
-	background-color: white;
+	width: 140px;
 }
 .user_mybtn {
 	text-align: right;
@@ -65,4 +90,46 @@
 }
 .user_post_btn {
 	text-align: right;
+	padding-right: 30px;
+}
+.user_post_btn a {
+	color: white;
+}
+.user_post_btn a:hover {
+	 	color: red;
+}
+.user_post_box {
+	margin-top: 50px;
+	margin-bottom: 60px
+}
+.user_post_box p {
+	color: white;
+
+}
+.user_post_text {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.user_post_mybtn {
+}
+.footer_users {
+	color: white;
+}
+.user_post_paginate {
+  width: 100%;
+  line-height: 90px;
+}
+.user_post_paginate nav {
+  width: 108px;
+  margin: 0 auto;
+  display: block;
+}
+.user_post_paginate a {
+  color: white;
+}
+.user_post_paginate a:hover {
+  color: red;
+}
+.user_post_paginate span {
+  color: white;
 }

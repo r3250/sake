@@ -1,2 +1,25 @@
-<h1>Retires#new</h1>
-<p>Find me in app/views/retires/new.html.erb</p>
+<div class="container">
+	<div class="retire_box">
+		<div class="retire_content">
+	     <% if @retire.errors.any? %>
+		    <div id="error_explanation">
+		      <ul>
+			      <% @retire.errors.full_messages.each do |message| %>
+			        <li><%= message %></li>
+		          <% end %>
+	          </ul>
+	        </div>
+	     <% end %>
+
+		  <div class="row retire_text">
+				 	<p>本当に退会いたしますか？</p>
+		  </div>
+		   <%= form_for(@retire) do |f| %>
+		 	<p><%= f.text_area :retire_reason, :size => "100", :placeholder => "退会理由" %></p>
+		  <div class="retire_btn">
+	 	    <%= f.submit "退会", class: "btn btn-dark btn-sm" %>
+	 	  </div>
+	 	   <% end %>
+	 	 </div>
+	</div>
+</div>
