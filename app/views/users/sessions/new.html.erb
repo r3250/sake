@@ -4,16 +4,7 @@
         <div class="col-lg-2">
         </div>
         <div class="col-lg-2">
-                <% if !alert.nil? %>
-      <div id="error_explanation">
-        <ul>
-          <li><%= alert %></li>
-        </ul>
-      </div>
-      <% end %>
-
               <p class="header_text"><strong>アカウントお持ちの方</strong></p><br>
-
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                     <div class="field">
                       <%= f.label :ログイン %><br />

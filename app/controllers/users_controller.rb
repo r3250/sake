@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-    before_action :authenticate_user!, except: [:user_post, :show]
+    before_action :authenticate_user!
     before_action :correct_user, only:[:show, :edit, :update]
+    
 
   def user_post
     @user = User.find(params[:id])

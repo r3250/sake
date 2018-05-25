@@ -1,10 +1,5 @@
 # frozen_string_literal: true
-class CustomFailure < Devise::FailureApp
-  def redirect_url
-    # 未ログインでアクセスしてきたときはサインアップページへリダイレクト
-    new_user_session_path
-  end
-end
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -14,9 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '2f9bd01d3057b3ef22f992c0fb35f7fe337001cf57e7b7abc7b00daf6a62e97f4766c874484f26bb9a738d2f04f2b65680580db57cf6ddd991701a8959bbd49e'
-  config.warden do |manager|
-    manager.failure_app = CustomFailure
-  end
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
