@@ -1,51 +1,47 @@
-<div class="container">
-  <nav>
-   <div class="row">
-          <% if user_signed_in? %>
-          <div class="col col-6">
-           <ul class="ddmenu">
-               <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
-                 <ul>
-                   <li><%= link_to "My Page", user_path(current_user) %></li>
-                 </ul>
-               </li>
-           </ul>
-          </div>
-            <div class="col col-6">
-              <div class="row">
-                 <div class="col-5">
-                 </div>
-                    <div class="col-7">
-                      <ul class="ddmenu">
-                          <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
-                          <li class="ddmenu_text">
+<% if user_signed_in? %>
+                <div class="container under_border">
+                  <nav>
+                         <ul class="ddmenu">
+                             <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
+                               <ul>
+                                 <li><%= link_to "My Page", user_path(current_user) %></li>
+                               </ul>
+                             </li>
+                              <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+                              <li class="ddmenu_text">
+                                  <div class="header-box">
+                                    <span class="header-bars0"></span>
+                                    <span class="header-bars1"></span>
+                                    <span class="header-bars2"></span>
+                                  </div>
+                                       menu
+                                <ul>
+                                   <li><%= link_to "酒一覧", sake_posts_path %></li>
+                                   <li><%= link_to "酒について", top_path %></li>
+                                   <li><%= link_to "退会", new_retire_path %></li>
+                                </ul>
+                              </li>
+                         </ul>
+                      </nav>
+                  </div>
+          <% else %>
+                  <div class="container">
+                    <nav>
+                    	  <ul class="ddmenu">
+                    			<li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
+                    			<li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
+                    			<li class="ddmenu_text">
+                              <div class="header-box">
+                                  <span class="header-bars0"></span>
+                                  <span class="header-bars1"></span>
+                                  <span class="header-bars2"></span>
+                              </div>
                                    menu
-                            <ul>
-                               <li><%= link_to "酒一覧", sake_posts_path %></li>
+                           <ul>
                                <li><%= link_to "酒について", top_path %></li>
-                               <li><%= link_to "退会", new_retire_path %></li>
                             </ul>
                           </li>
-                     </ul>
-                  </div>
-              </div>
-           </div>
-              <% else %>
-          <div class="col col-7">
-          </div>
-        <div class="col col-5">
-        	<ul class="ddmenu">
-        			<li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
-        			<li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
-        			<li class="ddmenu_text">
-                       menu
-               <ul>
-                   <li><%= link_to "酒について", top_path %></li>
-                </ul>
-              </li>
-          <% end %>
-         </ul>
-       </div>
-    </div>
-  </nav>
-</div>
+                        </ul>
+                   </nav>
+                 </div>
+<% end %>

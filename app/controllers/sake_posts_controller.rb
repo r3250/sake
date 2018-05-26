@@ -1,5 +1,5 @@
 class SakePostsController < ApplicationController
-  before_action :authenticate_user!, except: [:destroy]
+  before_action :authenticate_user!, except: [:index, :destroy]
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index

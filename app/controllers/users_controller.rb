@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     before_action :correct_user, only:[:show, :edit, :update]
-    
 
   def user_post
     @user = User.find(params[:id])
     @user_posts = @user.sake_posts.page(params[:page]).order(created_at: :desc).per(4)
-    @user_favorites = @user.favorites.page(params[:page]).order(created_at: :desc).per(4)
+    @user_favorites = @user.favorites
   end
 
   def show
