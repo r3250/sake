@@ -1,8 +1,9 @@
 <div class="container">
+	<div class="admin_user_box">
 		  <div class="row">
-				<div class="col-lg-5">
+				<div class="col-lg-5 col-md-4">
 				</div>
-			  <div class="col-lg-5 search_box">
+			  <div class="col-lg-5 col-md-5 search_box">
 		  		<p>ユーザー検索</p>
 		  		  <%= search_form_for(@q, url:admins_users_path) do |f| %>
 		          <%= f.search_field :nickname_cont, :placeholder => "ユーザーネーム" %>
@@ -11,23 +12,25 @@
 		      </div>
 		  </div>
   <div class="row">
-	  	<div class="col-lg-2">
+	  	<div class="col-lg-2 col-md-4">
 	  	</div>
-		  	 <div class="col-lg-10">
+		  	 <div class="col-lg-10 col-md-6">
 				  <% @users.each do |user| %>
 				  	  <div class="row admin_users">
-				  	  	  <div class="col-lg-2">
+				  	  	  <div class="col-lg-1">
 				  	  	  </div>
-				  	  	     <div class="col-lg-3">
+				  	  	     <div class="col-lg-4">
 								       <%= attachment_image_tag user, :image, :fill, 200, 300, format: 'jpg' %>
 						     </div>
-						        <div class="col-lg-7">
+						        <div class="col-lg-7 col-md-10">
 								      <p><%= "ユーザー名" %> : <%= user.nickname %></p>
 									  <p><%= "好きな酒" %>: <%= user.favorite_sake %></p>
 									  <p><%= "好きな飲み方" %> : <%= user.favorite_drink %></p>
 									  <p><%= "お気に入り場所" %> : <%= user.favorite_shop %></p>
 									  <p><%= "自己紹介" %></p>
+									<div  class="admin_user_scroll">
 									  <p><%= simple_format(user.introduction) %></p>
+									</div>
 									  <span class="admin_user_edit"><%=link_to "一覧", admins_user_path(user.id), class: "btn btn-secondary btn-sm" %></span>
 									  <span class="admin_user_edit"><%=link_to "編集", edit_admins_user_path(user.id), class: "btn btn-secondary btn-sm" %></span>
 							   </div>
@@ -38,5 +41,5 @@
         <div class="admin_paginate">
 	      <%= paginate @users %>
 	    </div>
+ </div>
 </div>
-<svg-icon><src href="sprite.svg#si-glyph-book-person" /></svg-icon>

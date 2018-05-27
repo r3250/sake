@@ -104,14 +104,26 @@ textarea {
 .sake_post_sake a:hover {
 	color: red;
 }
-.sake_post_shop {
-	margin-left: 112px;
+.sake_post_shop_scroll {
+	overflow: scroll;
+	white-space:nowrap;
+	width: 500px;
+	height: 26px;
+
+}
+.sake_posts_address {
+    margin-top: 10px;
 }
 .sake_post_address {
 	margin-left: 112px;
 }
 .sake_post_caption {
 	margin-top: 10px;
+}
+.sake_post_caption_scroll {
+	overflow-x: scroll;
+    width: 600px;
+    height: 100px;
 }
 .sake_post_back {
 	text-align: right;
@@ -243,4 +255,75 @@ width: 100%;
 .footer_under_border footer {
 	color: white;
 }
+
+
+@media screen and (max-width:1024px) {
+	.sake_post_top {
+		margin-top: 10px;
+	}
+	.sake_post_box {
+		padding-right: 150px;
+	}
+	.sake_post_text {
+		margin-top: 35px;
+	}
+	.header_sake_posts ul.ddmenu li {
+	width: 102px
+    }
+    .comment_scroll {
+    	width: 775px;
+    	height: 389px;
+    }
+	.comment_btn {
+		width: 720px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.sake_post_box {
+		width: 77%;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.sake_post_image {
+		width: 41%;
+		margin: 20px auto;
+	}
+	.sake_post_myimage {
+		width: 40%;
+		margin: 30px auto;
+	}
+	.sake_post_caption_scroll {
+		width: 430px;
+	}
+	.sake_post_show_text {
+		margin: 0 auto;
+	}
+	.sake_post_mybtn {
+		margin-top: 35px;
+		padding-right: 0;
+		width: 510px;
+		margin-bottom: 50px;
+	}
+	.well {
+		font-size: 10px;
+	}
+	.comment_scroll {
+    	width: 535px;
+    	height: 280px;
+    }
+	.comment_btn {
+		width: 504px;
+	}
+	.comment_btn .btn {
+		width: 56px;
+	    height: 20px;
+	    font-size: 10px;
+	    line-height: 10px;
+	}
+	.btn_back {
+		width: 570px;
+	}
+}
+
 

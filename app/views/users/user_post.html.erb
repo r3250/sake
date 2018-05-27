@@ -2,23 +2,25 @@
   <div class ="user_box">
     <div class="user_post_box">
           <div class="row">
-              <div class="col-lg-1">
+              <div class="col-lg-1 col-md-1">
               </div>
-                <div class="col-lg-11">
+                <div class="col-lg-11 col-md-11">
                   <div class="user_post_text">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-md-3">
                            <%= attachment_image_tag @user, :image, :fill, 150, 200, format: 'jpg' %>
                        </div>
-                       <div class="col-lg-4">
+                       <div class="col-lg-4 col-md-8">
                             <p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
                             <p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
                             <p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
                             <p><%= "お気に入り場所" %> <span class="user_favolite_address">: <%= @user.favorite_shop %></span></p>
                             <p><%= "自己紹介" %></p>
+                            <div class="user_introduction_scroll">
                             <p><span class="user_introduction"><%= simple_format(@user.introduction) %></span></p>
+                            </div>
                        </div>
-                       <div class="col-lg-5">
+                       <div class="col-lg-5 col-md-5">
                        </div>
                     </div>
                   </div>
@@ -27,14 +29,14 @@
               <% if user_signed_in? %>
                  <% if @user.id == current_user.id %>
                     <div class="row user_post_mybtn">
-                      <div class="col col-lg-10">
+                      <div class="col col-lg-10 col-md-9">
                       </div>
                         <%= link_to "マイページ", user_path(current_user.id) %>
                     </div>
                   <% end %>
                   <% else %>
               <% end %>
-              <div class="col-lg-2">
+              <div class="col-lg-2 col-md-3">
               </div>
       </div>
           <ul class="nav nav-tabs">

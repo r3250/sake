@@ -55,16 +55,18 @@ header {
   color: black;
  }
 .ddmenu_text_nickname {
-  padding-top: 48px;
+  width: 500px!important;
+  padding-top: 60px;
   padding-left: 15px;
-  color: white;
+  color: #e6dadb;
 }
 .ddmenu_text {
 	height: 80px;
-	padding-top: 40px;
+	padding-top: 50px;
   color: white;
 }
-.ddmenu_text:nth-child(2) {
+.ddmenu_text:nth-child(3) {
+  padding-left: 67px;
 }
 ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
@@ -250,8 +252,9 @@ footer {
 }
 
 
-@media screen and (max-width:1024px) {
-  .header_text {
+
+@media screen and (max-width:768px) {
+    .header_text {
     text-align: center;
   }
   .header_text:nth-child(2) {
@@ -259,7 +262,7 @@ footer {
 }
 
   .header_text_box {
-    margin-top: 80px;
+    margin-top: 140px;
   }
   .signin_field_box {
     width: 100%;
@@ -309,4 +312,9 @@ footer {
     margin: 5px auto;
     background-color: black;
   }
+}
+@media screen and (max-width:768px) {
+    .ddmenu_text_nickname {
+      width: 451px!important;
+    }
 }

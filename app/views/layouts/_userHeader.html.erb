@@ -1,35 +1,45 @@
 <% if user_signed_in? %>
-                <div class="container under_border">
-                  <nav>
-                         <ul class="ddmenu">
-                             <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
-                               <ul>
-                                 <li><%= link_to "My Page", user_path(current_user) %></li>
-                               </ul>
-                             </li>
-                              <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
-                              <li class="ddmenu_text">
-                                  <div class="header-box">
-                                    <span class="header-bars0"></span>
-                                    <span class="header-bars1"></span>
-                                    <span class="header-bars2"></span>
-                                  </div>
-                                       menu
-                                <ul>
-                                   <li><%= link_to "酒一覧", sake_posts_path %></li>
-                                   <li><%= link_to "酒について", top_path %></li>
-                                   <li><%= link_to "退会", new_retire_path %></li>
-                                </ul>
-                              </li>
-                         </ul>
-                      </nav>
-                  </div>
-          <% else %>
-                  <div class="container">
-                    <nav>
-                    	  <ul class="ddmenu">
-                    			<li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
-                    			<li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
+      <div class="container under_border">
+         <nav>
+               <ul class="ddmenu">
+                <div class="row">
+                      <div class="col col-lg-9">
+                         <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
+                           <ul>
+                             <li><%= link_to "My Page", user_path(current_user) %></li>
+                           </ul>
+                         </li>
+                      </div>
+                      <div class="col col-lg-3">
+                          <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
+                          <li class="ddmenu_text">
+                              <div class="header-box">
+                                <span class="header-bars0"></span>
+                                <span class="header-bars1"></span>
+                                <span class="header-bars2"></span>
+                              </div>
+                                   menu
+                            <ul>
+                               <li><%= link_to "酒一覧", sake_posts_path %></li>
+                               <li><%= link_to "酒について", top_path %></li>
+                               <li><%= link_to "退会", new_retire_path %></li>
+                            </ul>
+                          </li>
+                        </div>
+                </div>
+               </ul>
+          </nav>
+        </div>
+  <% else %>
+        <div class="container">
+          <nav>
+              <ul class="ddmenu">
+                <div class="row">
+                      <div class="col col-lg-8">
+                      </div>
+                      <div class="col col-lg-4">
+                  			<li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
+                  			<li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
                     			<li class="ddmenu_text">
                               <div class="header-box">
                                   <span class="header-bars0"></span>
@@ -37,11 +47,13 @@
                                   <span class="header-bars2"></span>
                               </div>
                                    menu
-                           <ul>
+                            <ul>
                                <li><%= link_to "酒について", top_path %></li>
                             </ul>
                           </li>
-                        </ul>
-                   </nav>
-                 </div>
+                       </div>
+                </div>
+              </ul>
+         </nav>
+       </div>
 <% end %>

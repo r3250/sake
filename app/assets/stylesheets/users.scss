@@ -77,7 +77,10 @@
 .user_favolite_address {
 	margin-left: 33px;
 }
-.user_introduction {
+.user_introduction_scroll {
+	overflow-x: scroll;
+    width: 600px;
+    height: 100px;
 }
 .sake_post_mybtn a:nth-child(3) {
 	margin-left: 30px;
@@ -114,7 +117,6 @@
 }
 .user_post_box {
 	margin-top: 50px;
-	margin-bottom: 60px
 }
 .user_post_box p {
 	color: white;
@@ -149,7 +151,7 @@
 }
 .user_post_scroll {
   overflow-x: scroll;
-  height: 500px;
+  height: 700px;
 }
 .footer_users {
 	color: white;
@@ -171,11 +173,14 @@
 	color: white;
 }
 @media screen and (max-width:1024px) {
+  .header_users ul.ddmenu li {
+    width: 102px
+  }
   .user_mybtn {
   	padding-right: 60px;
   }
   .btn_back {
-  	padding-right: 50px;
+  	padding-right: 10px;
   }
   .paginate {
     display: none;
@@ -185,3 +190,20 @@
   }
 }
 
+@media screen and (max-width:768px) {
+	.user_image {
+		width: 26%;
+		margin: 30px auto;
+	}
+	.user_text {
+		margin: 0 auto;
+	}
+	.user_introduction_scroll {
+		width: 430px;
+	}
+	.user_mybtn {
+		margin-top: 30px;
+		width: 555px;
+		padding-right: 10px;
+	}
+}

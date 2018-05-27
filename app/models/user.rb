@@ -23,6 +23,7 @@ KANA_REGEXP = /\A([ァ-ン]|ー)+\z/
  validates :first_kana, presence: true
  validates :first_kana, format: { with: KANA_REGEXP, message: "カタカナのみ使用できます" }, if: "first_kana.present?"
  validates :nickname, presence: true
+ validates :nickname, length: { in: 1..24 }
  validates :email, presence: true
 
 

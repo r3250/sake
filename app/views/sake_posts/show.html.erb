@@ -15,7 +15,7 @@
 					</div>
 						<div class="col-lg-1">
 						</div>
-				   <div class="col-lg-8 sake_post_show_text">
+				   <div class="col-lg-8 col-sm-9 sake_post_show_text">
 						<%= link_to user_post_path(@sake_post.user_id) do %>
 						<p><%= "ユーザー名" %><span class="sake_post_nickname">: <%= @sake_post.user.nickname %></span></p>
 						<% end %>
@@ -27,10 +27,15 @@
 						   <% end %>
 					    </div>
 						<br>
-						<p><%= "店名" %><span class="sake_post_shop">: <%= @sake_post.shop_name %></span></p>
-						<p><%= "場所" %><span class="sake_post_address">: <%= @sake_post.address %></span></p>
+						<p><%= "店名" %></p>
+						<div class="sake_post_shop_scroll">
+							<p><span class="sake_post_shop">: <%= @sake_post.shop_name %></span></p>
+						</div>
+						<p class="sake_posts_address"><%= "場所" %><span class="sake_post_address">: <%= @sake_post.address %></span></p>
 						<p><%= "SAKE紹介" %></p>
+						<div class="sake_post_caption_scroll">
 					    <p><span class="sake_post_caption"><%= simple_format(@sake_post.caption) %></span></p>
+					    </div>
 						  <div class="sake_post_mybtn">
 								<% if user_signed_in? %>
 									<% if @sake_post.user_id == current_user.id %>
