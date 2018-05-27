@@ -42,17 +42,11 @@ header {
 	width: 100%;
 	height: 80px;
 }
-.header_border {
-  background-color: white;
-	height: 1.2px;
-	width: 79%;
-	margin: 0 auto;
+.sessions .under_border:after {
+  display: none;
 }
-.top_border_registrations {
-	display: none;
-}
-.top_border_sessions {
-	display: none;
+.registrations .under_border:after {
+  display: none;
 }
 .registrations .ddmenu_text {
   color: black;
@@ -71,14 +65,12 @@ header {
   color: white;
 }
 .ddmenu_text:nth-child(2) {
-	padding-right: 60px;
 }
 ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
-   padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
 }
 ul.ddmenu li {
-   width: 125px;          /* メニュー項目の横幅(125px) */
+   width: 68px;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -112,7 +104,7 @@ ul.ddmenu ul {
    border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
 }
 ul.ddmenu ul li {
-   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+   width: 100px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid white; /* 項目上側の枠線(ピンク色で1pxの実線) */
 }
 ul.ddmenu ul li a {
@@ -127,21 +119,13 @@ ul.ddmenu ul li a:hover {
 }
 footer {
 	height: 50px;
-  color: black;
-  margin-left: 150px;
   margin-top: 50px;
 }
-.footer_border {
-  background-color: white;
-	height: 1.2px;
-	width: 79%;
-	margin: 20px auto;
+.sessions .footer_under_border:before {
+  display: none;
 }
-.under_border_sessions {
-	display: none;
-}
-.under_border_registrations {
-	display: none;
+.registratins .footer_under_border:before {
+  display: none;
 }
 .registration_hedding {
   width: 571px;
@@ -185,29 +169,26 @@ footer {
 }
 .header_text {
 	text-align: center;
-	width: 255px;
 }
 .header_text:nth-child(1) {
 	margin-top: 20px;
 }
 .header_text:nth-child(2) {
-  margin-bottom: 20px;
-  width: 279px;
+  text-align: center;
 }
 .signin_box {
 	margin-top: 30px;
-	margin-bottom: 100px;
 }
 .signin_box_field input {
 	margin-bottom: 20px;
 }
 .signin_actions {
-	text-align: center;
-	width: 255px;
+  width: 58%;
+  margin: 0 auto;
 }
-.header_text_btn {
-	text-align: center;
-	margin-top: 20px;
+.sign_in_box_btn {
+  width: 42%;
+  margin: 0 auto;
 }
 .button {
   display: inline-block;
@@ -266,4 +247,66 @@ footer {
 }
 .btn-default {
   width: 150px;
+}
+
+
+@media screen and (max-width:1024px) {
+  .header_text {
+    text-align: center;
+  }
+  .header_text:nth-child(2) {
+    margin-bottom: 42px;
+}
+
+  .header_text_box {
+    margin-top: 80px;
+  }
+  .signin_field_box {
+    width: 100%;
+  }
+  .signin_field {
+    width: 33%;
+    margin: 0 auto;
+  }
+  .signin_actions {
+    width: 20%;
+    margin: 0 auto;
+  }
+  .sign_in_box_btn {
+    width: 20%;
+    margin: 0 auto;
+  }
+  .footer_sessions {
+    text-align: center;
+  }
+  .header-box {
+    color: #fafafa;
+    padding: .2em .25em .15em;
+    border: solid 0.08em black;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    margin: 3px 8px 3px 0;
+  }
+  .header-bars0{
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: black;
+  }
+  .header-bars1{
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: black;
+  }
+  .header-bars2{
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: black;
+  }
 }

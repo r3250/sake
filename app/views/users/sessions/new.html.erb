@@ -3,26 +3,26 @@
   <div class="row">
         <div class="col-lg-2">
         </div>
-        <div class="col-lg-2">
-                <% if !alert.nil? %>
-      <div id="error_explanation">
-        <ul>
-          <li><%= alert %></li>
-        </ul>
-      </div>
-      <% end %>
-
+        <div class="col-lg-3 ">
+            <% if !alert.nil? %>
+            <div id="error_explanation">
+              <ul>
+                <li><%= alert %></li>
+              </ul>
+            </div>
+            <% end %>
               <p class="header_text"><strong>アカウントお持ちの方</strong></p><br>
-
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                    <div class="field">
+                  <div class="signin_fieled_box">
+                    <div class="field signin_field">
                       <%= f.label :ログイン %><br />
-                      <%= f.text_field :login, :size => "35", autofocus: true, autocomplete: "email", :placeholder => "email or ユーザーネーム" %>
+                      <%= f.text_field :login, :size => "30", autofocus: true, autocomplete: "email", :placeholder => "email or ユーザーネーム" %>
                     </div>
-                    <div class="field">
+                    <div class="field signin_field">
                       <%= f.label :password %><br />
-                      <%= f.password_field :password, :size => "35", autocomplete: "off", :placeholder => "パスワード" %>
+                      <%= f.password_field :password, :size => "30", autocomplete: "off", :placeholder => "パスワード" %>
                     </div>
+                  </div>
                     <br>
                   <div class="signin_actions">
                     <div class="actions">
@@ -31,16 +31,15 @@
                   </div>
               <% end %>
          </div>
-               <div class="col-lg-3">
+               <div class="col-lg-2">
                </div>
-               <div class="col-lg-3">
+               <div class="col-lg-4 header_text_box">
                    <p class="header_text"><strong>アカウントをお持ちでない方</strong></p>
                    <p class="header_text"><strong>こちらで新規登録をお願い致します</strong></p>
-                 <div class="header_text_btn">
+                   <div class="sign_in_box_btn">
                    <%= link_to "新規登録", new_user_registration_path, class: "button" %>
-                 </div>
                </div>
-       <div class="col-lg-2">
+       <div class="col-lg-1">
        </div>
   </div>
  </div>

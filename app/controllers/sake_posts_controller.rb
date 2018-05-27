@@ -1,5 +1,5 @@
 class SakePostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :destroy]
   before_action :correct_sake_post, only:[:edit, :update]
 
   def index
@@ -66,7 +66,7 @@ class SakePostsController < ApplicationController
   	if admin_signed_in?
        sake_post.destroy
   	   redirect_to admins_user_path(sake_post.user_id)
-    else
+    elsif user_siged_in?
        sake_post.destroy
        redirect_to sake_posts_path
     end

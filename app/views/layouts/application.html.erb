@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
 <% if request.path.include?('admin') %>
   <body class="admin_background">
     <% else %>
@@ -24,26 +25,21 @@
          <%= render 'layouts/userHeader' %>
        <% end %>
   	</header>
-  <% if request.path.include?('admin') %>
-    <div class="top_border_<%= "#{controller.controller_name}" %>">
-  <% else %>
-    <div class="header_border top_border_<%= "#{controller.controller_name}" %>">
-  <% end %>
     </div>
 
     <%= yield %>
-  <% if request.path.include?('admin') %>
-    <div class="under_border_<%= "#{controller.controller_name}" %>">
-  <% else %>
-    <div class="footer_border under_border_<%= "#{controller.controller_name}" %>">
-  <% end %>
-  </div>
+
   <% if request.path.include?('admin') %>
     <footer class="admin_<%="#{controller.controller_name}" %>">
+        Copyright © 2018 SAKE. All Rights Reserved.
   <% else %>
     <footer class="footer_<%="#{controller.controller_name}" %>">
-  <% end %>
-    	Copyright © 2018 SAKE. All Rights Reserved.
+<div class="container footer_under_border">
+<!--   <div class="footer_under_border">
+ -->    	Copyright © 2018 SAKE. All Rights Reserved.
+<!--   </div>
+ --></div>
     </footer>
+  <% end %>
   </body>
 </html>

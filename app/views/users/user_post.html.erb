@@ -66,7 +66,7 @@
                     <div class="row">
                           <div class="col-lg-2">
                           </div>
-                          <div class="col-lg-10">
+                          <div class="col-lg-10 user_post_scroll">
                               <% @user_favorites.each do |user_favorite| %>
                                    <%= link_to sake_post_path(user_favorite) do %>
                                      <%= attachment_image_tag user_favorite.sake_post, :image, :fill, 200, 300, format: 'jpg' %>
@@ -74,9 +74,6 @@
                               <% end %>
                           </div>
                     </div>
-                      <div class="user_post_paginate">
-                        <%= paginate @user_favorites %>
-                      </div>
                 </div>
               </div>
         <% if user_signed_in? %>
