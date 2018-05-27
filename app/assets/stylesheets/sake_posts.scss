@@ -327,3 +327,17 @@ width: 100%;
 }
 
 
+@media screen and (max-width:425px) {
+	.sake_post_shop_scroll {
+		width: 250px;
+	}
+	.sake_post_image {
+		width: 70%;
+		margin: 20px auto;
+		font-size: 10px;
+	}
+	.sake_post_text {
+		font-size: 10px;
+	}
+}
+

@@ -282,39 +282,67 @@ footer {
   .footer_sessions {
     text-align: center;
   }
-  .header-box {
-    color: #fafafa;
-    padding: .2em .25em .15em;
-    border: solid 0.08em black;
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    margin: 3px 8px 3px 0;
-  }
-  .header-bars0{
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px auto;
-    background-color: black;
-  }
-  .header-bars1{
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px auto;
-    background-color: black;
-  }
-  .header-bars2{
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px auto;
-    background-color: black;
-  }
 }
+
 @media screen and (max-width:768px) {
     .ddmenu_text_nickname {
       width: 451px!important;
     }
+    .header_text_box {
+      margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width:425px) {
+  .signin_field {
+    width: 67%;
+    margin: 0 auto
+  }
+  .signin_actions {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .sign_in_box_btn {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .footer_under_border {
+    font-size: 10px;
+  }
+  .ddmenu_text {
+    font-size: 10px;
+  }
+  .ddmenu_text:nth-child(3) {
+    padding-left: 150px;
+  }
+  .ddmenu_text_nickname {
+    width: 111px!important;
+    font-size: 10px;
+    padding-top: 74px;
+  }
+  .header_sake_posts ul.ddmenu li {
+    width: 55px;
+  }
+  .sake_post_myimage {
+    width: 80%;
+  }
+  .sake_post_caption_scroll {
+    width: 290px;
+  }
+  .sake_post_mybtn {
+    width: 290px;
+  }
+  .sake_post_show_text {
+    font-size: 10px;
+  }
+  .comment_scroll {
+    width: 290px;
+    height: 210px;
+  }
+.comment_btn {
+    width: 263px;
+  }
+  .btn_back {
+    width: 330px;
+  }
 }
