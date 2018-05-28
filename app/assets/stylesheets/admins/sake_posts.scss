@@ -17,3 +17,9 @@
 .admin_btn_back a{
 	color: black;
 }
+
+@media screen and (max-width:425px) {
+	.admin_post_form {
+		padding-top: 30px;
+	}
+}

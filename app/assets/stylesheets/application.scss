@@ -71,6 +71,18 @@ header {
 ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
 }
+.registrations ul.ddmenu li {
+   width: 32%;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
+}
+.sessions ul.ddmenu li {
+   width: 32%;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
+}
 ul.ddmenu li {
    width: 48%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
@@ -295,6 +307,15 @@ footer {
   .social {
     font-size: 14px;
   }
+  .registrations ul.ddmenu li {
+    width: 22%;
+  }
+  .sessions ul.ddmenu li {
+    width: 22%;
+  }
+  .tops .ddmenu_text_nickname {
+    padding-top: 75px;
+  }
   .signup_box {
     font-size: 10px;
   }
@@ -336,7 +357,7 @@ footer {
     padding-left: 150px;
   }
   .ddmenu_text_nickname {
-    width: 111px!important;
+    width: 160px!important;
     font-size: 10px;
     padding-top: 74px;
   }

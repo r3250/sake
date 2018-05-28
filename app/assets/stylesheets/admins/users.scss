@@ -15,7 +15,9 @@
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
 }
-
+.text_color input {
+  color: black;
+}
 .search_box {
 	margin-bottom: 50px;
 }
@@ -92,8 +94,8 @@
 }
 
 @media screen and (max-width:425px) {
-  .admin_user_scrol {
-    width: 330px;
+  .admin_user_scroll {
+    width: 345px;
   }
   .search_box {
     margin-top: 20px;
@@ -115,6 +117,9 @@
   }
   .admin_user_favolite_shop {
     padding-left: 20px;
+  }
+  .admin_user_image {
+  margin: 0 auto;
   }
 
 }

@@ -202,10 +202,16 @@
 }
 @media screen and (max-width:425px) {
 	.user_introduction_scroll {
-    width: 290px;
+    width: 313px;
     }
     .user_post_image {
-    	margin: 0 auto;
+      padding-left: 62px;
+      padding-bottom: 15px;
+      margin: 0 auto;
+   }
+    .user_image {
+    width: 60%;
+    margin: 30px auto;
     }
     .user_post_text {
     	font-size: 10px;
@@ -233,5 +239,8 @@
     }
     .nav-tabs li {
       font-size: 10px;
+    }
+    .user_post_box {
+      margin-top: 0;
     }
 }
