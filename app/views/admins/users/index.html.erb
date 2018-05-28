@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="admin_user_box">
 		  <div class="row">
-				<div class="col-lg-5 col-md-4">
+				<div class="col-lg-5 col-md-4 col-2">
 				</div>
-			  <div class="col-lg-5 col-md-5 search_box">
+			  <div class="col-lg-5 col-md-5 col-10 search_box">
 		  		<p>ユーザー検索</p>
 		  		  <%= search_form_for(@q, url:admins_users_path) do |f| %>
 		          <%= f.search_field :nickname_cont, :placeholder => "ユーザーネーム" %>
@@ -14,12 +14,12 @@
   <div class="row">
 	  	<div class="col-lg-2 col-md-4">
 	  	</div>
-		  	 <div class="col-lg-10 col-md-6">
+		  	 <div class="col-lg-10 col-md-6 col-12">
 				  <% @users.each do |user| %>
 				  	  <div class="row admin_users">
 				  	  	  <div class="col-lg-1">
 				  	  	  </div>
-				  	  	     <div class="col-lg-4">
+				  	  	     <div class="col-lg-4 col-2">
 								       <%= attachment_image_tag user, :image, :fill, 200, 300, format: 'jpg' %>
 						     </div>
 						        <div class="col-lg-7 col-md-10">

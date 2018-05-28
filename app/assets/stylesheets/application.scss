@@ -72,7 +72,7 @@ ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
 }
 ul.ddmenu li {
-   width: 68px;          /* メニュー項目の横幅(125px) */
+   width: 48%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -282,28 +282,47 @@ footer {
   .footer_sessions {
     text-align: center;
   }
-}
 
-@media screen and (max-width:768px) {
-    .ddmenu_text_nickname {
-      width: 451px!important;
-    }
-    .header_text_box {
-      margin-bottom: 100px;
-    }
+  .ddmenu_text_nickname {
+    width: 451px!important;
+  }
+  .header_text_box {
+    margin-bottom: 100px;
+  }
 }
 
 @media screen and (max-width:425px) {
+  .social {
+    font-size: 14px;
+  }
+  .signup_box {
+    font-size: 10px;
+  }
+  .signin_box {
+    font-size: 10px;
+  }
+  .registration_field input {
+    width: 300px;
+  }
+  .registration_hedding {
+    width: 310px;
+  }
+  .signup_actions {
+    width: 310px;
+  }
+  .sessions #error_explanation {
+    width: 44%;
+  }
   .signin_field {
-    width: 67%;
+    width: 44%;
     margin: 0 auto
   }
   .signin_actions {
-    width: 40%;
+    width: 25%;
     margin: 0 auto;
   }
   .sign_in_box_btn {
-    width: 40%;
+    width: 25%;
     margin: 0 auto;
   }
   .footer_under_border {
@@ -311,6 +330,7 @@ footer {
   }
   .ddmenu_text {
     font-size: 10px;
+    padding-top: 60px;
   }
   .ddmenu_text:nth-child(3) {
     padding-left: 150px;
@@ -320,29 +340,9 @@ footer {
     font-size: 10px;
     padding-top: 74px;
   }
-  .header_sake_posts ul.ddmenu li {
-    width: 55px;
-  }
-  .sake_post_myimage {
-    width: 80%;
-  }
-  .sake_post_caption_scroll {
-    width: 290px;
-  }
-  .sake_post_mybtn {
-    width: 290px;
-  }
-  .sake_post_show_text {
-    font-size: 10px;
-  }
-  .comment_scroll {
-    width: 290px;
-    height: 210px;
-  }
-.comment_btn {
-    width: 263px;
-  }
-  .btn_back {
-    width: 330px;
+  .button {
+    width: 90px;
+    height: 20px;
+    line-height: 19px;
   }
 }

@@ -106,19 +106,39 @@
 
 
 @media screen and (max-width:768px){
-    .admin_field_box {
+  .admin_field_box {
     width: 24%;
     margin: 0 auto;
   }
   .admin_actions {
   width: 20%;
   margin: 0 auto;
-}
+  }
   .admin_link_btn {
   width: 40%;
   margin: 0 auto;
-}
+  }
   .admin_link_btn .btn {
     width: 300px;
+  }
 }
+
+@media screen and (max-width:425px) {
+  .admin_field_box {
+    width: 49%;
+  }
+  .admin_actions {
+    width: 40%;
+  }
+  .admin_link_btn {
+    width: 77%;
+  }
+  .admin_background .ddmenu_text:nth-child(1) {
+  padding-left: 30px;
+}
+  .admin_background .ddmenu_text:nth-child(2) {
+  padding-left: 30px;
+}
+
+
 }

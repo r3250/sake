@@ -22,9 +22,6 @@
 .users #error_explanation {
 	color: red;
 }
-.header_users ul.ddmenu li {
-	width: 111px;
-}
 .header_users ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
    color: white;              /* メニュー項目の文字色(白色) */
@@ -66,16 +63,13 @@
 	margin-top: 70px;
 }
 .user_nickname {
-	margin-left: 65px;
+	padding-left: 65px;
 }
 .user_favolite_sake {
-	margin-left: 81px;
+	padding-left: 81px;
 }
 .user_favolite_shop {
-	margin-left: 49px;
-}
-.user_favolite_address {
-	margin-left: 33px;
+	padding-left: 49px;
 }
 .user_introduction_scroll {
 	overflow-x: scroll;
@@ -172,10 +166,9 @@
 .footer_under_border footer {
 	color: white;
 }
+
+
 @media screen and (max-width:1024px) {
-  .header_users ul.ddmenu li {
-    width: 102px
-  }
   .user_mybtn {
   	padding-right: 60px;
   }
@@ -192,8 +185,8 @@
 
 @media screen and (max-width:768px) {
 	.user_image {
-		width: 26%;
-		margin: 30px auto;
+		width: 40%;
+		margin: 20px auto;
 	}
 	.user_text {
 		margin: 0 auto;
@@ -206,4 +199,39 @@
 		width: 555px;
 		padding-right: 10px;
 	}
+}
+@media screen and (max-width:425px) {
+	.user_introduction_scroll {
+    width: 290px;
+    }
+    .user_post_image {
+    	margin: 0 auto;
+    }
+    .user_post_text {
+    	font-size: 10px;
+    }
+    .user_post_mybtn {
+    	font-size: 10px;
+    }
+    .user_mybtn {
+    	width: 321px;
+    }
+    .user_text {
+    	font-size: 10px;
+    }
+    .user_nickname {
+    	padding-left: 20px;
+    }
+    .user_favolite_sake {
+    	padding-left: 30px;
+    }
+    .user_favolite_shop {
+    	padding-left: 10px;
+    }
+    .user_image_text {
+      font-size: 10px;
+    }
+    .nav-tabs li {
+      font-size: 10px;
+    }
 }

@@ -17,9 +17,6 @@
 .sake_posts #error_explanation {
 	color: red;
 }
-.header_sake_posts ul.ddmenu li {
-	width: 111px;
-}
 .header_sake_posts ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
    color: white;              /* メニュー項目の文字色(白色) */
@@ -96,10 +93,10 @@ textarea {
 	margin-top: 70px;
 }
 .sake_post_nickname {
-	margin-left: 65px;
+	padding-left: 65px;
 }
 .sake_post_sake {
-	margin-left: 96px;
+	padding-left: 96px;
 }
 .sake_post_sake a:hover {
 	color: red;
@@ -115,7 +112,7 @@ textarea {
     margin-top: 10px;
 }
 .sake_post_address {
-	margin-left: 112px;
+	color: white;
 }
 .sake_post_caption {
 	margin-top: 10px;
@@ -166,6 +163,18 @@ textarea {
 .btn_back a:hover {
 	color: red;
 }
+.edit_btn_back {
+	text-align: right;
+	margin-bottom: 30px;
+	margin-right: 50px;
+}
+.edit_btn_back a {
+	color: white;
+}
+.edit_btn_back a:hover {
+	color: red;
+}
+
 .form_btn {
 	width: 300px;
 	text-align: right;
@@ -267,15 +276,16 @@ width: 100%;
 	.sake_post_text {
 		margin-top: 35px;
 	}
-	.header_sake_posts ul.ddmenu li {
-	width: 102px
-    }
     .comment_scroll {
     	width: 775px;
     	height: 389px;
     }
 	.comment_btn {
 		width: 720px;
+	}
+	.sake_post_mybtn {
+		margin-top: 20px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -324,10 +334,16 @@ width: 100%;
 	.btn_back {
 		width: 570px;
 	}
+	.edit_btn_back {
+		width: 640px;
+	}
 }
 
 
 @media screen and (max-width:425px) {
+	.sake_posts #error_explanation {
+		padding-left: 25px;
+	}
 	.sake_post_shop_scroll {
 		width: 250px;
 	}
@@ -336,8 +352,55 @@ width: 100%;
 		margin: 20px auto;
 		font-size: 10px;
 	}
+	.sake_post_myimage {
+		width: 70%;
+	}
 	.sake_post_text {
 		font-size: 10px;
 	}
+	.sake_post_mybtn {
+		margin-top: 0;
+	}
+	.sake_post_nickname {
+		padding-left: 34px;
+	}
+	.sake_post_sake {
+		padding-left: 52px;
+	}
+	.tag_box {
+	    margin-top: 15px;
+	    margin-bottom: 30px;
+    }
+    .sake_post_caption_scroll {
+        width: 290px;
+  }
+    .sake_post_mybtn {
+        width: 290px;
+  }
+    .sake_post_show_text {
+        font-size: 10px;
+  }
+    .comment_scroll {
+       width: 290px;
+       height: 210px;
+  }
+    .comment_btn {
+       width: 263px;
+  }
+    .btn_back {
+       width: 330px;
+  }
+  .edit_box {
+  	margin: 25px auto;
+  }
+  .btn_back {
+    width: 295px;
+  }
+  .edit_btn_back {
+    width: 325px;
+  }
+  .new_box {
+  	margin-top: 30px;
+  	}
 }
 
