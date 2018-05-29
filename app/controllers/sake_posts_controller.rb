@@ -11,10 +11,10 @@ class SakePostsController < ApplicationController
     end
     if params[:tag_list].present?
           @search_sake_posts = SakePost.tagged_with(params[:tag_list]).order(created_at: :desc).sake # sake_post.rbにてsakeを定義
-          @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
+          @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(10)
     else
       @search_sake_posts = search_sake_posts
-      @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(4)
+      @search_sake_posts = Kaminari.paginate_array(@search_sake_posts).page(params[:page]).per(10)
     end
   end
 

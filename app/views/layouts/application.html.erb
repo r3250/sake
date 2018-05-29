@@ -25,21 +25,19 @@
          <%= render 'layouts/userHeader' %>
        <% end %>
   	</header>
-    </div>
 
     <%= yield %>
 
   <% if request.path.include?('admin') %>
     <footer class="admin_<%="#{controller.controller_name}" %>">
+      <div class="container footer_under_border">
         Copyright © 2018 SAKE. All Rights Reserved.
   <% else %>
     <footer class="footer_<%="#{controller.controller_name}" %>">
-<div class="container footer_under_border">
-<!--   <div class="footer_under_border">
- -->    	Copyright © 2018 SAKE. All Rights Reserved.
-<!--   </div>
- --></div>
-    </footer>
+      <div class="container footer_under_border">
+    	  Copyright © 2018 SAKE. All Rights Reserved.
   <% end %>
+      </div>
+    </footer>
   </body>
 </html>

@@ -6,6 +6,12 @@
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
 }
+.retires .ddmenu_text_nickname {
+	color: black;
+}
+.retires .ddmenu_text {
+	color: black;
+}
 .retire_box {
 	width: 100%;
 	margin-top: 100px;
@@ -22,4 +28,16 @@
 }
 .retire_btn .btn {
 	width: 80px;
+}
+
+@media screen and (max-width:1024px) {
+	.retire_content {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width:425px) {
+	.retire_content {
+		width: 88%;
+	}
 }

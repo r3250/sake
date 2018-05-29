@@ -1,50 +1,43 @@
 <div class="container">
- <div class="user_box">
-  <div class="row">
- 	<div class="col-lg-2">
-    </div>
-    <div class="col-lg-10">
-			<div class="row">
-    			  <div class="col-lg-3">
-
-    			  		 <% if @user.errors.any? %>
-		    <div id="error_explanation">
-		      <ul>
-			      <% @user.errors.full_messages.each do |message| %>
-			        <li><%= message %></li>
-		          <% end %>
-	          </ul>
-	        </div>
-     <% end %>
-
-    				 <div class="user_image">
-					  <%= attachment_image_tag @user, :image, :fill, 200, 300, format: 'jpg' %>
-					  <div class= "user_image_text">
-					  <%= link_to "投稿一覧", user_post_path(@user) %>
-					  </div>
+	<div class="user_box">
+		<div class="row">
+			<div class="col-lg-2">
+			</div>
+			<div class="col-lg-10 col-12">
+				<div class="row">
+					<div class="col-lg-3 col-12">
+						<div class="user_image">
+							<%= attachment_image_tag @user, :image, :fill, 200, 300, format: 'jpg' %>
+							<div class= "user_image_text">
+								<%= link_to "投稿一覧", user_post_path(@user) %>
+							</div>
+						</div>
 					</div>
-				  </div>
-				  <div class="col-lg-1">
-				  </div>
-					<div class="col-lg-8 user_text">
-					  <p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
-					  <p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
-					  <p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
-					  <p><%= "お気に入り場所" %> <span class="user_favolite_address">: <%= @user.favorite_shop %></span></p>
-					  <p><%= "自己紹介" %></p>
-					  	<p><span class="user_introduction"><%= simple_format(@user.introduction) %></span></p>
-					 <div class="user_mybtn">
-					 <% if user_signed_in? %>
-					  <% if @user.id == current_user.id %>
-					  <%= link_to "投稿", new_sake_post_path %>
-					  <%= link_to "編集", edit_user_path(current_user) %>
-					  <% end %>
-					 <% end %>
-					  <%= link_to "戻る", sake_posts_path %>
-                    </div>
-				  </div>
-	   		</div>
-    </div>
-  </div>
- </div>
+					<div class="col-lg-1">
+					</div>
+					<div class="col-lg-8 col-md-8 col-12 user_text">
+						<p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
+						<p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
+						<p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
+						<p><%= "お気に入り場所" %></p>
+						<p><span class="user_favolite_address"><%= @user.favorite_shop %></span></p>
+						<p><%= "自己紹介" %></p>
+						<div class="user_introduction_scroll">
+							<p><span class="user_introduction"><%= simple_format(@user.introduction) %></span></p>
+						</div>
+						<div class="user_mybtn">
+							<% if user_signed_in? %>
+							<% if @user.id == current_user.id %>
+							<%= link_to "投稿", new_sake_post_path %>
+							<%= link_to "編集", edit_user_path(current_user) %>
+							<% end %>
+							<% end %>
+							<%= link_to "戻る", sake_posts_path %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+

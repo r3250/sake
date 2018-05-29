@@ -12,20 +12,23 @@
 		      <div class="tab-content">
 					<div class="tab-pane" id="user_page">
 						   <div class="row">
-				    			  <div class="col col-lg-3">
+				    			  <div class="col col-lg-3 col-md-1">
 				    				 <div class="user_image">
 									  <%= attachment_image_tag @user, :image, :fill, 200, 300, format: 'jpg' %>
 									</div>
 								  </div>
-								  <div class="col col-lg-1">
+								  <div class="col col-lg-1 col-md-3">
 								  </div>
-									<div class="col col-lg-8 user_text">
-									  <p><%= "ユーザー名" %> <span class="user_nickname">: <%= @user.nickname %></span></p>
-									  <p><%= "好きな酒" %> <span class="user_favolite_sake">: <%= @user.favorite_sake %></span></p>
-									  <p><%= "好きな飲み方" %> <span class="user_favolite_shop">: <%= @user.favorite_drink %></span></p>
-									  <p><%= "お気に入り場所" %> <span class="user_favolite_address">: <%= @user.favorite_shop %></span></p>
+									<div class="col col-lg-8 col-md-8 admin_user_text">
+									  <p><%= "ユーザー名" %> <span class="admin_user_nickname">: <%= @user.nickname %></span></p>
+									  <p><%= "好きな酒" %> <span class="admin_user_favolite_sake">: <%= @user.favorite_sake %></span></p>
+									  <p><%= "好きな飲み方" %> <span class="admin_user_favolite_shop">: <%= @user.favorite_drink %></span></p>
+									  <p><%= "お気に入り場所" %></p>
+									  <p><span class="admin_user_favolite_address"><%= @user.favorite_shop %></span></p>
 									  <p><%= "自己紹介" %></p>
-									  	<p><span class="user_introduction"><%= simple_format(@user.introduction) %></span></p>
+									<div  class="admin_user_scroll">
+									  	<p><span class="admin_user_introduction"><%= simple_format(@user.introduction) %></span></p>
+									</div>
 									 <div class="admin_user_mybtn">
 									  <% if admin_signed_in? %>
 									   <%= link_to "戻る", admins_users_path %>
@@ -41,14 +44,15 @@
 									     <%= attachment_image_tag user_post, :image, :fill, 150, 150, format: 'jpg', class: "card-img-top" %>
 								    <div class="card-body">
 									    <h5 class="card-title"><%= user_post.sake_name %></h5>
-									<ul class="list-group list-group-flush">
-									    <p class="list-group-item card_shop"><%= user_post.shop_name %></p>
-									    <p class="list-group-item card_address"><%= user_post.address %></p>
-									    <p class="list-group-item card_caption"><%= user_post.caption %></p>
-									    <div class="card-body">
-										    <%= link_to "編集",edit_admins_sake_post_path(user_post.id), class: "btn btn-secondary btn-sm" %>
-										    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか", class: "btn btn-danger btn-sm" %>
-										</div>
+										<ul class="list-group list-group-flush">
+										    <p class="list-group-item card_shop"><%= user_post.shop_name %></p>
+										    <p class="list-group-item card_address"><%= user_post.address %></p>
+										    <p class="list-group-item card_caption"><%= user_post.caption %></p>
+										    <div class="card-body">
+											    <%= link_to "編集",edit_admins_sake_post_path(user_post.id), class: "btn btn-secondary btn-sm" %>
+											    <%= link_to "削除",sake_post_path(user_post.id), method: :delete, "data-confirm" => "削除しますか", class: "btn btn-danger btn-sm" %>
+											</div>
+										</ul>
 									</div>
 								 </div>
 							  <% end %>

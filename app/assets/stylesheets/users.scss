@@ -22,9 +22,6 @@
 .users #error_explanation {
 	color: red;
 }
-.header_users ul.ddmenu li {
-	width: 111px;
-}
 .header_users ul.ddmenu a {
    /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
    color: white;              /* メニュー項目の文字色(白色) */
@@ -66,18 +63,18 @@
 	margin-top: 70px;
 }
 .user_nickname {
-	margin-left: 65px;
+	padding-left: 65px;
 }
 .user_favolite_sake {
-	margin-left: 81px;
+	padding-left: 81px;
 }
 .user_favolite_shop {
-	margin-left: 49px;
+	padding-left: 49px;
 }
-.user_favolite_address {
-	margin-left: 33px;
-}
-.user_introduction {
+.user_introduction_scroll {
+	overflow-x: scroll;
+    width: 600px;
+    height: 100px;
 }
 .sake_post_mybtn a:nth-child(3) {
 	margin-left: 30px;
@@ -114,7 +111,6 @@
 }
 .user_post_box {
 	margin-top: 50px;
-	margin-bottom: 60px
 }
 .user_post_box p {
 	color: white;
@@ -149,7 +145,7 @@
 }
 .user_post_scroll {
   overflow-x: scroll;
-  height: 500px;
+  height: 700px;
 }
 .footer_users {
 	color: white;
@@ -170,12 +166,14 @@
 .footer_under_border footer {
 	color: white;
 }
+
+
 @media screen and (max-width:1024px) {
   .user_mybtn {
   	padding-right: 60px;
   }
   .btn_back {
-  	padding-right: 50px;
+  	padding-right: 10px;
   }
   .paginate {
     display: none;
@@ -185,3 +183,67 @@
   }
 }
 
+@media screen and (max-width:768px) {
+	.user_image {
+		width: 40%;
+		margin: 20px auto;
+	}
+	.user_text {
+		margin: 0 auto;
+	}
+	.user_introduction_scroll {
+		width: 430px;
+	}
+	.user_mybtn {
+		margin-top: 30px;
+		width: 555px;
+		padding-right: 10px;
+	}
+}
+@media screen and (max-width:425px) {
+	.user_introduction_scroll {
+    width: 313px;
+    }
+    .user_post_image {
+      padding-left: 62px;
+      padding-bottom: 15px;
+      margin: 0 auto;
+   }
+    .user_image {
+    width: 60%;
+    margin: 30px auto;
+    }
+    .user_post_text {
+    	font-size: 10px;
+    }
+    .user_post_mybtn {
+    	font-size: 10px;
+    }
+    .user_mybtn {
+    	width: 321px;
+    }
+    .user_text {
+    	font-size: 10px;
+    }
+    .user_nickname {
+    	padding-left: 20px;
+    }
+    .user_favolite_sake {
+    	padding-left: 30px;
+    }
+    .user_favolite_shop {
+    	padding-left: 10px;
+    }
+    .user_image_text {
+      font-size: 10px;
+    }
+    .nav-tabs li {
+      font-size: 10px;
+    }
+    .user_post_box {
+      margin-top: 0;
+    }
+    .user_post_scroll {
+      
+    }
+}

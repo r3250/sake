@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515165464) do
+ActiveRecord::Schema.define(version: 20180524112929) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -112,13 +112,15 @@ ActiveRecord::Schema.define(version: 20180515165464) do
     t.string "first_name", default: "太郎", null: false
     t.string "last_kana", default: "タナカ", null: false
     t.string "first_kana", default: "タロウ", null: false
-    t.string "nickname", null: false
+    t.string "nickname", default: "サンプル", null: false
     t.string "favorite_sake"
     t.string "favorite_drink"
     t.string "favorite_shop"
     t.text "introduction"
     t.datetime "deleted_at"
     t.text "image_id"
+    t.string "uid"
+    t.string "provider"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

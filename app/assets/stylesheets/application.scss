@@ -55,22 +55,36 @@ header {
   color: black;
  }
 .ddmenu_text_nickname {
-  padding-top: 48px;
+  width: 500px!important;
+  padding-top: 60px;
   padding-left: 15px;
-  color: white;
+  color: #e6dadb;
 }
 .ddmenu_text {
 	height: 80px;
-	padding-top: 40px;
+	padding-top: 50px;
   color: white;
 }
-.ddmenu_text:nth-child(2) {
+.ddmenu_text:nth-child(3) {
+  padding-left: 67px;
 }
 ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
 }
+.registrations ul.ddmenu li {
+   width: 32%;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
+}
+.sessions ul.ddmenu li {
+   width: 32%;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
+}
 ul.ddmenu li {
-   width: 68px;          /* メニュー項目の横幅(125px) */
+   width: 48%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -250,8 +264,9 @@ footer {
 }
 
 
-@media screen and (max-width:1024px) {
-  .header_text {
+
+@media screen and (max-width:768px) {
+    .header_text {
     text-align: center;
   }
   .header_text:nth-child(2) {
@@ -259,7 +274,7 @@ footer {
 }
 
   .header_text_box {
-    margin-top: 80px;
+    margin-top: 140px;
   }
   .signin_field_box {
     width: 100%;
@@ -279,34 +294,79 @@ footer {
   .footer_sessions {
     text-align: center;
   }
-  .header-box {
-    color: #fafafa;
-    padding: .2em .25em .15em;
-    border: solid 0.08em black;
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    margin: 3px 8px 3px 0;
+
+  .ddmenu_text_nickname {
+    width: 451px!important;
   }
-  .header-bars0{
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px auto;
-    background-color: black;
+  .header_text_box {
+    margin-bottom: 100px;
   }
-  .header-bars1{
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px auto;
-    background-color: black;
+}
+
+@media screen and (max-width:425px) {
+  .social {
+    font-size: 14px;
   }
-  .header-bars2{
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 5px auto;
-    background-color: black;
+  .registrations ul.ddmenu li {
+    width: 22%;
+  }
+  .sessions ul.ddmenu li {
+    width: 22%;
+  }
+  .tops .ddmenu_text_nickname {
+    padding-top: 75px;
+  }
+  .tops ul.ddmenu li {
+    width: 21%;
+  }
+  .signup_box {
+    font-size: 10px;
+  }
+  .signin_box {
+    font-size: 10px;
+  }
+  .registration_field input {
+    width: 300px;
+  }
+  .registration_hedding {
+    width: 310px;
+  }
+  .signup_actions {
+    width: 310px;
+  }
+  .sessions #error_explanation {
+    width: 44%;
+  }
+  .signin_field {
+    width: 44%;
+    margin: 0 auto
+  }
+  .signin_actions {
+    width: 25%;
+    margin: 0 auto;
+  }
+  .sign_in_box_btn {
+    width: 25%;
+    margin: 0 auto;
+  }
+  .footer_under_border {
+    font-size: 10px;
+  }
+  .ddmenu_text {
+    font-size: 10px;
+    padding-top: 60px;
+  }
+  .ddmenu_text:nth-child(3) {
+    padding-left: 150px;
+  }
+  .ddmenu_text_nickname {
+    width: 160px!important;
+    font-size: 10px;
+    padding-top: 74px;
+  }
+  .button {
+    width: 90px;
+    height: 20px;
+    line-height: 19px;
   }
 }
