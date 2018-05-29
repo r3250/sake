@@ -3,27 +3,30 @@ ja:
     models:
       user: ユーザー
       sake_post: 投稿
+      retire: 退会
+      tag: タグ
     attributes:
       user:
         last_name: 苗字
         first_name: 名前
-        last_kana: フリガナ（セイ）
-        first_kana: フリガナ（メイ)
+        last_kana: フリガナ(セイ)
+        first_kana: フリガナ(メイ)
         nickname: ユーザーネーム
         email: メールアドレス
         password: パスワード
         image: 写真
+        password_confirmation: パスワード確認
         login: メールアドレスかユーザーネーム
       sake_post:
         sake_name: 酒の名前
         shop_name: 店名
-        caption: 詳細
+        caption: 酒の詳細
         address: 住所
         image: 写真
       sake_comment:
         comment: コメント
       retire:
-        retire_reson: 退会理由
+        retire_reason: 退会理由
       tag:
         name: タグ
   views:
