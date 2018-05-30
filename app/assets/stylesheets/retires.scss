@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.retires .logo {
+  line-height: 53px;
+  padding-left: 13px;
+  height: 44px;
+  margin-top: 24px;
+  margin-left: 14px;
+}
+.retires .fa-beer {
+  color: black;
+}
+.retires .social .sake_logo {
+  color: gold;
+  font-size: 30px;
+}
+
 .header_retires ul.ddmenu ul li {
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
@@ -40,4 +55,16 @@
 	.retire_content {
 		width: 88%;
 	}
+	.retires .logo {
+    padding-left: 9px;
+    line-height: 36px;
+    height: 37px;
+    margin-top: 42px;
+    margin-left: 5px;
+
+  }
+    .retires .social .sake_logo {
+  font-size: 14px;
+}
+
 }

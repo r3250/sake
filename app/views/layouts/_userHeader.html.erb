@@ -3,7 +3,12 @@
  <nav>
    <ul class="ddmenu">
     <div class="row">
-      <div class="col col-lg-9 col-md-8 col-7">
+      <div class="col col-lg-1 col-md-1 col-1">
+        <div class="social logo">
+        <i class="fas fa-beer"><span class="sake_logo">酒</span></i>
+      </div>
+    </div>
+      <div class="col col-lg-8 col-md-7 col-6">
        <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
          <ul>
            <li><%= link_to "My Page", user_path(current_user) %></li>
@@ -30,9 +35,13 @@
   <nav>
     <ul class="ddmenu">
       <div class="row">
-        <div class="col col-lg-8 col-md-7">
+
+        <div class="col col-lg-8 col-md-6 col-1">
+        <div class="social logo">
+        <i class="fas fa-beer"><span class="sake_logo">酒</span></i>
+      </div>
         </div>
-        <div class="col col-lg-4 col-md-5 col-12">
+        <div class="col col-lg-4 col-md-5 col-11">
          <li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
          <li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
          <li class="ddmenu_text">

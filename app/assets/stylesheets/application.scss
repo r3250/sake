@@ -14,7 +14,9 @@
  *= require_self
  */
  @import "bootstrap" ;
-
+.sake_logo {
+    font-family: 'sans-serif', 'arial unicode ms';
+}
 
  *{
 	margin:  0;
@@ -25,6 +27,28 @@
 	content: "";
 	display: block;
 	clear: both;
+}
+.logo {
+  line-height: 53px;
+  padding-left: 13px;
+  height: 44px;
+  margin-top: 24px;
+  margin-left: 14px;
+}
+.sessions .sake_logo {
+  color: black;
+  font-size: 30px;
+}
+.registrations .sake_logo {
+  color: black;
+  font-size: 30px;
+}
+.sake_logo {
+  color: white;
+  font-size: 30px;
+}
+.fa-beer {
+  color: gold;
 }
 a,a:hover,a:visited{
   text-decoration: none;
@@ -57,7 +81,7 @@ header {
 .ddmenu_text_nickname {
   width: 500px!important;
   padding-top: 60px;
-  padding-left: 15px;
+  padding-left: 35px;
   color: #e6dadb;
 }
 .ddmenu_text {
@@ -84,7 +108,7 @@ ul.ddmenu {
    position: relative;    /* ★サブメニュー表示の基準位置にする */
 }
 ul.ddmenu li {
-   width: 48%;          /* メニュー項目の横幅(125px) */
+   width: 45%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -296,7 +320,7 @@ footer {
   }
 
   .ddmenu_text_nickname {
-    width: 451px!important;
+    width: 400px!important;
   }
   .header_text_box {
     margin-bottom: 100px;
@@ -307,17 +331,51 @@ footer {
   .social {
     font-size: 14px;
   }
+    .sessions .social .fa-beer {
+    font-size: 10px;
+  }
+  .sessions .logo {
+    padding-left: 9px;
+    line-height: 36px;
+    height: 37px;
+    margin-top: 42px;
+    margin-left: 5px;
+  }
+  .sessions .sake_logo {
+    font-size: 15px;
+  }
+  .registrations .social .fa-beer {
+    font-size: 10px;
+  }
+  .registrations .logo {
+    padding-left: 9px;
+    line-height: 36px;
+    height: 37px;
+    margin-top: 42px;
+    margin-left: 5px;
+  }
+  .registrations .sake_logo {
+    font-size: 15px;
+  }
+
+  .social .fa-beer {
+    font-size: 10px;
+  }
+  .logo {
+    padding-left: 9px;
+    line-height: 36px;
+    height: 37px;
+    margin-top: 42px;
+    margin-left: 5px;
+  }
+  .sake_logo {
+    font-size: 15px;
+  }
   .registrations ul.ddmenu li {
     width: 22%;
   }
   .sessions ul.ddmenu li {
     width: 22%;
-  }
-  .tops .ddmenu_text_nickname {
-    padding-top: 75px;
-  }
-  .tops ul.ddmenu li {
-    width: 21%;
   }
   .signup_box {
     font-size: 10px;
@@ -357,16 +415,21 @@ footer {
     padding-top: 60px;
   }
   .ddmenu_text:nth-child(3) {
-    padding-left: 150px;
+    padding-left: 115px;
   }
   .ddmenu_text_nickname {
-    width: 160px!important;
+    width: 185px!important;
     font-size: 10px;
     padding-top: 74px;
+    padding-left: 25px
   }
   .button {
     width: 90px;
     height: 20px;
     line-height: 19px;
+  }
+  .footer_tops .footer_under_border {
+    width: 66%;
+    margin: 0 auto;
   }
 }
