@@ -66,6 +66,16 @@ header {
 	width: 100%;
 	height: 80px;
 }
+.sake_posts ul.ddmenu_2 li {
+    width: 32%;
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+}
+.header_sake_posts ul.ddmenu_2 ul li {
+   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+   border-bottom: 1px solid white; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
 .sessions .under_border:after {
   display: none;
 }
@@ -108,7 +118,7 @@ ul.ddmenu {
    position: relative;    /* ★サブメニュー表示の基準位置にする */
 }
 ul.ddmenu li {
-   width: 45%;          /* メニュー項目の横幅(125px) */
+   width: 49%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -357,7 +367,6 @@ footer {
   .registrations .sake_logo {
     font-size: 15px;
   }
-
   .social .fa-beer {
     font-size: 10px;
   }
@@ -370,6 +379,9 @@ footer {
   }
   .sake_logo {
     font-size: 15px;
+  }
+  .sake_posts ul.ddmenu_2 li {
+    width: 23%;
   }
   .registrations ul.ddmenu li {
     width: 22%;

@@ -66,7 +66,7 @@ class SakePostsController < ApplicationController
   	if admin_signed_in?
        sake_post.destroy
   	   redirect_to admins_user_path(sake_post.user_id)
-    elsif user_siged_in?
+    elsif user_signed_in?
        sake_post.destroy
        redirect_to sake_posts_path
     end
