@@ -4,9 +4,11 @@
    <ul class="ddmenu">
     <div class="row">
       <div class="col col-lg-1 col-md-1 col-1">
+        <%= link_to sake_posts_path do %>
         <div class="social logo">
         <i class="fas fa-beer"><span class="sake_logo">酒</span></i>
       </div>
+      <% end %>
     </div>
       <div class="col col-lg-8 col-md-7 col-6">
        <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
