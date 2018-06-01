@@ -62,12 +62,16 @@
     margin-left: 5px;
 
   }
-    .retires .social .sake_logo {
-  font-size: 14px;
-}
-.retire_text {
-  padding-left: 52px;
-}
+  .retires .social .sake_logo {
+      font-size: 14px;
+    }
+  .retire_text {
+      padding-left: 52px;
+    }
+  .header_retires ul.ddmenu ul li {
+       width: 55px;               /* サブメニュー1項目の横幅(135px) */
+    }
+
 
 
 }
