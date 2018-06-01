@@ -10,14 +10,14 @@
       </div>
       <% end %>
     </div>
-      <div class="col col-lg-8 col-md-7 col-6">
+      <div class="col col-lg-8 col-md-7 col-4">
        <li class="ddmenu_text_nickname" ><%= current_user.nickname %>
          <ul>
            <li><%= link_to "My Page", user_path(current_user) %></li>
          </ul>
        </li>
      </div>
-     <div class="col col-lg-3 col-md-4 col-5">
+     <div class="col col-lg-3 col-md-4 col-6">
       <li class="ddmenu_text"><%= link_to "ログアウト",destroy_user_session_path, method: :delete %></li>
       <li class="ddmenu_text">
        menu
@@ -43,7 +43,7 @@
         <i class="fas fa-beer"><span class="sake_logo">酒</span></i>
       </div>
         </div>
-        <div class="col col-lg-4 col-md-5 col-11">
+        <div class="col col-lg-4 col-md-5 col-10">
          <li class="ddmenu_text"><%= link_to "新規登録",new_user_registration_path %></li>
          <li class="ddmenu_text"><%= link_to "ログイン",new_user_session_path %></li>
          <li class="ddmenu_text">

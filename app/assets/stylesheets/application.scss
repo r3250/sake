@@ -118,7 +118,7 @@ ul.ddmenu {
    position: relative;    /* ★サブメニュー表示の基準位置にする */
 }
 ul.ddmenu li {
-   width: 49%;          /* メニュー項目の横幅(125px) */
+   width: 48%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -297,10 +297,48 @@ footer {
   width: 150px;
 }
 
+@media screen and (max-width:1024px) {
+  .sessions ul.ddmenu li {
+    width: 24%;
+  }
+  .registrations ul.ddmenu li {
+    width: 24%;
+  }
+  .tops ul.ddmenu_2 li {
+    width: 24%;
+  }
+  .sake_posts ul.ddmenu_2 li {
+    width: 24%;
+  }
+  .sessions ul.ddmenu ul li {
+    width: 90px;
+  }
+  .registrations ul.ddmenu ul li {
+    width: 90px;
+  }
+  .tops ul.ddmenu_2 ul li {
+    width: 90px;
+  }
+  .sake_posts ul.ddmenu_2 ul li {
+    width: 90px;
+  }
+}
 
 
 @media screen and (max-width:768px) {
-    .header_text {
+  .sessions ul.ddmenu li {
+    width: 30%;
+  }
+  .registrations ul.ddmenu li {
+    width: 30%;
+  }
+  .tops ul.ddmenu_2 li {
+    width: 30%;
+  }
+  .sake_posts ul.ddmenu_2 li {
+    width: 30%;
+  }
+  .header_text {
     text-align: center;
   }
   .header_text:nth-child(2) {
@@ -337,15 +375,52 @@ footer {
   }
 }
 
+
 @media screen and (max-width:425px) {
+  .sessions ul.ddmenu ul li {
+    width: 55px;
+  }
+  .registrations ul.ddmenu ul li {
+    width: 55px;
+  }
+    .tops ul.ddmenu ul li {
+    width: 55px;
+  }
+  .tops ul.ddmenu_2 ul li {
+    width: 55px;
+  }
+  .sake_posts ul.ddmenu_2 ul li {
+    width: 55px;
+  }
+  .sessions ul.ddmenu ul li a {
+    line-height: 25px;
+  }
+  .registrations ul.ddmenu ul li a {
+    line-height: 25px;
+  }
+  .tops ul.ddmenu ul li a {
+    line-height: 25px;
+  }
+  .tops ul.ddmenu_2 ul li a {
+    line-height: 25px;
+  }
+  .sake_posts ul.ddmenu_2 ul li a {
+    line-height: 25px;
+  }
+  ul.ddmenu ul li {
+    width: 55px;
+  }
+  ul.ddmenu ul li a {
+    line-height: 25px;
+  }
   .social {
     font-size: 14px;
   }
-    .sessions .social .fa-beer {
+  .sessions .social .fa-beer {
     font-size: 10px;
   }
   .sessions .logo {
-    padding-left: 9px;
+    padding-left: 3px;
     line-height: 36px;
     height: 37px;
     margin-top: 42px;
@@ -381,13 +456,19 @@ footer {
     font-size: 15px;
   }
   .sake_posts ul.ddmenu_2 li {
-    width: 23%;
+    width: 19%;
+  }
+  .tops ul.ddmenu_2 li {
+    width: 22%;
   }
   .registrations ul.ddmenu li {
     width: 22%;
   }
   .sessions ul.ddmenu li {
     width: 22%;
+  }
+  .ddmenu_text:nth-child(3) {
+    padding-left: 130px;
   }
   .signup_box {
     font-size: 10px;
@@ -399,16 +480,18 @@ footer {
     width: 300px;
   }
   .registration_hedding {
-    width: 310px;
+    width: 90%;
+    margin: 20px auto;
   }
   .signup_actions {
-    width: 310px;
+    width: 90%;
+    margin: 0 auto;
   }
   .sessions #error_explanation {
     width: 44%;
   }
   .signin_field {
-    width: 44%;
+    width: 50%;
     margin: 0 auto
   }
   .signin_actions {
@@ -425,9 +508,7 @@ footer {
   .ddmenu_text {
     font-size: 10px;
     padding-top: 60px;
-  }
-  .ddmenu_text:nth-child(3) {
-    padding-left: 115px;
+    padding-left: 12px;
   }
   .ddmenu_text_nickname {
     width: 185px!important;
@@ -441,6 +522,10 @@ footer {
     line-height: 19px;
   }
   .footer_tops .footer_under_border {
+    width: 66%;
+    margin: 0 auto;
+  }
+  .footer_registrations .footer_under_border {
     width: 66%;
     margin: 0 auto;
   }

@@ -14,17 +14,11 @@
   /* 画像が読み込まれる前の背景色の指定 */
   background-color: #464646;
 }
+.sake_posts ul.ddmenu a {
+	color: white;
+}
 .sake_posts #error_explanation {
 	color: red;
-}
-.header_sake_posts ul.ddmenu a {
-   /*background-color: #cc0000;*/ /* メニュー項目の背景色(濃い赤色) */
-   color: white;              /* メニュー項目の文字色(白色) */
-   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
-   text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
-   text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
-   font-weight: normal;         /* 太字にする */
-   display: block;            /* ★項目内全域をリンク可能にする */
 }
 .under_border {
   position: relative;
@@ -348,12 +342,12 @@ width: 100%;
 		width: 250px;
 	}
 	.sake_post_image {
-		width: 70%;
+		width: 90%;
 		margin: 45px auto;
 		font-size: 10px;
 	}
 	.sake_post_myimage {
-		width: 71%;
+		width: 83%;
 	}
 	.sake_post_text {
 		font-size: 10px;
@@ -372,10 +366,17 @@ width: 100%;
 	    margin-bottom: 30px;
     }
     .sake_post_caption_scroll {
-        width: 290px;
+        width: 255px;
   }
     .sake_post_mybtn {
-        width: 290px;
+        width: 252px;
+  }
+    textarea {
+        width: 262px;
+        height: 40px;
+  }
+	.form_btn {
+	  	width: 250px;
   }
     .sake_post_show_text {
         font-size: 10px;
