@@ -8,13 +8,13 @@
 	color: black;
 }
 .admin_background .ddmenu_text:nth-child(2) {
-	padding-left: 60px;
+	padding-left: 45px;
 }
 .admin_background ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
 }
 .admin_background ul.ddmenu li {
-   width: 80px;          /* メニュー項目の横幅(125px) */
+   width: 32%;          /* メニュー項目の横幅(125px) */
    display: inline-block; /* ★横並びに配置する */
    list-style-type: none; /* ★リストの先頭記号を消す */
    position: relative;    /* ★サブメニュー表示の基準位置にする */
@@ -98,6 +98,9 @@
 
 
 @media screen and (max-width:1024px) {
+  .admin_background ul.ddmenu li {
+    width: 39%;
+  }
     .admin_field_box {
       width: 54%;
       margin: 0 auto;
@@ -124,17 +127,26 @@
 }
 
 @media screen and (max-width:425px) {
+  .admin_background ul.ddmenu li {
+    width: 43%
+  }
+  .admin_background ul.ddmenu ul li {
+    width: 65px;
+  }
+  .admin_background ul.ddmenu ul li a {
+    line-height: 18px;
+  }
   .admin_field_box {
-    width: 49%;
+    width: 57%;
   }
   .admin_actions {
-    width: 40%;
+    width: 46%;
   }
   .admin_link_btn {
     width: 77%;
   }
   .admin_background .ddmenu_text:nth-child(1) {
-  padding-left: 30px;
+  padding-left: 15px;
 }
   .admin_background .ddmenu_text:nth-child(2) {
   padding-left: 30px;

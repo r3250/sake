@@ -11,10 +11,6 @@
    font-weight: normal;         /* 太字にする */
    display: block;            /* ★項目内全域をリンク可能にする */
 }
-.admin_background ul.ddmenu ul li {
-   width: 125px;               /* サブメニュー1項目の横幅(135px) */
-   border-bottom: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
-}
 .text_color input {
   color: black;
 }

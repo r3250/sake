@@ -235,7 +235,7 @@ footer {
   width: 42%;
   margin: 0 auto;
 }
-.button {
+.login_up {
   display: inline-block;
   width: 150px;
   height: 40px;
@@ -246,23 +246,23 @@ footer {
   background-color: #333;
   color: #fff;
 }
-.button::before,
-.button::after {
+.login_up::before,
+.login_up::after {
   position: absolute;
   z-index: -1;
   display: block;
   content: '';
 }
-.button,
-.button::before,
-.button::after {
+.login_up,
+.login_up::before,
+.login_up::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.button:hover {
+.login_up:hover {
   background-color: #f5f5f5;
   color: #333;
 }
@@ -495,11 +495,11 @@ footer {
     margin: 0 auto
   }
   .signin_actions {
-    width: 30%;
+    width: 27%;
     margin: 0 auto;
   }
   .sign_in_box_btn {
-    width: 30%;
+    width: 27%;
     margin: 0 auto;
   }
   .footer_under_border {
@@ -516,7 +516,7 @@ footer {
     padding-top: 74px;
     padding-left: 25px
   }
-  .button {
+  .login_up {
     width: 90px;
     height: 20px;
     line-height: 19px;
