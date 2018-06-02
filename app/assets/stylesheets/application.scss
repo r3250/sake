@@ -235,34 +235,36 @@ footer {
   width: 42%;
   margin: 0 auto;
 }
-.login_up {
+.button {
   display: inline-block;
   width: 150px;
-  height: 40px;
+  height: 35px;
   text-align: center;
   text-decoration: none;
-  line-height: 40px;
+  line-height: 35px;
   outline: none;
   background-color: #333;
   color: #fff;
+  padding: 0;
+  border-radius: 0;
 }
-.login_up::before,
-.login_up::after {
+.button::before,
+.button::after {
   position: absolute;
   z-index: -1;
   display: block;
   content: '';
 }
-.login_up,
-.login_up::before,
-.login_up::after {
+.button,
+.button::before,
+.button::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.login_up:hover {
+.button:hover {
   background-color: #f5f5f5;
   color: #333;
 }
@@ -516,7 +518,7 @@ footer {
     padding-top: 74px;
     padding-left: 25px
   }
-  .login_up {
+  .button {
     width: 90px;
     height: 20px;
     line-height: 19px;
