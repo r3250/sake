@@ -15,12 +15,10 @@
 	         <% end %>
 		 <%= form_for(@user) do |f| %>
               <div class="row">
-	              	<div class="col-lg-7 col-md-6 image_filed">
+	              	<div class="col-lg-7 col-md-6 col-12 image_filed">
 	              	  <%= f.attachment_field :image %>
 					</div>
-					<!-- <div class="col-lg-4">
-					</div> -->
-				  <div class="col-lg-5 col-md-6">
+				  <div class="col-lg-5 col-md-6 col-11 user_edit_text_box">
 						<%= f.text_field :last_name, :size => "30", :placeholder => "姓" %><br>
 					 <div class="field_form">
 						<%= f.text_field :first_name, :size => "30",  :placeholder => "名" %><br>

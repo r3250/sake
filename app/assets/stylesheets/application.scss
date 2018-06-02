@@ -17,7 +17,6 @@
 .sake_logo {
     font-family: 'sans-serif', 'arial unicode ms';
 }
-
  *{
 	margin:  0;
 	padding: 0;
@@ -28,6 +27,12 @@
 	display: block;
 	clear: both;
 }
+.sessions {
+  background-color: white; /*controllerで背景色を変更*/
+}
+.registrations {
+  background-color: white; /*controllerで背景色を変更*/
+}
 .logo {
   line-height: 53px;
   padding-left: 13px;
@@ -35,16 +40,16 @@
   margin-top: 24px;
   margin-left: 14px;
 }
+.sake_logo {
+  color: white;
+  font-size: 30px;
+}
 .sessions .sake_logo {
-  color: black;
+  color: black;              /*controllerでロゴ変更*/
   font-size: 30px;
 }
 .registrations .sake_logo {
-  color: black;
-  font-size: 30px;
-}
-.sake_logo {
-  color: white;
+  color: black;              /*controllerでロゴ変更*/
   font-size: 30px;
 }
 .fa-beer {
@@ -54,14 +59,8 @@ a,a:hover,a:visited{
   text-decoration: none;
 }
 .iine {
- color: #ff0000;
+ color: #ff0000;            /*いいねした時の色*/
  }
-.sessions {
-	background-color: white;
-}
-.registrations {
-	background-color: white;
-}
 header {
 	width: 100%;
 	height: 80px;
@@ -76,46 +75,11 @@ header {
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
    border-bottom: 1px solid white; /* 項目上側の枠線(ピンク色で1pxの実線) */
 }
-.sessions .under_border:after {
+.sessions .under_border:after {     /*下線のcss*/
   display: none;
 }
-.registrations .under_border:after {
+.registrations .under_border:after {  /*下線のcss*/
   display: none;
-}
-.registrations .ddmenu_text {
-  color: black;
- }
- .sessions .ddmenu_text {
-  color: black;
- }
-.ddmenu_text_nickname {
-  width: 500px!important;
-  padding-top: 60px;
-  padding-left: 35px;
-  color: #e6dadb;
-}
-.ddmenu_text {
-	height: 80px;
-	padding-top: 50px;
-  color: white;
-}
-.ddmenu_text:nth-child(3) {
-  padding-left: 67px;
-}
-ul.ddmenu {
-   margin: 0px;               /* メニューバー外側の余白(ゼロ) */
-}
-.registrations ul.ddmenu li {
-   width: 32%;          /* メニュー項目の横幅(125px) */
-   display: inline-block; /* ★横並びに配置する */
-   list-style-type: none; /* ★リストの先頭記号を消す */
-   position: relative;    /* ★サブメニュー表示の基準位置にする */
-}
-.sessions ul.ddmenu li {
-   width: 32%;          /* メニュー項目の横幅(125px) */
-   display: inline-block; /* ★横並びに配置する */
-   list-style-type: none; /* ★リストの先頭記号を消す */
-   position: relative;    /* ★サブメニュー表示の基準位置にする */
 }
 ul.ddmenu li {
    width: 48%;          /* メニュー項目の横幅(125px) */
@@ -142,6 +106,41 @@ ul.ddmenu ul {
    display: none;      /* ★標準では非表示にする */
    position: absolute; /* ★絶対配置にする */
    z-index: 1;
+}
+.ddmenu_text_nickname {
+  width: 500px!important;
+  padding-top: 60px;
+  padding-left: 35px;
+  color: #e6dadb;
+}
+.ddmenu_text {
+	height: 80px;
+	padding-top: 50px;
+  color: white;
+}
+.registrations .ddmenu_text {
+  color: black;
+ }
+ .sessions .ddmenu_text {
+  color: black;
+ }
+.ddmenu_text:nth-child(3) {
+  padding-left: 67px;
+}
+ul.ddmenu {
+   margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+}
+.registrations ul.ddmenu li {
+   width: 32%;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
+}
+.sessions ul.ddmenu li {
+   width: 32%;          /* メニュー項目の横幅(125px) */
+   display: inline-block; /* ★横並びに配置する */
+   list-style-type: none; /* ★リストの先頭記号を消す */
+   position: relative;    /* ★サブメニュー表示の基準位置にする */
 }
 .header_registrations ul.ddmenu ul li {
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
@@ -183,9 +182,7 @@ footer {
   margin: 30px auto;
   padding-top:10px;
   padding-bottom:5px;
-/*  background-color: #ffd5cd;
-  border-radius: 5px;
-*/}
+}
 .sessions #error_explanation{
   width: 150%;
   margin: 30px auto;
@@ -494,15 +491,15 @@ footer {
     width: 44%;
   }
   .signin_field {
-    width: 50%;
+    width: 55%;
     margin: 0 auto
   }
   .signin_actions {
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
   }
   .sign_in_box_btn {
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
   }
   .footer_under_border {
