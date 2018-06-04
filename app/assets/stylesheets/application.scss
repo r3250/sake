@@ -297,6 +297,10 @@ footer {
 }
 
 @media screen and (max-width:1024px) {
+   img {
+    width: 200px;
+    height: 300px;
+   }
   .sessions ul.ddmenu li {
     width: 24%;
   }
@@ -325,6 +329,10 @@ footer {
 
 
 @media screen and (max-width:768px) {
+   img {
+    width: 200px;
+    height: 300px;
+   }
   .sessions ul.ddmenu li {
     width: 30%;
   }
@@ -376,6 +384,10 @@ footer {
 
 
 @media screen and (max-width:425px) {
+   img {
+    width: 200px;
+    height: 300px;
+   }
   .ddmenu_text_hedding {
     padding-left: 60px;
   }
