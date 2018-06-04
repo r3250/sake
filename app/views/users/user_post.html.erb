@@ -53,7 +53,7 @@
           <div class="row">
            <div class="col-lg-2 col-2">
            </div>
-           <div class="col-lg-10 col-10">
+           <div class="col-lg-10 col-10 user_post_image_bottom">
              <% @user_posts.each do |user_post| %>
              <%= link_to sake_post_path(user_post) do %>
              <%= attachment_image_tag user_post, :image, :fill, 200, 300, format: 'jpg' %>
