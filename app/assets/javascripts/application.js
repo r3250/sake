@@ -37,7 +37,7 @@ $(function(){
 
    //ボタンの表示設定
    $(window).scroll(function(){
-      if($(this).scrollTop()>150) {
+      if($(this).scrollTop()>200) {
          //画面を80pxスクロールしたら、ボタンを表示する
          topBtn.fadeIn();
    }else {
