@@ -27,7 +27,7 @@
   	</header>
 
     <%= yield %>
-
+<p id="pageTop"><a href="#"><i class="fas fa-angle-double-up"></i></a></p>
   <% if request.path.include?('admin') %>
     <footer class="admin_<%="#{controller.controller_name}" %>">
       <div class="container footer_under_border">

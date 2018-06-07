@@ -1,8 +1,84 @@
 // Place all the styles related to the SakeComments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.well p {
+	padding-left: 10px;
+}
+.comment_area a,
+.comment_area p {
+	color: black;
+	 a:hover {
+	 	color: red;
+	 }
+}
+.comment_btn {
+	width: 850px;
+	text-align: right;
+	position: relative;
+}
+.comment_btn:after {
+position: absolute;
+content: " ";
+display: block;
+border-bottom: 1px dashed black;
+bottom: -3px;
+width: 100%;
+}
+.comment_border {
+	width: 850px;
+	text-align: right;
+	position: relative;
+}
+.comment_border:after {
+position: absolute;
+content: " ";
+display: block;
+border-bottom: 1px dashed black;
+bottom: -3px;
+width: 100%;
+}
+
 .comment_scroll {
-  overflow-x: scroll;
+  overflow-y: auto;
   width: 920px;
   height: 500px;
+}
+
+@media screen and (max-width:1024px) {
+	.comment_scroll {
+    	width: 775px;
+    	height: 389px;
+    }
+	.comment_btn {
+		width: 720px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.well {
+		font-size: 10px;
+	}
+	.comment_scroll {
+    	width: 535px;
+    	height: 280px;
+    }
+	.comment_btn {
+		width: 504px;
+	}
+	.comment_btn .btn {
+		width: 56px;
+	    height: 20px;
+	    font-size: 10px;
+	    line-height: 10px;
+	}
+}
+
+@media screen and (max-width:425px) {
+	.comment_scroll {
+       width: 290px;
+       height: 210px;
+  }
+    .comment_btn {
+       width: 263px;
+  }
 }

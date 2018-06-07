@@ -94,11 +94,8 @@ textarea {
 	color: red;
 }
 .sake_post_shop_scroll {
-	overflow: scroll;
+	overflow-x: auto;
 	white-space:nowrap;
-	width: 500px;
-	height: 26px;
-
 }
 .sake_posts_address {
     margin-top: 10px;
@@ -110,8 +107,7 @@ textarea {
 	margin-top: 10px;
 }
 .sake_post_caption_scroll {
-	overflow-x: scroll;
-    width: 600px;
+	overflow-y: auto;
     height: 100px;
 }
 .sake_post_back {
@@ -189,42 +185,6 @@ textarea {
 	 	color: white;
 	 }
 }
-.well p {
-	padding-left: 10px;
-}
-.comment_area a,
-.comment_area p {
-	color: black;
-	 a:hover {
-	 	color: red;
-	 }
-}
-.comment_btn {
-	width: 850px;
-	text-align: right;
-	position: relative;
-}
-.comment_btn:after {
-position: absolute;
-content: " ";
-display: block;
-border-bottom: 1px dashed black;
-bottom: -3px;
-width: 100%;
-}
-.comment_border {
-	width: 850px;
-	text-align: right;
-	position: relative;
-}
-.comment_border:after {
-position: absolute;
-content: " ";
-display: block;
-border-bottom: 1px dashed black;
-bottom: -3px;
-width: 100%;
-}
 .black-btn{
   background-color: black;
   color:#fff;
@@ -268,13 +228,6 @@ width: 100%;
 	.sake_post_text {
 		margin-top: 35px;
 	}
-    .comment_scroll {
-    	width: 775px;
-    	height: 389px;
-    }
-	.comment_btn {
-		width: 720px;
-	}
 	.sake_post_mybtn {
 		margin-top: 20px;
 		margin-bottom: 30px;
@@ -295,9 +248,6 @@ width: 100%;
 		width: 40%;
 		margin: 52px auto;
 	}
-	.sake_post_caption_scroll {
-		width: 430px;
-	}
 	.sake_post_show_text {
 		margin: 0 auto;
 	}
@@ -306,22 +256,6 @@ width: 100%;
 		padding-right: 0;
 		width: 510px;
 		margin-bottom: 50px;
-	}
-	.well {
-		font-size: 10px;
-	}
-	.comment_scroll {
-    	width: 535px;
-    	height: 280px;
-    }
-	.comment_btn {
-		width: 504px;
-	}
-	.comment_btn .btn {
-		width: 56px;
-	    height: 20px;
-	    font-size: 10px;
-	    line-height: 10px;
 	}
 	.btn_back {
 		width: 570px;
@@ -335,9 +269,6 @@ width: 100%;
 @media screen and (max-width:425px) {
 	.sake_posts #error_explanation {
 		padding-left: 25px;
-	}
-	.sake_post_shop_scroll {
-		width: 250px;
 	}
 	.sake_post_image {
 		width: 70%;
@@ -363,9 +294,6 @@ width: 100%;
 	    margin-top: 15px;
 	    margin-bottom: 30px;
     }
-    .sake_post_caption_scroll {
-        width: 255px;
-  }
     .sake_post_mybtn {
         width: 252px;
   }
@@ -378,13 +306,6 @@ width: 100%;
   }
     .sake_post_show_text {
         font-size: 10px;
-  }
-    .comment_scroll {
-       width: 290px;
-       height: 210px;
-  }
-    .comment_btn {
-       width: 263px;
   }
     .btn_back {
        width: 330px;

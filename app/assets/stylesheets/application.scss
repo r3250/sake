@@ -295,6 +295,30 @@ footer {
 .btn-default {
   width: 150px;
 }
+#pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+#pageTop i {
+  padding-top: 6px;
+  font-size: 25px;
+}
+#pageTop a {
+  display: block;
+  z-index: 999;
+  padding: 8px 0 0 8px;
+  width: 35px;
+  height: 35px;
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+#pageTop a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
 
 @media screen and (max-width:1024px) {
    img {
