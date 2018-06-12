@@ -7,15 +7,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.users {
-  background: image-url('1289519907-simply-wood-dark-iphone-wallpaper.png');
-  background-repeat: no-repeat;
-  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-  background-attachment: fixed;
-  /* 表示するディスプレイの大きさに基づいて、背景画像を縦横比を固定しながら調整 */
-  background-size: cover;
-  /* 画像が読み込まれる前の背景色の指定 */
-  background-color: #464646;
+.users::before {
+  background:url('1289519907-simply-wood-dark-iphone-wallpaper.png') no-repeat left top;
+  background-size: 100% 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 108px;
+  content: "";
+  z-index: -1;
 }
 .users #error_explanation {
 	color: red;
@@ -158,7 +161,9 @@
 .footer_under_border footer {
 	color: white;
 }
-
+.aaa {
+  float: left;
+}
 
 @media screen and (max-width:1024px) {
   .user_mybtn {
@@ -239,5 +244,15 @@
     .user_edit_text_box {
       margin: 25px auto;
     }
-
+    .user_post_scroll {
+      height: 200px;
+      margin: 0 auto;
+    }
+    .user_post_image_responsive {
+      width: 69px;
+      height: 83px;
+    }
+    .user_post_btn {
+      font-size: 10px;
+    }
 }

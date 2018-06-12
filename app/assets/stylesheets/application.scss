@@ -319,12 +319,12 @@ footer {
   text-decoration: none;
   opacity: 0.7;
 }
+.alert_position {
+  width: 47%;
+  margin: 0 auto;
+}
 
 @media screen and (max-width:1024px) {
-   img {
-    width: 200px;
-    height: 300px;
-   }
   .sessions ul.ddmenu li {
     width: 24%;
   }
@@ -349,17 +349,13 @@ footer {
   .sake_posts ul.ddmenu_2 ul li {
     width: 90px;
   }
+  .alert_position {
+    width: 55%;
+  }
 }
 
 
 @media screen and (max-width:768px) {
-   img {
-    width: 200px;
-    height: 300px;
-   }
-   .user_post_image_bottom img {
-    margin-bottom: 7px; 
-   }
   .sessions ul.ddmenu li {
     width: 30%;
   }
@@ -377,8 +373,7 @@ footer {
   }
   .header_text:nth-child(2) {
     margin-bottom: 42px;
-}
-
+  }
   .header_text_box {
     margin-top: 140px;
   }
@@ -407,14 +402,13 @@ footer {
   .header_text_box {
     margin-bottom: 100px;
   }
+  .alert_position {
+    width: 74%;
+  }
 }
 
 
 @media screen and (max-width:425px) {
-   img {
-    width: 200px;
-    height: 300px;
-   }
   .ddmenu_text_hedding {
     padding-left: 60px;
   }
@@ -571,4 +565,8 @@ footer {
     width: 66%;
     margin: 0 auto;
   }
+  .alert_position {
+    width: 94%;
+  }
+
 }
