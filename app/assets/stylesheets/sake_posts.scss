@@ -239,7 +239,8 @@ textarea {
 		background: none;
 	}
 	.sake_posts::before {
-		background:url('1289519907-simply-wood-dark-iphone-wallpaper.png') no-repeat left top;
+		background: image-url('1289519907-simply-wood-dark-iphone-wallpaper.png');
+        background-repeat: no-repeat;
         background-size: 100% 100%;
 	    display: block;
 		position: fixed;
